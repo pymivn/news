@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tin tức Python PyMI.vn</title><link href="https://n.pymi.vn/" rel="alternate"></link><link href="https://n.pymi.vn/feeds/all.atom.xml" rel="self"></link><id>https://n.pymi.vn/</id><updated>2021-07-09T00:00:00+07:00</updated><entry><title>Kỳ diệu range</title><link href="https://n.pymi.vn/range.html" rel="alternate"></link><published>2021-07-09T00:00:00+07:00</published><updated>2021-07-09T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-07-09:/range.html</id><summary type="html">&lt;p&gt;Bất kỳ ai học Python cũng đều biết đến range, function giúp tạo 1 list các
+số&amp;nbsp;nguyên:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1550031675-d8ce0062caf7?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjU3OTU0MzY&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;range&lt;/code&gt; có trong Python từ rất lâu rồi, thời Python2, &lt;code&gt;range&lt;/code&gt; có kèm 1 người
+anh em song sinh tên gọi &lt;code&gt;xrange&lt;/code&gt;. &lt;code&gt;xrange&lt;/code&gt; này chính là &lt;code&gt;range&lt;/code&gt; ở Python3 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bất kỳ ai học Python cũng đều biết đến range, function giúp tạo 1 list các
+số&amp;nbsp;nguyên:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1550031675-d8ce0062caf7?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjU3OTU0MzY&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;range&lt;/code&gt; có trong Python từ rất lâu rồi, thời Python2, &lt;code&gt;range&lt;/code&gt; có kèm 1 người
+anh em song sinh tên gọi &lt;code&gt;xrange&lt;/code&gt;. &lt;code&gt;xrange&lt;/code&gt; này chính là &lt;code&gt;range&lt;/code&gt; ở Python3.
+Khác gì&amp;nbsp;nhau?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;range (cũ) sẽ tạo ra 1&amp;nbsp;list&lt;/li&gt;
+&lt;li&gt;xrange hay range python3 sẽ tạo ra&amp;#8230; 1&amp;nbsp;range&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nc"&gt;range&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Vậy nên trong Python3, khi muốn tạo list, phải gõ &lt;code&gt;list(range(1, 100)&lt;/code&gt;.
+Tại&amp;nbsp;sao?&lt;/p&gt;
+&lt;p&gt;Nếu dùng &lt;code&gt;range&lt;/code&gt; Python2, sẽ khó mà tạo được list chứa 1 tỷ phần tử (do máy sẽ
+hết &lt;span class="caps"&gt;RAM&lt;/span&gt;), nhưng &lt;code&gt;range&lt;/code&gt; Python3 thì tạo cái gì cũng được, và nó chỉ trả
+về phần tử khi yêu cầu - đây là ý tưởng chính của &lt;a href="https://pp.pymi.vn/article/tuple_comps/"&gt;&amp;#8220;generator&amp;#8221;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nhưng range không phải generator, range là kiểu range, vì nó còn đặc biệt hơn.
+Một &lt;a href="https://pp.pymi.vn/article/tuple_comps/"&gt;generator&lt;/a&gt; không có len, range thì&amp;nbsp;có:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1_000_000_000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="mi"&gt;333333333&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+  &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;lt;stdin&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;module&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="ne"&gt;TypeError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;object&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;generator&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;has&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Bonus: đọc code tính len của range - code C:
+&lt;a href="https://github.com/python/cpython/blob/main/Objects/rangeobject.c#L182"&gt;https://github.com/python/cpython/blob/main/Objects/rangeobject.c#L182&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Hết&lt;/h2&gt;
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="news"></category><category term="range"></category><category term="generator"></category></entry><entry><title>Dùng Python để giải nén file zip, gz, tarball</title><link href="https://n.pymi.vn/ziptargz.html" rel="alternate"></link><published>2021-07-08T00:00:00+07:00</published><updated>2021-07-08T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-07-08:/ziptargz.html</id><summary type="html">&lt;p&gt;Python3 mang lại nhiều câu lệnh mới từ các module khiến Python có thể dùng
+thay cho các công cụ chuyên biệt khác, và làm rất&amp;nbsp;tốt.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1548382340-e7280a94e3ae?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjU3MDc5ODE&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Khi máy đã cài Python, người dùng không phải lo cài &lt;code&gt;unzip&lt;/code&gt;, &lt;code&gt;gzip&lt;/code&gt;, &lt;code&gt;tar&lt;/code&gt;&amp;#8230;
+vì Python đã có sẵn các thư viện làm …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python3 mang lại nhiều câu lệnh mới từ các module khiến Python có thể dùng
+thay cho các công cụ chuyên biệt khác, và làm rất&amp;nbsp;tốt.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1548382340-e7280a94e3ae?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjU3MDc5ODE&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Khi máy đã cài Python, người dùng không phải lo cài &lt;code&gt;unzip&lt;/code&gt;, &lt;code&gt;gzip&lt;/code&gt;, &lt;code&gt;tar&lt;/code&gt;&amp;#8230;
+vì Python đã có sẵn các thư viện làm những công việc này.
+Nhưng phải viết code? KHÔNG! Python có thể &amp;#8220;chạy&amp;#8221; các thư viện như các chương
+trình &lt;span class="caps"&gt;CLI&lt;/span&gt;.
+Cú&amp;nbsp;pháp:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;MODULENAME&lt;/span&gt; &lt;span class="n"&gt;INPUT&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ví dụ để nén/giải nén 1 file&amp;nbsp;zip:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ python3 -m zipfile --create post.zip content/*.md
+$ file post.zip
+post.zip: Zip archive data, at least v2.0 to extract
+$ python3 -m zipfile --extract post.zip /tmp
+$ ls /tmp/*.md
+/tmp/36eol.md      /tmp/dictorder.md  /tmp/equal.md    /tmp/hn2107.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Sợ chậm? no no no! các thư viện này đều gọi đến thư viện viết bằng C bên dưới,
+tốc độ nhiều khi &lt;strong&gt;test nhanh&lt;/strong&gt; còn cho kết quả nhanh hơn
+các chương trình &lt;span class="caps"&gt;CLI&lt;/span&gt; chuyên&amp;nbsp;dụng.&lt;/p&gt;
+&lt;p&gt;Giải nén&amp;nbsp;tar.gz&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ python3 -m gzip -d ~/Downloads/go1.15.7.linux-amd64.tar.gz
+$ python3 -m tarfile -e ~/Downloads/go1.15.7.linux-amd64.tar
+$ du -csh go
+377M    go
+377M    total
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Hết&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ python3 -V
+Python &lt;span class="m"&gt;3&lt;/span&gt;.8.10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="news"></category><category term="zip"></category><category term="unzip"></category><category term="gz"></category><category term="gzip"></category><category term="tar"></category></entry><entry><title>Lớp Python PyMivn khóa 37 tại Hà Nội khai giảng 1/7/2021</title><link href="https://n.pymi.vn/pymihn2107.html" rel="alternate"></link><published>2021-06-24T00:00:00+07:00</published><updated>2021-06-24T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-06-24:/pymihn2107.html</id><summary type="html">&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để trở thành lập trình viên #python chuyên&amp;nbsp;nghiệp.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1607188924640-b3382257fee7?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjQ1NDUyODg&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Học viên không ở Hà Nội có thể học qua livestream trên Youtube với kênh chat
+Slack cùng các học viên Hà&amp;nbsp;Nội.&lt;/p&gt;
+&lt;p&gt;Lịch học: &lt;a href="https://gitlab.com/pyfml/prepare/-/boards/2862036"&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Chi tiết tại trang chủ &lt;a href="https://pymi.vn"&gt;Pymivn&lt;/a&gt;.
+Thắc mắc/hỏi …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để trở thành lập trình viên #python chuyên&amp;nbsp;nghiệp.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1607188924640-b3382257fee7?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjQ1NDUyODg&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Học viên không ở Hà Nội có thể học qua livestream trên Youtube với kênh chat
+Slack cùng các học viên Hà&amp;nbsp;Nội.&lt;/p&gt;
+&lt;p&gt;Lịch học: &lt;a href="https://gitlab.com/pyfml/prepare/-/boards/2862036"&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Chi tiết tại trang chủ &lt;a href="https://pymi.vn"&gt;Pymivn&lt;/a&gt;.
+Thắc mắc/hỏi đáp: &lt;a href="https://invite.pymi.vn"&gt;slack&lt;/a&gt;&lt;/p&gt;</content><category term="pymi.vn"></category><category term="pymivn"></category><category term="pyfml"></category><category term="course"></category><category term="class"></category><category term="khóa học"></category></entry><entry><title>Tôi muốn … em</title><link href="https://n.pymi.vn/ellipsis.html" rel="alternate"></link><published>2021-06-19T00:00:00+07:00</published><updated>2021-06-19T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-06-19:/ellipsis.html</id><summary type="html">&lt;p&gt;&lt;code&gt;...&lt;/code&gt; là một keyword hợp lệ trong Python, đã có từ rất lâu, và rất ít được biết&amp;nbsp;tới.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1560336767-9bb468f204c0?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjQwNzMxNzQ&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;...&lt;/code&gt; trong tiếng Anh là Ellipsis, trong Python có thể viết 1 trong 2 giá trị này, chúng có kiểu &lt;code&gt;ellipsis&lt;/code&gt; chữ e viết&amp;nbsp;thường.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; x = ...
+&amp;gt;&amp;gt;&amp;gt; type(x)
+&amp;lt;class &amp;#39;ellipsis&amp;#39;&amp;gt;
+&amp;gt;&amp;gt;&amp;gt; Ellipsis is ...
+True …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;...&lt;/code&gt; là một keyword hợp lệ trong Python, đã có từ rất lâu, và rất ít được biết&amp;nbsp;tới.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1560336767-9bb468f204c0?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjQwNzMxNzQ&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;...&lt;/code&gt; trong tiếng Anh là Ellipsis, trong Python có thể viết 1 trong 2 giá trị này, chúng có kiểu &lt;code&gt;ellipsis&lt;/code&gt; chữ e viết&amp;nbsp;thường.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; x = ...
+&amp;gt;&amp;gt;&amp;gt; type(x)
+&amp;lt;class &amp;#39;ellipsis&amp;#39;&amp;gt;
+&amp;gt;&amp;gt;&amp;gt; Ellipsis is ...
+True
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ellipsis dùng để giữ chỗ khi cần, ví dụ khi viết&amp;nbsp;function:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;pikachu&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;có tác dụng&amp;nbsp;như&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;pikachu&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;pass&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Mới đây, &lt;code&gt;...&lt;/code&gt; được trọng dụng trong 1 framework siêu hot mới nổi có tên &lt;a href="https://fastapi.tiangolo.com/tutorial/body-multiple-params/"&gt;FastAPI&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;update_item&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;item_id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Item&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;importance&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Ellipsis&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The same as the ellipsis literal “&amp;#8230;”. Special value used mostly in conjunction with extended slicing syntax for user-defined container data&amp;nbsp;types.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Tham&amp;nbsp;khảo&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/constants.html#Ellipsis"&gt;https://docs.python.org/3/library/constants.html#Ellipsis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="news"></category><category term="features"></category></entry><entry><title>Là và bằng</title><link href="https://n.pymi.vn/equal.html" rel="alternate"></link><published>2021-06-18T00:00:00+07:00</published><updated>2021-06-18T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-06-18:/equal.html</id><summary type="html">&lt;p&gt;Nếu học Python tại Pymi.vn, chắc chắn bạn biết 1 bí mật ít khi dùng tới: 1 == True và 0 ==&amp;nbsp;False:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Thậm chí có thể đem tính&amp;nbsp;toán:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;bí mật này dẫn tới một số vấn đề &amp;#8220;kỳ lạ …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Nếu học Python tại Pymi.vn, chắc chắn bạn biết 1 bí mật ít khi dùng tới: 1 == True và 0 ==&amp;nbsp;False:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Thậm chí có thể đem tính&amp;nbsp;toán:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;bí mật này dẫn tới một số vấn đề &amp;#8220;kỳ lạ&amp;nbsp;sau&amp;#8221;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;xs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;xs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;sẽ có ít nhất 68% được hỏi trả lời sai câu này, dù trình độ code Python lâu đến mấy.
+Lý do vì trong thực tế, gần như không bao giờ gặp trường hợp như vậy, việc tạo 1 list chứa cả boolean lẫn integer đã là code quá dở&amp;nbsp;rồi.&lt;/p&gt;
+&lt;p&gt;Ngày hôm qua, trên &amp;#8220;room Telegram chat sách&amp;#8221; của Pymi (tham gia &lt;a href="https://invite.pymi.vn"&gt;Slack&lt;/a&gt; vào #chem-gio để ra nhập), thành viên cốt cán @no7kai có&amp;nbsp;đố:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;dic&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;yes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;no&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;maybe&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;dic&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;dic&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;no7kai&amp;gt;  Nhìn code đọc luôn kq&amp;nbsp;ae.&lt;/p&gt;
+&lt;p&gt;Ta cheating, mang luôn đi&amp;nbsp;chạy&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;dic&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;yes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;no&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;maybe&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;dic&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;maybe&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;có người sẽ thấy ngạc nhiên, nhưng Python có ghi rõ trong doc (tất nhiên cái phần doc này cũng không mấy ai&amp;nbsp;đọc:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A dictionary’s keys are almost arbitrary values. Values that are not hashable, that is, values containing lists, dictionaries or other mutable types (that are compared by value rather than by object identity) may not be used as keys. Numeric types used for keys obey the normal rules for numeric comparison: if two numbers compare equal (such as 1 and 1.0) then they can be used interchangeably to index the same dictionary entry. (Note however, that since computers store floating-point numbers as approximations it is usually unwise to use them as dictionary&amp;nbsp;keys.)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict"&gt;mapping-types-dict&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Khi giá trị bằng nhau, chúng được dùng thay thế&amp;nbsp;nhau&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;dic&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;maybe&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;dic&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;maybe&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ví dụ ban đầu và ví dụ này, Python đều so sánh &lt;code&gt;==&lt;/code&gt; để thực hiện các phép&amp;nbsp;tính.&lt;/p&gt;
+&lt;h3&gt;Hỏi&amp;nbsp;khó&lt;/h3&gt;
+&lt;p&gt;vậy còn set? set([True, 1]) thì trả về mấy phần&amp;nbsp;tử?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1542134377-e67fbf4ca699?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjM5ODE1ODM&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="news"></category><category term="features"></category></entry><entry><title>Python len trả về kết quả: ngay và luôn</title><link href="https://n.pymi.vn/len.html" rel="alternate"></link><published>2021-06-17T00:00:00+07:00</published><updated>2021-06-17T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-06-17:/len.html</id><summary type="html">&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1553880376-2dec478c8e3b?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjM4OTI4ODE&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Vì &lt;a href="https://n.pymi.vn/listarray.html"&gt;CPython list là 1 array&lt;/a&gt;, mà 1 array luôn chứa (phía
+sau) kích thước/độ dài
+của nó, nên việc tính len(x) luôn luôn trả về kết quả ngay lập tức không phụ
+thuộc vào độ lớn của list hay còn gọi là &amp;#8220;có độ phức tạp&amp;nbsp;O …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1553880376-2dec478c8e3b?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjM4OTI4ODE&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Vì &lt;a href="https://n.pymi.vn/listarray.html"&gt;CPython list là 1 array&lt;/a&gt;, mà 1 array luôn chứa (phía
+sau) kích thước/độ dài
+của nó, nên việc tính len(x) luôn luôn trả về kết quả ngay lập tức không phụ
+thuộc vào độ lớn của list hay còn gọi là &amp;#8220;có độ phức tạp&amp;nbsp;O(1)&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3/faq/design.html#how-are-lists-implemented-in-cpython"&gt;How are lists implemented in&amp;nbsp;CPython?&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CPython’s lists are really variable-length arrays, not Lisp-style linked
+lists. The implementation uses a contiguous array of references to other
+objects, and keeps a pointer to this array and the array’s length in a list
+head&amp;nbsp;structure.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="news"></category><category term="features"></category></entry><entry><title>Enum trong Python</title><link href="https://n.pymi.vn/enum.html" rel="alternate"></link><published>2021-06-10T00:00:00+07:00</published><updated>2021-06-10T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-06-10:/enum.html</id><summary type="html">&lt;p&gt;Khái niệm Enum có trong hầu hết các ngôn ngữ static typing nhưng mãi đến 3.4
+mới xuất hiện trong Python standard lib &lt;a href="https://docs.python.org/3/library/enum.html"&gt;enum&lt;/a&gt;.
+Tức Python developers đã nghĩ ra cách để không phải dùng
+enum cũng chẳng sao&amp;#8230; nhưng có thì&amp;nbsp;tốt.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1575846008827-b0167ab20bb9?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjMyNDkyNTI&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;h2&gt;Enum để làm&amp;nbsp;gì?&lt;/h2&gt;
+&lt;p&gt;Enum là …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Khái niệm Enum có trong hầu hết các ngôn ngữ static typing nhưng mãi đến 3.4
+mới xuất hiện trong Python standard lib &lt;a href="https://docs.python.org/3/library/enum.html"&gt;enum&lt;/a&gt;.
+Tức Python developers đã nghĩ ra cách để không phải dùng
+enum cũng chẳng sao&amp;#8230; nhưng có thì&amp;nbsp;tốt.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1575846008827-b0167ab20bb9?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjMyNDkyNTI&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;h2&gt;Enum để làm&amp;nbsp;gì?&lt;/h2&gt;
+&lt;p&gt;Enum là viết tắt của enumeration (tránh nhầm với function enumerate).
+Enum là một bộ hữu hạn các tên ứng với các giá trị cố định.
+Ví dụ
+- kích thước áo chỉ có trong 1 tập giới hạn các giá trị &lt;span class="caps"&gt;XXS&lt;/span&gt; &lt;span class="caps"&gt;XS&lt;/span&gt; S M L &lt;span class="caps"&gt;XL&lt;/span&gt; &lt;span class="caps"&gt;XXL&lt;/span&gt;
+- điểm số tây chỉ nằm trong tập A B C D E F
+- các ngày trong tuần chỉ có từ thứ 2 đến chủ nhật
+- các lá bài chỉ có 4 chất dô cơ tép bích :))))) (Diamond Heart Club&amp;nbsp;Spade)&lt;/p&gt;
+&lt;p&gt;Làm thế nào để biểu diễn 4 chất này lên&amp;nbsp;Python?&lt;/p&gt;
+&lt;p&gt;Cách 1: dùng string &amp;#8216;D&amp;#8217;, &amp;#8216;H&amp;#8217;, &amp;#8216;C&amp;#8217;,&amp;nbsp;&amp;#8216;S&amp;#8217;&lt;/p&gt;
+&lt;p&gt;Nhược điểm: không so sánh được nếu ta có luật Spade &amp;lt; Club &amp;lt; Diamond &amp;lt; Heart,
+lập trình viên cũng có thể gõ nhầm chữ P và để lại lỗi chỉ phát hiện ra lúc&amp;nbsp;chạy.&lt;/p&gt;
+&lt;p&gt;Cách 2: đặt tên theo kiểu &lt;span class="caps"&gt;CONSTANT&lt;/span&gt; gán giá trị số - cách này phổ biến ở các
+ngôn ngữ không có&amp;nbsp;Enum.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;SPADE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="n"&gt;CLUB&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;DIAMOND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="n"&gt;HEART&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="n"&gt;ALL_SUITS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SPADE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;CLUB&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;DIAMOND&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;HEART&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Nhược điểm: người dùng có thể đưa nhầm số khác vào và vẫn chạy, do bản chất
+đây là các số. Không lấy được tập giá trị, hoặc phải tự tạo 1&amp;nbsp;list.&lt;/p&gt;
+&lt;p&gt;Và Enum đến giải cứu, để tạo 1 enum, kế thừa nó từ class Enum, ví dụ game 1&amp;nbsp;cây:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;typing&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Tuple&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;enum&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;IntEnum&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;auto&lt;/span&gt;
+
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Suit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IntEnum&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;SPADE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;auto&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;CLUB&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;auto&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;DIAMOND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;auto&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;HEART&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;auto&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SPADE&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HEART&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;create_cards&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Tuple&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="p"&gt;]]:&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;[(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;play_1_cay&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;choice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;create_cards&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;LeMe: &lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s2"&gt; vs No: &lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s2"&gt;: &lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+
+&lt;span class="n"&gt;play_1_cay&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CLUB&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;play_1_cay&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="https://glot.io/snippets/fze7cclp5r"&gt;Link&amp;nbsp;glot.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SPADE&lt;/span&gt; &lt;span class="n"&gt;SPADE&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CLUB&lt;/span&gt; &lt;span class="n"&gt;CLUB&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DIAMOND&lt;/span&gt; &lt;span class="n"&gt;DIAMOND&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HEART&lt;/span&gt; &lt;span class="n"&gt;HEART&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="n"&gt;LeMe&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CLUB&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;vs&lt;/span&gt; &lt;span class="n"&gt;No&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DIAMOND&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="n"&gt;LeMe&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;vs&lt;/span&gt; &lt;span class="n"&gt;No&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Suit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HEART&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="https://pp.pymi.vn/article/mypy/"&gt;mypy&lt;/a&gt; sẽ báo: ở dòng gọi &lt;code&gt;play_1_cay(8, 5)&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;enumtest&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Argument&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;play_1_cay&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;has&lt;/span&gt; &lt;span class="n"&gt;incompatible&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;int&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;expected&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Suit&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;auto()&lt;/code&gt; tự sinh số tăng&amp;nbsp;dần.&lt;/p&gt;
+&lt;p&gt;Happy&amp;nbsp;enum.&lt;/p&gt;
+&lt;h2&gt;Tham&amp;nbsp;khảo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;https://docs.python.org/3/library/enum.html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="news"></category><category term="features"></category><category term="stdlib"></category></entry><entry><title>Lập trình viên Python có mức lương cao nhất tại Việt Nam 2021</title><link href="https://n.pymi.vn/topmoney.html" rel="alternate"></link><published>2021-06-09T00:00:00+07:00</published><updated>2021-06-09T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-06-09:/topmoney.html</id><summary type="html">&lt;p&gt;Theo &lt;a href="https://topdev.vn/page/bao-cao-it-viet-nam"&gt;Báo Cáo Thị Trường &lt;span class="caps"&gt;IT&lt;/span&gt; Việt Nam 2021 – Developers Recruitment State&lt;/a&gt;,
+lập trình viên dùng &amp;#8220;công nghệ&amp;#8221; Python có mức lương cao nhất, ngôn ngữ theo sát
+sau là &lt;a href="https://pp.pymi.vn/article/go/"&gt;Golang&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="topmoney" src="https://n.pymi.vn/images/topmoney.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;MỨC LƯƠNG CỦA LẬP TRÌNH VIÊN &lt;span class="caps"&gt;THEO&lt;/span&gt; CÔNG NGHỆ
+(một cách tương đối dành cho đối tượng có tới …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Theo &lt;a href="https://topdev.vn/page/bao-cao-it-viet-nam"&gt;Báo Cáo Thị Trường &lt;span class="caps"&gt;IT&lt;/span&gt; Việt Nam 2021 – Developers Recruitment State&lt;/a&gt;,
+lập trình viên dùng &amp;#8220;công nghệ&amp;#8221; Python có mức lương cao nhất, ngôn ngữ theo sát
+sau là &lt;a href="https://pp.pymi.vn/article/go/"&gt;Golang&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="topmoney" src="https://n.pymi.vn/images/topmoney.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;MỨC LƯƠNG CỦA LẬP TRÌNH VIÊN &lt;span class="caps"&gt;THEO&lt;/span&gt; CÔNG NGHỆ
+(một cách tương đối dành cho đối tượng có tới 3 năm kinh&amp;nbsp;nghiệm)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Ngoài điểm sáng này ra, phần còn lại của bản báo cáo có nhiều &amp;#8220;vấn đề kỹ thuật&amp;#8221;,
+như chuyện xếp MongoDB và Redis vào nhóm &lt;span class="caps"&gt;SQL&lt;/span&gt;, nhóm chung các nghề là &amp;#8220;lập trình
+viên&amp;#8221; (thay vì DevOps, SysAdmin, Data Analyst, hay thậm chí Scrum Master! &amp;#8230;).
+Kèm theo bất ngờ lớn khi &lt;strong&gt;Falcon&lt;/strong&gt; vượt
+qua &lt;strong&gt;Flask&lt;/strong&gt; đứng vị trí thứ 2 trong các bộ &amp;#8220;khung&amp;#8221; (theo báo cáo)
+phổ biến nhất của Python tại Việt Nam, trong khi trên thế giới, Flask là số 1 theo
+báo cáo của &lt;a href="https://www.jetbrains.com/lp/python-developers-survey-2020/"&gt;&lt;span class="caps"&gt;PSF&lt;/span&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; JetBrains&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Python no 1 khỏi phải bàn&amp;nbsp;😎&lt;/p&gt;
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="news"></category><category term="news"></category></entry><entry><title>Đáp án vì sao không tool nào thấy bug</title><link href="https://n.pymi.vn/free.html" rel="alternate"></link><published>2021-06-08T00:00:00+07:00</published><updated>2021-06-08T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-06-08:/free.html</id><summary type="html">&lt;p&gt;Trong &lt;a href="https://n.pymi.vn/latebinding.html"&gt;bài trước&lt;/a&gt;, một ví dụ trông đơn giản
+và dễ phát hiện lỗi bằng mắt việc x chưa được định nghĩa nhưng không tool nào
+của Python phát hiện&amp;nbsp;ra.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;n_pymi_vn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
+
+
+&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;n_pymi_vn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1593627906979-dc2fdc503e32?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjMxMTkyNTE&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Lý do là bởi khái …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Trong &lt;a href="https://n.pymi.vn/latebinding.html"&gt;bài trước&lt;/a&gt;, một ví dụ trông đơn giản
+và dễ phát hiện lỗi bằng mắt việc x chưa được định nghĩa nhưng không tool nào
+của Python phát hiện&amp;nbsp;ra.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;n_pymi_vn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
+
+
+&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;n_pymi_vn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1593627906979-dc2fdc503e32?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjMxMTkyNTE&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Lý do là bởi khái niệm ít được nghe tới &lt;a href="https://pp.pymi.vn/article/free/"&gt;&amp;#8220;free variable&amp;#8221;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="news"></category><category term="features"></category></entry><entry><title>Vì sao không chương trình nào phát hiện ra lỗi này?</title><link href="https://n.pymi.vn/latebinding.html" rel="alternate"></link><published>2021-06-06T00:00:00+07:00</published><updated>2021-06-06T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-06-06:/latebinding.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;n_pymi_vn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
+
+
+&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;n_pymi_vn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Đoạn code này có bug gì? tại sao các tool không phát hiện ra?
+và nên sửa thế nào để các tool có thể phát hiện&amp;nbsp;ra?&lt;/p&gt;
+&lt;p&gt;Xóa 3 dòng cuối đi, flake8 hay mypy sẽ …&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;n_pymi_vn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
+
+
+&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;n_pymi_vn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Đoạn code này có bug gì? tại sao các tool không phát hiện ra?
+và nên sửa thế nào để các tool có thể phát hiện&amp;nbsp;ra?&lt;/p&gt;
+&lt;p&gt;Xóa 3 dòng cuối đi, flake8 hay mypy sẽ phát hiện ra&amp;nbsp;bug:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;n_pymi_vn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;flake8&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;F821&lt;/span&gt; &lt;span class="n"&gt;undefined&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;x&amp;#39;&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;mypy&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Name&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;x&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;defined&lt;/span&gt;
+&lt;span class="n"&gt;Found&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;checked&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Chú ý câu hỏi về việc phát hiện ra bug này &lt;strong&gt;trước&lt;/strong&gt; khi chạy&amp;nbsp;code.&lt;/p&gt;
+&lt;p&gt;Việc định nghĩa x = 10 sau &lt;code&gt;def n_pymi_vn&lt;/code&gt; hoàn toàn không phải bug, đoạn code
+sau chạy &lt;span class="caps"&gt;OK&lt;/span&gt;, không có&amp;nbsp;bug:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;n_pymi_vn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
+
+
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;n_pymi_vn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;https://glot.io/snippets/fzafpx0nqu&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1571030905044-7458c2a7ac24?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjI5NTM3NTI&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Câu trả lời sẽ được tiết lộ vào bài viết&amp;nbsp;sau.&lt;/p&gt;
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="news"></category><category term="features"></category><category term="quiz"></category></entry><entry><title>Thư viện pathlib trong Python3.4</title><link href="https://n.pymi.vn/pathlib.html" rel="alternate"></link><published>2021-05-27T00:00:00+07:00</published><updated>2021-05-27T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-05-27:/pathlib.html</id><summary type="html">&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1584802142766-52eda937f127?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjIxMzAzMDQ&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Làm thế nào để viết code mở 1 file ở ngay cùng thư mục file code hiện&amp;nbsp;tại?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;./data.csv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;cách này sẽ mở file cùng thư mục làm việc hiện tại (current work directory -
+cwd), mặc định là thư mục người dùng gõ lệnh để chạy Python script …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1584802142766-52eda937f127?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjIxMzAzMDQ&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Làm thế nào để viết code mở 1 file ở ngay cùng thư mục file code hiện&amp;nbsp;tại?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;./data.csv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;cách này sẽ mở file cùng thư mục làm việc hiện tại (current work directory -
+cwd), mặc định là thư mục người dùng gõ lệnh để chạy Python script.
+Nếu&amp;nbsp;gõ:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;thì ok, nhưng nếu đang ở &lt;code&gt;/&lt;/code&gt; gõ &lt;code&gt;python /path/to/script.py&lt;/code&gt; sẽ fail.
+Để lấy cwd, gõ &lt;code&gt;os.getcwd()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Python có một biến đặc biệt &lt;code&gt;__file__&lt;/code&gt; là đường dẫn của chính file code hiện
+tại, cách làm truyền thống ở Python2.x sẽ&amp;nbsp;là&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+
+&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;abspath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+                &lt;span class="vm"&gt;__file__&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;data.csv&amp;quot;&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;bước &lt;code&gt;abspath&lt;/code&gt; là cần thiết, vì &lt;code&gt;__path__&lt;/code&gt; &lt;a href="https://stackoverflow.com/questions/7116889/is-module-file-attribute-absolute-or-relative"&gt;có thể trả về đường dẫn tương đối
+(như &lt;code&gt;./script.py&lt;/code&gt;).&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pathlib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="vm"&gt;__file__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;absolute&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;data.csv&amp;quot;&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ngắn gọn hơn nhiều, với dấu &lt;code&gt;/&lt;/code&gt; là dấu phân cách quen thuộc trên các hệ điều
+hành không phải&amp;nbsp;Windows.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;PS&lt;/span&gt;: nếu bạn nghĩ vậy là phức tạp? đây là &lt;a href="https://stackoverflow.com/questions/59895/how-can-i-get-the-source-directory-of-a-bash-script-from-within-the-script-itsel"&gt;code&amp;nbsp;bash&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Tham&amp;nbsp;khảo&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;https://docs.python.org/3/library/pathlib.html&lt;/li&gt;
+&lt;li&gt;https://stackoverflow.com/questions/7116889/is-module-file-attribute-absolute-or-relative&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="features"></category><category term="features"></category></entry><entry><title>CPython list thực chất là 1 array</title><link href="https://n.pymi.vn/listarray.html" rel="alternate"></link><published>2021-05-24T00:00:00+07:00</published><updated>2021-05-24T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-05-24:/listarray.html</id><summary type="html">&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1586294839852-650d52bb6923?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjE4MjAwMTc&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Trong CPython (bản/implementation Python phổ biến nhất - tải tại python.org),
+kiểu dữ liệu list thực chất là 1 array tương tự như array trong các ngôn ngữ
+lập trình khác (C/Java&amp;#8230;).
+Nó không phải kiểu linked-list mà trong ngành khoa học máy tính thường hay
+gọi là …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1586294839852-650d52bb6923?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjE4MjAwMTc&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Trong CPython (bản/implementation Python phổ biến nhất - tải tại python.org),
+kiểu dữ liệu list thực chất là 1 array tương tự như array trong các ngôn ngữ
+lập trình khác (C/Java&amp;#8230;).
+Nó không phải kiểu linked-list mà trong ngành khoa học máy tính thường hay
+gọi là (linkedlist) list (xem link phần tham&amp;nbsp;khảo).&lt;/p&gt;
+&lt;p&gt;Thư viện standard &lt;code&gt;deque&lt;/code&gt; cung cấp kiểu dữ liệu &lt;code&gt;double-ended queue&lt;/code&gt;, giống
+với kiểu &lt;code&gt;double linked list&lt;/code&gt;. Và thư viện &lt;code&gt;array&lt;/code&gt; cung cấp kiểu dữ liệu&amp;#8230;
+array (như list với yêu cầu các phàn tử phải cùng&amp;nbsp;kiểu).&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;deque&lt;/code&gt; có thể dùng để lấy 10 dòng cuối của 1 file rất đơn giản, dùng ít
+bộ&amp;nbsp;nhớ:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;tail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;Return the last n lines of a file&amp;#39;&lt;/span&gt;
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;deque&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Tham&amp;nbsp;khảo&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;https://docs.python.org/3/faq/design.html#how-are-lists-implemented-in-cpython&lt;/li&gt;
+&lt;li&gt;https://docs.python.org/3/library/collections.html#collections.deque&lt;/li&gt;
+&lt;li&gt;https://docs.python.org/3/library/array.html&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.geeksforgeeks.org/linked-list-vs-array/"&gt;https://www.geeksforgeeks.org/linked-list-vs-array/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="features"></category><category term="list"></category><category term="array"></category><category term="CPython"></category><category term="deque"></category></entry><entry><title>dataclass trong Python3.7</title><link href="https://n.pymi.vn/dataclass.html" rel="alternate"></link><published>2021-05-22T00:00:00+07:00</published><updated>2021-05-22T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-05-22:/dataclass.html</id><summary type="html">&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/flagged/photo-1587096472434-8b65b343980d?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjE2NTM1NTg&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Python3.7 trở đi có thêm 1 thư viện mới: &lt;code&gt;dataclasses&lt;/code&gt;, thư viện này cho phép
+tạo 1 data class (class với mục đích chính để biểu diễn/chứa dữ liệu,
+thường không định nghĩa method)
+với cú pháp ngắn gọn, kết hợp với cú pháp type&amp;nbsp;annotation:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;dataclasses …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/flagged/photo-1587096472434-8b65b343980d?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjE2NTM1NTg&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Python3.7 trở đi có thêm 1 thư viện mới: &lt;code&gt;dataclasses&lt;/code&gt;, thư viện này cho phép
+tạo 1 data class (class với mục đích chính để biểu diễn/chứa dữ liệu,
+thường không định nghĩa method)
+với cú pháp ngắn gọn, kết hợp với cú pháp type&amp;nbsp;annotation:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;dataclasses&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;dc&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;typing&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@dc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dataclass&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;User&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
+    &lt;span class="n"&gt;languages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;age&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;
+
+
+&lt;span class="n"&gt;p1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Pymier1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;SQL&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;output&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;User&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Pymier1&amp;#39;&lt;/span&gt;, &lt;span class="nv"&gt;languages&lt;/span&gt;&lt;span class="o"&gt;=[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Python&amp;#39;&lt;/span&gt;, &lt;span class="s1"&gt;&amp;#39;SQL&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;, &lt;span class="nv"&gt;age&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;20&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Chú ý: từ Python3.9 trở đi, có thể viết &lt;code&gt;list[str]&lt;/code&gt; mà không cần import&amp;nbsp;typing.&lt;/p&gt;
+&lt;p&gt;code này tương đương với code sau ở Python các bản trước&amp;nbsp;3.7:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;User&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;languages&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;age&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;languages&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;languages&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;age&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;age&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__str__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;User(name=&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#39;, languages=&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;languages&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;, age=&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;age&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;)&amp;quot;&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# ... và nhiều nữa https://stackoverflow.com/a/47955313/807703&lt;/span&gt;
+&lt;span class="n"&gt;p1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Pymier1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Vietnames&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Để biến 1 dataclass thành dict, chỉ cần dùng function &lt;code&gt;asdict&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asdict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Pymier1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;languages&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Python&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Vietnames&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;age&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Để class trở nên &amp;#8220;immutable&amp;#8221;, gọi dataclass với argument &lt;code&gt;frozen=True&lt;/code&gt;
+https://docs.python.org/3.8/library/dataclasses.html#frozen-instances&lt;/p&gt;
+&lt;p&gt;dataclass thích hợp để thay cho namedtuple, tuple hay các class chỉ để chứa
+dữ liệu, hay dictionary hoạt động như 1 container chứa dữ&amp;nbsp;liệu.&lt;/p&gt;
+&lt;h3&gt;Tham&amp;nbsp;khảo:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;https://www.python.org/dev/peps/pep-0557/#why-not-just-use-namedtuple&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="features"></category><category term="features"></category><category term="dataclass"></category></entry><entry><title>Từ Python3.7 trở đi, các key trong dict có thứ tự</title><link href="https://n.pymi.vn/dictorder.html" rel="alternate"></link><published>2021-05-21T00:00:00+07:00</published><updated>2021-05-21T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-05-21:/dictorder.html</id><summary type="html">&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1577303600246-c694ab6ad8a1?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjE1NjIwMjc&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Các key sẽ theo thứ tự chúng được thêm vào&amp;nbsp;dict.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;}:&lt;/span&gt;
+   &lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+   &lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mi"&gt;20&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;khác với trước kia, các key không có thứ tự (khác với ngẫu nhiên - ngẫu nhiên
+là mỗi lần chạy …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1577303600246-c694ab6ad8a1?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjE1NjIwMjc&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Các key sẽ theo thứ tự chúng được thêm vào&amp;nbsp;dict.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;}:&lt;/span&gt;
+   &lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+   &lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mi"&gt;20&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;khác với trước kia, các key không có thứ tự (khác với ngẫu nhiên - ngẫu nhiên
+là mỗi lần chạy qua key dict ra 1 kết quả khác nhau, còn ở đây là luôn
+giống nhau trong 1 lần chạy&amp;nbsp;code).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python2&lt;/span&gt;
+&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mf"&gt;2.7.18&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Mar&lt;/span&gt;  &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="mi"&gt;2021&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;45&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;GCC&lt;/span&gt; &lt;span class="mf"&gt;9.3.0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;linux2&lt;/span&gt;
+&lt;span class="n"&gt;Type&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;help&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;credits&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;license&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;more&lt;/span&gt; &lt;span class="n"&gt;information&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;}:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mi"&gt;20&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;}:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mi"&gt;20&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Tham&amp;nbsp;khảo&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;https://docs.python.org/3/whatsnew/3.7.html&lt;/li&gt;
+&lt;li&gt;https://mail.python.org/pipermail/python-dev/2017-December/151283.html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="features"></category><category term="dictorder"></category><category term="tip"></category><category term="dict"></category></entry><entry><title>Python 3.6 sẽ hết thời vào tháng 12 2021</title><link href="https://n.pymi.vn/py36eol.html" rel="alternate"></link><published>2021-05-20T00:00:00+07:00</published><updated>2021-05-20T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-05-20:/py36eol.html</id><summary type="html">&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1556575157-75a0d60e4835?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjE1MzE1MTk&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Có thể bạn đã biết, bản #python 3 ngon lành đầu tiên được dùng siêu rộng rãi là
+3.6 sẽ hết hạn (&lt;span class="caps"&gt;EOL&lt;/span&gt;) vào cuối năm nay. Đã đến lúc học dần các tính năng mới của
+3.8 và upgrade dần đi thôi&amp;nbsp;😜&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://devguide.python.org/#status-of-python-branches"&gt;https://devguide.python.org/#status-of-python-branches …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="img" src="https://images.unsplash.com/photo-1556575157-75a0d60e4835?crop=entropy&amp;amp;cs=tinysrgb&amp;amp;fit=max&amp;amp;fm=jpg&amp;amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjE1MzE1MTk&amp;amp;ixlib=rb-1.2.1&amp;amp;q=80&amp;amp;w=600"&gt;&lt;/p&gt;
+&lt;p&gt;Có thể bạn đã biết, bản #python 3 ngon lành đầu tiên được dùng siêu rộng rãi là
+3.6 sẽ hết hạn (&lt;span class="caps"&gt;EOL&lt;/span&gt;) vào cuối năm nay. Đã đến lúc học dần các tính năng mới của
+3.8 và upgrade dần đi thôi&amp;nbsp;😜&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://devguide.python.org/#status-of-python-branches"&gt;https://devguide.python.org/#status-of-python-branches&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để học Python tại Hà Nội &lt;span class="caps"&gt;TP&lt;/span&gt; &lt;span class="caps"&gt;HCM&lt;/span&gt; (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&amp;nbsp;học.&lt;/p&gt;</content><category term="news"></category><category term="eol"></category><category term="version"></category></entry><entry><title>Code Advent of code 2020 của giám đốc nghiên cứu Google - Peter Norvig</title><link href="https://n.pymi.vn/aoc2020-norvig.html" rel="alternate"></link><published>2021-01-09T00:00:00+07:00</published><updated>2021-01-09T00:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-01-09:/aoc2020-norvig.html</id><summary type="html">&lt;p&gt;Lý do bạn quá bận để tham gia &amp;#8220;adventofcode&amp;nbsp;2020&amp;#8221;?&lt;/p&gt;
+&lt;p&gt;Hãy nghĩ lại, khi giám đốc nghiên cứu của Google - Peter Norvig đã xử đẹp 47/50 bài với 1 file jupyter notebook, với code siêu đẹp, siêu ngắn gọn. Và như thường lệ, đây là &amp;#8220;văn mẫu&amp;#8221; của các …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Lý do bạn quá bận để tham gia &amp;#8220;adventofcode&amp;nbsp;2020&amp;#8221;?&lt;/p&gt;
+&lt;p&gt;Hãy nghĩ lại, khi giám đốc nghiên cứu của Google - Peter Norvig đã xử đẹp 47/50 bài với 1 file jupyter notebook, với code siêu đẹp, siêu ngắn gọn. Và như thường lệ, đây là &amp;#8220;văn mẫu&amp;#8221; của các pythonista&amp;nbsp;😍&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/norvig/pytudes/blob/master/ipynb/Advent-2020.ipynb"&gt;https://github.com/norvig/pytudes/blob/master/ipynb/Advent-2020.ipynb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để trở thành lập trình viên #python chuyên&amp;nbsp;nghiệp.&lt;/p&gt;
+&lt;p&gt;Lớp &lt;span class="caps"&gt;HCM&lt;/span&gt; khai giảng tối thứ 3 ngày&amp;nbsp;12/1/2021.&lt;/p&gt;
+&lt;h1&gt;pymi #pymivn #pyfml&amp;nbsp;#adventofcode&lt;/h1&gt;</content><category term="news"></category><category term="văn mẫu"></category><category term="beautifulcode"></category><category term="aoc"></category><category term="adventofcode"></category></entry><entry><title>Lớp Python PyMivn khóa 35 tại Sài Gòn - tp Hồ Chí Minh khai giảng 12/1/2021</title><link href="https://n.pymi.vn/pymihcm2101.html" rel="alternate"></link><published>2021-01-08T21:00:00+07:00</published><updated>2021-01-08T21:00:00+07:00</updated><author><name>Pymier0</name></author><id>tag:n.pymi.vn,2021-01-08:/pymihcm2101.html</id><content type="html">&lt;p&gt;Đăng ký ngay tại &lt;a href="https://pymi.vn"&gt;PyMI.vn&lt;/a&gt; để trở thành lập trình viên #python chuyên&amp;nbsp;nghiệp.&lt;/p&gt;
+&lt;p&gt;Lớp &lt;span class="caps"&gt;HCM&lt;/span&gt; khai giảng tối thứ 3 ngày&amp;nbsp;12/1/2021.&lt;/p&gt;
+&lt;p&gt;Lịch học: &lt;a href="https://trello.com/b/Ls5ZsxBS/h%E1%BB%8Dc-python-tp-h%E1%BB%93-ch%C3%AD-minh-pymivn-hcm2101-timetable"&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Chi tiết tại trang chủ &lt;a href="https://pymi.vn"&gt;Pymivn&lt;/a&gt;.
+Thắc mắc/hỏi đáp: &lt;a href="https://invite.pymi.vn"&gt;slack&lt;/a&gt;&lt;/p&gt;</content><category term="pymi.vn"></category><category term="pymivn"></category><category term="pyfml"></category><category term="course"></category><category term="class"></category><category term="khóa học"></category></entry></feed>
