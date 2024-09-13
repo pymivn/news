@@ -41,5 +41,4 @@ Các doanh nghiệp đóng góp 396 giao dịch. Trung bình mỗi giao dịch l
 
 Jupyter Notebook được sử dụng có thể xem tại [đây](https://gist.github.com/tung491/fde52f83ca79fda886b24fb524cfae82).
 
-
 Hết.
