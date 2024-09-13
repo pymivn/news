@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="Enum trong&nbsp;Python">
+<meta name="twitter:description" content="biểu diễn 1 nhóm các giá trị rời rạc - như size xs s m l xl xxl">
+        <!-- OG Tags -->
+<meta property="og:url" content="./enum.html"/>
+<meta property="og:title" content="Enum trong&nbsp;Python | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="biểu diễn 1 nhóm các giá trị rời rạc - như size xs s m l xl xxl" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="biểu diễn 1 nhóm các giá trị rời rạc - như size xs s m l xl xxl" />
+
+    <meta name="tags" content="features" />
+    <meta name="tags" content="stdlib" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2021-06-10 00:00:00+07:00">
+                <script>document.write(moment('2021-06-10 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Enum trong&nbsp;Python
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p>Khái niệm Enum có trong hầu hết các ngôn ngữ static typing nhưng mãi đến 3.4
+mới xuất hiện trong Python standard lib <a href="https://docs.python.org/3/library/enum.html">enum</a>.
+Tức Python developers đã nghĩ ra cách để không phải dùng
+enum cũng chẳng sao&#8230; nhưng có thì&nbsp;tốt.</p>
+<p><img alt="img" src="https://images.unsplash.com/photo-1575846008827-b0167ab20bb9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjMyNDkyNTI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=600"></p>
+<h2>Enum để làm&nbsp;gì?</h2>
+<p>Enum là viết tắt của enumeration (tránh nhầm với function enumerate).
+Enum là một bộ hữu hạn các tên ứng với các giá trị cố định.
+Ví dụ
+- kích thước áo chỉ có trong 1 tập giới hạn các giá trị <span class="caps">XXS</span> <span class="caps">XS</span> S M L <span class="caps">XL</span> <span class="caps">XXL</span>
+- điểm số tây chỉ nằm trong tập A B C D E F
+- các ngày trong tuần chỉ có từ thứ 2 đến chủ nhật
+- các lá bài chỉ có 4 chất dô cơ tép bích :))))) (Diamond Heart Club&nbsp;Spade)</p>
+<p>Làm thế nào để biểu diễn 4 chất này lên&nbsp;Python?</p>
+<p>Cách 1: dùng string &#8216;D&#8217;, &#8216;H&#8217;, &#8216;C&#8217;,&nbsp;&#8216;S&#8217;</p>
+<p>Nhược điểm: không so sánh được nếu ta có luật Spade &lt; Club &lt; Diamond &lt; Heart,
+lập trình viên cũng có thể gõ nhầm chữ P và để lại lỗi chỉ phát hiện ra lúc&nbsp;chạy.</p>
+<p>Cách 2: đặt tên theo kiểu <span class="caps">CONSTANT</span> gán giá trị số - cách này phổ biến ở các
+ngôn ngữ không có&nbsp;Enum.</p>
+<div class="highlight"><pre><span></span><code><span class="n">SPADE</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">CLUB</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">DIAMOND</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">HEART</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">ALL_SUITS</span> <span class="o">=</span> <span class="p">(</span><span class="n">SPADE</span><span class="p">,</span> <span class="n">CLUB</span><span class="p">,</span> <span class="n">DIAMOND</span><span class="p">,</span> <span class="n">HEART</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Nhược điểm: người dùng có thể đưa nhầm số khác vào và vẫn chạy, do bản chất
+đây là các số. Không lấy được tập giá trị, hoặc phải tự tạo 1&nbsp;list.</p>
+<p>Và Enum đến giải cứu, để tạo 1 enum, kế thừa nó từ class Enum, ví dụ game 1&nbsp;cây:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">IntEnum</span><span class="p">,</span> <span class="n">auto</span>
+
+
+<span class="k">class</span> <span class="nc">Suit</span><span class="p">(</span><span class="n">IntEnum</span><span class="p">):</span>
+    <span class="n">SPADE</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">CLUB</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">DIAMOND</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">HEART</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+
+
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">Suit</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">Suit</span><span class="o">.</span><span class="n">SPADE</span> <span class="o">&lt;</span> <span class="n">Suit</span><span class="o">.</span><span class="n">HEART</span>
+
+
+<span class="k">def</span> <span class="nf">create_cards</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Suit</span><span class="p">]]:</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">Suit</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">play_1_cay</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="n">Suit</span><span class="p">):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">create_cards</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LeMe: </span><span class="si">{}</span><span class="s2"> vs No: </span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">s</span><span class="p">),</span> <span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">r</span><span class="p">))</span>
+
+
+<span class="n">play_1_cay</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">Suit</span><span class="o">.</span><span class="n">CLUB</span><span class="p">)</span>
+<span class="n">play_1_cay</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+
+<p><a href="https://glot.io/snippets/fze7cclp5r">Link&nbsp;glot.io</a></p>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Suit</span><span class="o">.</span><span class="n">SPADE</span> <span class="n">SPADE</span> <span class="mi">1</span>
+<span class="n">Suit</span><span class="o">.</span><span class="n">CLUB</span> <span class="n">CLUB</span> <span class="mi">2</span>
+<span class="n">Suit</span><span class="o">.</span><span class="n">DIAMOND</span> <span class="n">DIAMOND</span> <span class="mi">3</span>
+<span class="n">Suit</span><span class="o">.</span><span class="n">HEART</span> <span class="n">HEART</span> <span class="mi">4</span>
+<span class="n">LeMe</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Suit</span><span class="o">.</span><span class="n">CLUB</span><span class="p">:</span> <span class="mi">2</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">vs</span> <span class="n">No</span><span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Suit</span><span class="o">.</span><span class="n">DIAMOND</span><span class="p">:</span> <span class="mi">3</span><span class="o">&gt;</span><span class="p">):</span> <span class="kc">True</span>
+<span class="n">LeMe</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="n">vs</span> <span class="n">No</span><span class="p">:</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Suit</span><span class="o">.</span><span class="n">HEART</span><span class="p">:</span> <span class="mi">4</span><span class="o">&gt;</span><span class="p">):</span> <span class="kc">False</span>
+</code></pre></div>
+
+<p><a href="https://pp.pymi.vn/article/mypy/">mypy</a> sẽ báo: ở dòng gọi <code>play_1_cay(8, 5)</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">enumtest</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="w"> </span><span class="n">error</span><span class="p">:</span><span class="w"> </span><span class="n">Argument</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="s2">&quot;play_1_cay&quot;</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">incompatible</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="s2">&quot;int&quot;</span><span class="p">;</span><span class="w"> </span><span class="n">expected</span><span class="w"> </span><span class="s2">&quot;Suit&quot;</span><span class="w"></span>
+</code></pre></div>
+
+<p><code>auto()</code> tự sinh số tăng&nbsp;dần.</p>
+<p>Happy&nbsp;enum.</p>
+<h2>Tham&nbsp;khảo</h2>
+<ul>
+<li>https://docs.python.org/3/library/enum.html</li>
+</ul>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>
