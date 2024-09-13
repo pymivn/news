@@ -7,9 +7,9 @@ slug: saoke
 authors: tung491
 
 
-Nhân dịp ngày hội check var phông bạt toàn quốc thứ 6 ngày 13/9/2024, một pymier rảnh rỗi đã ngồi vọc file sao kê từ MTTQ VN. Dưới đây là một số insights từ file sao kê đó.
+Nhân dịp ngày hội check var phông bạt toàn quốc thứ 6 ngày 13/9/2024, một pymier rảnh rỗi đã ngồi vọc file sao kê từ MTTQ VN. Dưới đây là một số insights từ [file sao kê đó](https://docs.google.com/spreadsheets/d/1qEFjpatScpsf7znaVcrp3lFZpRtMJm5mMeMCVqN_38s/edit?usp=sharing) (đã convert từ [pdf](https://drive.google.com/file/d/18dIWiReYtJkyuQ_8vSBJWweGaD71rBpu/view) sang csv)
 
-## Tổng số tiền 
+## Tổng số tiền
 ![Tổng số tiền](images/total_saoke_amount.png)
 
 Với tổng 200,364 giao dịch trong 10 ngày từ 1-10/9/2024, tổng số tiền mà MTTQ VN nhận được là 135 tỷ đồng với trung bình mỗi giao dịch là 674,183 nghìn đồng và giao dịch có giá trị lớn nhất là 1 tỷ đồng.
@@ -39,5 +39,7 @@ Dù là học sinh sinh viên đã đóng góp 1580 giao dịch, với giá tr�
 
 Các doanh nghiệp đóng góp 396 giao dịch. Trung bình mỗi giao dịch là 12.7 triệu đồng và giao dịch có giá trị lớn nhất là 100 triệu đồng.
 
-Jupyter Notebook được sử dụng có thể xem tại [đây](https://gist.github.com/tung491/fde52f83ca79fda886b24fb524cfae82). Link data tại [đây](https://docs.google.com/spreadsheets/d/1qEFjpatScpsf7znaVcrp3lFZpRtMJm5mMeMCVqN_38s/edit?usp=sharing)
+Jupyter Notebook được sử dụng có thể xem tại [đây](https://gist.github.com/tung491/fde52f83ca79fda886b24fb524cfae82).
+
+
 Hết.
