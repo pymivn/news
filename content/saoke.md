@@ -1,4 +1,4 @@
-title: Một số insights từ file sao kê của MTTQ VN
+title: Một số insights từ file sao kê của Mặt trận Tổ Quốc Việt Nam
 date: 2024-09-15
 modified: 2024-09-15
 tags: mttq, sao kê, insights
@@ -16,7 +16,7 @@ Với tổng 200,364 giao dịch trong 10 ngày từ 1-10/9/2024, tổng số ti
 
 ## Số lượng giao dịch mỗi ngày
 ![Số lượng giao dịch mỗi ngày](images/distribution_daily.png)
-Bão Yagi độ bổ vào đất liền Việt Nam vào ngày 7/9/2024. Ta có thể thấy ngày hôm sau (8/9), số lượng giao dịch gửi vào MTTQ đã tăng đột biến gấp gần 10 lần với 503 giao dịch. Đáng kinh ngạc hơn nữa, ngày 9/9, số lượng giao dịch đã tăng lên hơn 6 ngàn giao dịch, gấp 12 lần ngày hôm trước. Và đến ngày 10/10, tổng số giao dịch trong ngày đã lên đến 191 nghìn giao dịch.
+Bão Yagi đổ bộ vào đất liền Việt Nam vào ngày 7/9. Ta có thể thấy ngày hôm sau (8/9), số lượng giao dịch gửi vào MTTQ đã tăng đột biến gấp gần 10 lần với 503 giao dịch. Đáng kinh ngạc hơn nữa, ngày 9/9, số lượng giao dịch đã tăng lên hơn 6 ngàn giao dịch, gấp 12 lần ngày hôm trước. Và đến ngày 10/9, tổng số giao dịch trong ngày đã lên đến 191 nghìn giao dịch.
 
 
 ## Thống kê về một số patterns trong phần nội dung giao dịch
@@ -39,6 +39,5 @@ Dù là học sinh sinh viên đã đóng góp 1580 giao dịch, với giá tr�
 
 Các doanh nghiệp đóng góp 396 giao dịch. Trung bình mỗi giao dịch là 12.7 triệu đồng và giao dịch có giá trị lớn nhất là 100 triệu đồng.
 
-Jupyter Notebook được sử dụng có thể xem tại [đây](https://gist.github.com/tung491/fde52f83ca79fda886b24fb524cfae82)
-
+Jupyter Notebook được sử dụng có thể xem tại [đây](https://gist.github.com/tung491/fde52f83ca79fda886b24fb524cfae82). Link data tại [đây](https://docs.google.com/spreadsheets/d/1qEFjpatScpsf7znaVcrp3lFZpRtMJm5mMeMCVqN_38s/edit?usp=sharing)
 Hết.
