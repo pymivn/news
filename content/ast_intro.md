@@ -7,7 +7,7 @@ authors: Pymier0
 description: làm sao biến 1+1<2 thành 1 + 1 > 2
 
 ### AST là gì
-Code Python ngoài dạng dòng text lập trình viên, có thể được biểu diễn ở dạng cây (tree), tên đầy đủ là Abstract Syntax Tree (AST).
+Code Python ngoài dạng dòng text lập trình viên viết, có thể được biểu diễn ở dạng cây (tree), tên đầy đủ là Abstract Syntax Tree (AST).
 
 AST giúp việc duyệt qua từng biểu thức (expression), thành phần nhỏ nhất (token) trong mỗi biểu thức trở nên dễ dàng hơn nhiều so với dạng text, vì vậy các tool check code ưa chuộng việc dùng AST thay text.
 
@@ -86,9 +86,9 @@ Mọi giải pháp sử dụng biến đổi text (string method/regex) đều g
 
 ### Dùng AST biến nhỏ thành lớn
 
-Viết 4 trường hợp thành 5 dòng code. Trong 5 dòng này, ta chỉ muốn dòng 2 bị thay đổi.
+Viết 5 trường hợp thành 5 dòng code. Trong 5 dòng này, ta chỉ muốn dòng 2 bị thay đổi.
 
-```
+```py
 body = """1+1<<2
 1+1<2
 2+2==3
@@ -99,7 +99,7 @@ body = """1+1<<2
 
 Dump AST ra màn hình:
 
-```
+```py
 >>> tree = ast.parse(body)
 >>> print(ast.dump(tree, indent=4))
 Module(
@@ -172,7 +172,7 @@ print(ast.unparse(node))
 ```
 Kết quả
 
-```
+```py
 1 + 1 << 2
 1 + 1 > 2
 2 + 2 == 3
