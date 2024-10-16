@@ -40,7 +40,7 @@ AST không bị ảnh hưởng khi thêm space vào giữa các token, hay thậ
 
  <
 #<
- 2)
+ 3)
 ```
 
 ```py
@@ -195,7 +195,7 @@ Dùng `unparse` để biến AST thành code. Code này có AST tương đương
 Chạy online tại đây <https://glot.io/snippets/h0wqj0crmy>
 
 ### Ứng dụng
-AST được dùng khi cần check code hay biến đổi code, dùng nhiều trong các linter hay code formatter. Các tool này có thể không dùng built-in library `ast` mà dùng các thư viện khác.
+AST được dùng khi cần check code hay biến đổi code, dùng nhiều trong các linter hay code formatter. Các tool này có thể không dùng standard library `ast` mà dùng các thư viện khác.
 
 - [PyLint](https://github.com/pylint-dev/pylint/tree/v3.3.0/pylint): dùng [astroid](https://github.com/pylint-dev/astroid/tree/v3.3.0)
 - [black](https://github.com/psf/black/tree/24.10.0/src/blib2to3) dùng [lib2to3](https://docs.python.org/3.7/library/2to3.html) từng là 1 phần của Python các bản cũ < 3.8 để hỗ trợ convert code từ Python2 sang Python3, hỗ trợ AST với comment.
