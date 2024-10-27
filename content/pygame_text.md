@@ -60,7 +60,6 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Keyboard Echo")
 
 clock = pygame.time.Clock()
-pygame.font.init()
 font = pygame.font.SysFont("FreeMono", bold=True, size=30)
 BACKGROUND = (149, 225, 211)
 screen.fill(BACKGROUND)
@@ -81,11 +80,11 @@ while True:
             sys.exit()
 
         if event.type == pygame.KEYDOWN and event.key < 256:
+            print("you hit", chr(event.key), event.key)
+            current_char = chr(event.key)
             if event.key == ord("q"):
                 pygame.quit()
                 sys.exit()
-            print("you hit", chr(event.key), event.key)
-            current_char = chr(event.key)
 
     text_surface = font.render(current_char, False, (255, 255, 255))
     screen.blit(text_surface, (WIDTH // 2, HEIGHT // 2))
