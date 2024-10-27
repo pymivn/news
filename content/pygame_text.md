@@ -24,19 +24,20 @@ render trả về 1 Surface sau khi đã viết chữ lên, ở đây dùng màu
 
 ### Keyboard event
 > Pygame handles all its event messaging through an event queue
-Khi di chuột, bấm chuột, bấm phím, đề sinh ra event. Duyệt qua các event với
+
+Khi di chuột, bấm chuột, bấm phím, đều sinh ra event. Duyệt qua các event với
 
 ```py
 for event in pygame.event.get():
 ```
 
-lấy event.key tương ứng với ký tự bàn phím ở dạng int, đổi sang str với `chr` rồi hiển thị ra giữa cửa sổ:
+lấy `event.key` tương ứng với ký tự bàn phím ở dạng int, đổi sang str với `chr` rồi hiển thị ra giữa cửa sổ:
 
 
 ```py
-    current_char = chr(event.key)
-    text_surface = font.render(current_char, False, (255, 255, 255))
-    screen.blit(text_surface, (WIDTH // 2, HEIGHT // 2))
+current_char = chr(event.key)
+text_surface = font.render(current_char, False, (255, 255, 255))
+screen.blit(text_surface, (WIDTH // 2, HEIGHT // 2))
 ```
 
 ### Kết quả
