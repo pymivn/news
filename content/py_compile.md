@@ -2,7 +2,7 @@ title: CPython compile code chạy "Hello world"
 date: 2024-10-28
 tags: ast, Python, compile, C, readcode
 category: news
-slug: compile
+slug: py_compile
 authors: Pymier0
 description: Python compile, rồi interpret
 
