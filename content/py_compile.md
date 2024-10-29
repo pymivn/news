@@ -44,7 +44,7 @@ Quá trình compile từ source code thành bytecode bao gồm các bước:
 
 Tạo file hello.py với nội dung `print("Hello" + " Pymier 2024")`
 
-[Build Python từ source]({filename}/slice_reverse.md) rồi chạy [lldb](https://familug.github.io/doc-code-bash-xem-vi-sao-echo-khong-hien-ten-file-an.html), đặt breakpoint tại function `pyrun_file` :
+[Build Python từ source]({filename}/slice_rev.md) rồi chạy [lldb](https://familug.github.io/doc-code-bash-xem-vi-sao-echo-khong-hien-ten-file-an.html), đặt breakpoint tại function `pyrun_file` :
 
 ```c
 $ lldb ./python
