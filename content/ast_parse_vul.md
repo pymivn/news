@@ -91,7 +91,7 @@ Trên doc trang chủ:
 ```
 ast.parse(source, filename='<unknown>', mode='exec', *, type_comments=False, feature_version=None)¶
 ```
-filename mặc định có giá trị là '<unknown>'.
+filename mặc định có giá trị là `<unknown>`.
 Thử vài ví dụ:
 
 ```py
@@ -109,7 +109,7 @@ Traceback (most recent call last):
          ^
 SyntaxError: '(' was never closed
 ```
-có thể thấy khi có SyntaxError, màn hình sẽ hiện ra dòng code bị lỗi syntax, và file '<unknown>' không đóng vai trò gì cả.
+có thể thấy khi có SyntaxError, màn hình sẽ hiện ra dòng code bị lỗi syntax, và file `<unknown>` không đóng vai trò gì cả.
 
 Nhưng khi gán filename="secret.py", dòng số 2 của file này lại hiện ra:
 
@@ -124,7 +124,7 @@ Traceback (most recent call last):
              ^
 SyntaxError: '(' was never closed
 ```
-
+đề bài khá "lươn" vì viết code từ dòng thứ 2, nếu người dùng thử với `source='def'` thì sẽ không hiện ra gì.
 Vậy chỉ cần viết code xuống đến dòng thứ 6 rồi viết syntax error sẽ hiện ra FLAG:
 
 ```py
