@@ -40,7 +40,7 @@ một website flask đơn giản, nhận đầu vào tùy ý của người dùn
 Một file `secret.py` nằm cùng thư mục, chứa flag
 
 ```py
-
+    
 def main():
     print("Here's the flag: ")
     print(FLAG)
