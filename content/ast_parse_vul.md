@@ -163,7 +163,7 @@ _PyErr_ProgramDecodedTextObject(PyObject *filename, int lineno, const char* enco
 ```
 trong [errors.c](https://github.com/python/cpython/blob/43a2a372ba071c4ebb1071240da2b852c29d77fb/Python/errors.c#L1946)
 
-
+Xem write up & source at <https://github.com/TheRomanXpl0it/TRX-CTF-2025/blob/main/web/online-python-editor/remote/app/app.py>
 ### Góc AI
 Vác luôn đề hỏi các AI xịn nhất ngày nay xem:
 
