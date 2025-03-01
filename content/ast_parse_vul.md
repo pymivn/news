@@ -1,6 +1,6 @@
 title: Đọc file tùy ý với ast.parse
 date: 2025-02-26
-tags: ast, Python, security,
+tags: ast, Python, security, ctf
 category: pymi.vn
 slug: ast_parse
 authors: Pymier0
@@ -40,7 +40,7 @@ một website flask đơn giản, nhận đầu vào tùy ý của người dùn
 Một file `secret.py` nằm cùng thư mục, chứa flag
 
 ```py
-    
+
 def main():
     print("Here's the flag: ")
     print(FLAG)
@@ -167,7 +167,7 @@ Xem write up & source at <https://github.com/TheRomanXpl0it/TRX-CTF-2025/blob/ma
 ### Góc AI
 Vác luôn đề hỏi các AI xịn nhất ngày nay xem:
 
-[Claude.ai](https://claude.ai/chat/553d2e6f-62f4-4048-8480-f2e1367426f6)
+[Claude.ai](https://claude.ai/share/a8de39c7-6ec3-45b9-b310-c6667d2ca49b)
 
 > Given the code shown, I don't see a direct path to reading the FLAG from secret.py through the ast.parse() function alone. The function's parameters don't provide functionality to import or read other files in a way that would return their contents through the error messages.
 
