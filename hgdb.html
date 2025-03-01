@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="Python hello world từ debugger&nbsp;gdb">
+<meta name="twitter:description" content="Tự thêm tính năng cho GDB bằng code Python đơn giản!">
+        <!-- OG Tags -->
+<meta property="og:url" content="./hgdb.html"/>
+<meta property="og:title" content="Python hello world từ debugger&nbsp;gdb | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="Tự thêm tính năng cho GDB bằng code Python đơn giản!" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="Tự thêm tính năng cho GDB bằng code Python đơn giản!" />
+
+    <meta name="tags" content="gdb" />
+    <meta name="tags" content="debugger" />
+    <meta name="tags" content="extension" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2023-01-17 00:00:00+07:00">
+                <script>document.write(moment('2023-01-17 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Python hello world từ debugger&nbsp;gdb
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <h3><span class="caps">GDB</span> là&nbsp;gì</h3>
+<p><span class="caps">GDB</span> <code>GDB: The GNU Project Debugger</code> là debugger phổ biến bậc nhất thế giới, hỗ
+trợ nhiều ngôn ngữ như C, Go, Rust &#8230;
+Lập trình viên Python không dùng <span class="caps">GDB</span> mà dùng pdb với giao diện tương tự gdb, nhưng lập trình viên CPython (core devs) có thể dùng tới gdb vì code CPython - viết bằng&nbsp;C.</p>
+<p>Cài&nbsp;đặt</p>
+<div class="highlight"><pre><span></span><code>sudo apt-get install gdb
+</code></pre></div>
+
+<p><img alt="bug" src="https://images.unsplash.com/photo-1512887000011-f36fc9a9eeaf?ixlib=rb-4.0.3&amp;dl=krzysztof-niewolny-RVd0o9ryfAo-unsplash.jpg&amp;w=640&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb"></p>
+<p>Photo by <a href="https://unsplash.com/fr/@epan5?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Krzysztof  Niewolny</a> on <a href="https://unsplash.com/photos/RVd0o9ryfAo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+<p><span class="caps">GDB</span> đã có từ rất rất lâu, tuy đa năng, nhưng khá khó dùng, không &#8220;đẹp sẵn&#8221;. Khi chơi <a href="https://pp.pymi.vn/tag/ctf/"><span class="caps">CTF</span></a>, hay làm &#8220;binary exploitation&#8221;/reverse engineer, người dùng thường dùng các bản mở rộng tính năng, đẹp sãn màu mè thay gdb nguyên bản&nbsp;như:</p>
+<ul>
+<li><a href="https://github.com/pwndbg/pwndbg">https://github.com/pwndbg/pwndbg</a></li>
+<li><a href="https://github.com/longld/peda">https://github.com/longld/peda</a></li>
+<li><a href="https://github.com/hugsy/gef">https://github.com/hugsy/gef</a></li>
+</ul>
+<p>Trích tài liệu của <a href="https://github.com/pwndbg/pwndbg">pwndbg</a></p>
+<blockquote>
+<p>Many other projects from the past (e.g., gdbinit, <span class="caps">PEDA</span>) and present (e.g. <span class="caps">GEF</span>) exist to fill some these gaps. Each provides an excellent experience and great features &#8212; but they&#8217;re difficult to extend (some are unmaintained, and all are a single <span class="caps">100KB</span>, <span class="caps">200KB</span>, or <span class="caps">300KB</span> file&nbsp;(respectively)).</p>
+</blockquote>
+<p>Điều thú vị ở đây là cả 3 chương trình này đều viết bằng&nbsp;Python.</p>
+<p>Từ bản 7 trở đi, <span class="caps">GDB</span> hỗ trợ &#8220;extending&#8221; (mở rộng) bằng các ngôn ngữ khác như Python hay guile, để kiểm tra xem bản mình cài có không&nbsp;gõ:</p>
+<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="w"> </span><span class="n">gdb</span><span class="w"> </span><span class="o">--</span><span class="n">configuration</span><span class="w"></span>
+<span class="n">This</span><span class="w"> </span><span class="n">GDB</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">configured</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">follows</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="n">configure</span><span class="w"> </span><span class="o">--</span><span class="n">host</span><span class="o">=</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="w"> </span><span class="o">--</span><span class="n">target</span><span class="o">=</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">auto</span><span class="o">-</span><span class="nb">load</span><span class="o">-</span><span class="n">dir</span><span class="o">=$</span><span class="n">debugdir</span><span class="p">:</span><span class="o">$</span><span class="n">datadir</span><span class="o">/</span><span class="n">auto</span><span class="o">-</span><span class="nb">load</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">auto</span><span class="o">-</span><span class="nb">load</span><span class="o">-</span><span class="n">safe</span><span class="o">-</span><span class="n">path</span><span class="o">=$</span><span class="n">debugdir</span><span class="p">:</span><span class="o">$</span><span class="n">datadir</span><span class="o">/</span><span class="n">auto</span><span class="o">-</span><span class="nb">load</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">expat</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">gdb</span><span class="o">-</span><span class="n">datadir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">gdb</span><span class="w"> </span><span class="p">(</span><span class="n">relocatable</span><span class="p">)</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">jit</span><span class="o">-</span><span class="n">reader</span><span class="o">-</span><span class="n">dir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">gdb</span><span class="w"> </span><span class="p">(</span><span class="n">relocatable</span><span class="p">)</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">without</span><span class="o">-</span><span class="n">libunwind</span><span class="o">-</span><span class="n">ia64</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">lzma</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">babeltrace</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">without</span><span class="o">-</span><span class="n">intel</span><span class="o">-</span><span class="n">pt</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">mpfr</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">without</span><span class="o">-</span><span class="n">xxhash</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">python</span><span class="o">=/</span><span class="n">usr</span><span class="w"> </span><span class="p">(</span><span class="n">relocatable</span><span class="p">)</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">without</span><span class="o">-</span><span class="n">guile</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">source</span><span class="o">-</span><span class="n">highlight</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">separate</span><span class="o">-</span><span class="n">debug</span><span class="o">-</span><span class="n">dir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">debug</span><span class="w"> </span><span class="p">(</span><span class="n">relocatable</span><span class="p">)</span><span class="w"></span>
+<span class="w">             </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">gdbinit</span><span class="o">=/</span><span class="n">etc</span><span class="o">/</span><span class="n">gdb</span><span class="o">/</span><span class="n">gdbinit</span><span class="w"></span>
+</code></pre></div>
+
+<p>bản mặc định trên Ubuntu 20.04 này có <code>--with-python</code> hỗ trợ Python và <code>--without-guile</code> không hỗ trợ&nbsp;Guile.</p>
+<h3>Bật Python từ&nbsp;gdb</h3>
+<p>Gõ <code>gdb -q</code> để bật gdb lên, sau đó gõ <code>pi</code> (viết tắt của python-interactive) để bật Python interpreter&nbsp;lên:</p>
+<div class="highlight"><pre><span></span><code>$ gdb -q
+<span class="o">(</span>gdb<span class="o">)</span> pi
+&gt;&gt;&gt; sum<span class="o">(</span>i <span class="k">for</span> i <span class="k">in</span> range<span class="o">(</span><span class="m">1000</span><span class="o">)</span> <span class="k">if</span> i % <span class="nv">3</span> <span class="o">==</span> <span class="m">0</span> or i % <span class="nv">5</span> <span class="o">==</span> <span class="m">0</span><span class="o">)</span>
+<span class="m">233168</span>
+</code></pre></div>
+
+<h3>Tự  viết Python&nbsp;extension</h3>
+<p>gdb có 1 file &#8220;init&#8221; tại $<span class="caps">HOME</span>/.gdbinit, viết nội dung sau để gdb load code từ file khi bật lên. Ở đây ví dụ code nằm trong <code>/home/hvn/me/hgdb/hgdb.py</code>:</p>
+<div class="highlight"><pre><span></span><code>source /home/hvn/me/hgdb/hgdb.py
+</code></pre></div>
+
+<p>Trong file /home/hvn/me/hgdb/hgdb.py, viết code Python như thường, để tạo 1 command mới trong gdb, viết class kế thừa gdb.Command, chú ý sys và gdb lib được import&nbsp;sẵn:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world, from python&quot;</span><span class="p">)</span>
+<span class="n">gdb</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello world by gdb</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">HelloWorld</span><span class="p">(</span><span class="n">gdb</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span> <span class="p">(</span><span class="n">HelloWorld</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="n">gdb</span><span class="o">.</span><span class="n">COMMAND_USER</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">invoke</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">from_tty</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">arg</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;World&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Chào, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+
+<span class="n">HelloWorld</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Bật gdb&nbsp;lên:</p>
+<div class="highlight"><pre><span></span><code>$ gdb -q
+/usr/bin/python
+<span class="m">3</span>.8.10 <span class="o">(</span>default, Nov <span class="m">14</span> <span class="m">2022</span>, <span class="m">12</span>:59:47<span class="o">)</span>
+<span class="o">[</span>GCC <span class="m">9</span>.4.0<span class="o">]</span>
+Hello world, from python
+Hello world by gdb
+<span class="o">(</span>gdb<span class="o">)</span> hello
+Chào, World!
+<span class="o">(</span>gdb<span class="o">)</span> hello Pymier
+Chào, Pymier!
+</code></pre></div>
+
+<p>Hết.</p>
+<p>Thực hiện&nbsp;trên</p>
+<div class="highlight"><pre><span></span><code>$ gdb --version
+GNU gdb <span class="o">(</span>Ubuntu <span class="m">9</span>.2-0ubuntu1~20.04.1<span class="o">)</span> <span class="m">9</span>.2
+Copyright <span class="o">(</span>C<span class="o">)</span> <span class="m">2020</span> Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version <span class="m">3</span> or later &lt;http://gnu.org/licenses/gpl.html&gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+</code></pre></div>
+
+<h2>Tham&nbsp;khảo</h2>
+<p><a href="https://sourceware.org/gdb/current/onlinedocs/gdb.html/Extending-GDB.html#Extending-GDB">https://sourceware.org/gdb/current/onlinedocs/gdb.html/Extending-<span class="caps">GDB</span>.html#Extending-<span class="caps">GDB</span></a></p>
+<h2>Liên&nbsp;quan</h2>
+<ul>
+<li><a href="https://familug.github.io/hoc-rust-voi-gdb.html">https://familug.github.io/hoc-rust-voi-gdb.html</a></li>
+<li><a href="https://pp.pymi.vn/tag/ctf/">https://pp.pymi.vn/tag/ctf/</a></li>
+</ul>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

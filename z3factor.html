@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="Dùng z3 giải hệ phương trình số lớn giải mã&nbsp;rsa">
+<meta name="twitter:description" content="việc gì khó đã có Z3">
+        <!-- OG Tags -->
+<meta property="og:url" content="./z3factor.html"/>
+<meta property="og:title" content="Dùng z3 giải hệ phương trình số lớn giải mã&nbsp;rsa | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="việc gì khó đã có Z3" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="việc gì khó đã có Z3" />
+
+    <meta name="tags" content="z3" />
+    <meta name="tags" content="factorize" />
+    <meta name="tags" content="CTF" />
+    <meta name="tags" content="RSA" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2022-08-29 00:00:00+07:00">
+                <script>document.write(moment('2022-08-29 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Dùng z3 giải hệ phương trình số lớn giải mã&nbsp;rsa
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p><img alt="img" src="https://images.unsplash.com/photo-1661621768920-5b5cdafc96c4?ixlib=rb-1.2.1&amp;dl=dibakar-roy-JAvgd-akITY-unsplash.jpg&amp;w=640&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb"></p>
+<p><a href="https://ctftime.org/event/1676">MapleCTF 2022</a> ra đề Brsaby Crypto với nội&nbsp;dung:</p>
+<ul>
+<li>Cho p * q ==&nbsp;N</li>
+<li>Cho <code>p**4 - q**3 == hint</code></li>
+<li>Tìm p và q rồi giải mã lấy&nbsp;flag.</li>
+</ul>
+<h3><span class="caps">RSA</span> trong 2&nbsp;phút</h3>
+<p>Đây là 1 phần trong bài tóan giải mã <span class="caps">RSA</span>. <a href="https://en.wikipedia.org/wiki/RSA_(algorithm)"><span class="caps">RSA</span> là hệ mã hóa phổ biến nhất hiện</a>
+tại, được dùng ở hầu hết chỗ nào cần mã hóa trên máy tính.
+Nền tảng của <span class="caps">RSA</span> dựa trên một bài toán khó &#8220;gần như&#8221; không giải được dễ dàng:
+tìm 2 số nhân với nhau ra một số N rất lớn.
+Sau đó, mã hóa một bí mật m bằng công&nbsp;thức:</p>
+<ul>
+<li><code>c = m**e % N</code></li>
+</ul>
+<p>với e cho công khai cùng N, thường có giá trị&nbsp;65535.</p>
+<p>Để giải mã, cần tim ra 2 số đã nhân thành N, gọi là p, q.
+Từ p,q tính ra&nbsp;d:</p>
+<ul>
+<li><code>phi =(p-1)*(q-1)</code></li>
+<li><code>d=(e**-1 % phi)</code></li>
+</ul>
+<p>rồi giải mã bằng công thức <code>c**d mod N</code>.</p>
+<h3>Factorize N tìm p,q bằng&nbsp;z3</h3>
+<p>Việc tìm các ước p,q của số N gọi là&nbsp;factorize.</p>
+<p>Bài&nbsp;giải:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># pip install pycryptodome==3.14.1</span>
+<span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">getPrime</span><span class="p">,</span> <span class="n">bytes_to_long</span><span class="p">,</span> <span class="n">long_to_bytes</span>
+<span class="c1">#from secret import FLAG</span>
+<span class="c1">#msg = bytes_to_long(FLAG)</span>
+<span class="c1">#p = getPrime(512)</span>
+<span class="c1">#q = getPrime(512)</span>
+<span class="c1">#N = p*q</span>
+<span class="c1"># e = 0x10001</span>
+<span class="c1"># enc = pow(msg, e, N)</span>
+<span class="c1"># hint = p**4 - q**3</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">N</span> <span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">e</span> <span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">enc</span> <span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">hint</span> <span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">134049493752540418773065530143076126635445393203564220282068096099004424462500237164471467694656029850418188898633676218589793310992660499303428013844428562884017060683631593831476483842609871002334562252352992475614866865974358629573630911411844296034168928705543095499675521713617474013653359243644060206273</span>
+<span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>
+<span class="n">enc</span> <span class="o">=</span> <span class="mi">110102068225857249266317472106969433365215711224747391469423595211113736904624336819727052620230568210114877696850912188601083627767033947343144894754967713943008865252845680364312307500261885582194931443807130970738278351511194280306132200450370953028936210150584164591049215506801271155664701637982648648103</span>
+<span class="n">hint</span> <span class="o">=</span> <span class="mi">20172108941900018394284473561352944005622395962339433571299361593905788672168045532232800087202397752219344139121724243795336720758440190310585711170413893436453612554118877290447992615675653923905848685604450760355869000618609981902108252359560311702189784994512308860998406787788757988995958832480986292341328962694760728098818022660328680140765730787944534645101122046301434298592063643437213380371824613660631584008711686240103416385845390125711005079231226631612790119628517438076962856020578250598417110996970171029663545716229258911304933901864735285384197017662727621049720992964441567484821110407612560423282</span>
+
+<span class="c1">## giải</span>
+<span class="kn">from</span> <span class="nn">z3</span> <span class="kn">import</span> <span class="n">Solver</span><span class="p">,</span> <span class="n">Ints</span>
+<span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">Ints</span><span class="p">(</span><span class="s1">&#39;p q&#39;</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">Solver</span><span class="p">()</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">p</span><span class="o">**</span><span class="mi">4</span><span class="o">-</span><span class="n">q</span><span class="o">**</span><span class="mi">3</span><span class="o">==</span><span class="n">hint</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">p</span> <span class="o">*</span> <span class="n">q</span> <span class="o">==</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">check</span><span class="p">()</span>
+<span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">model</span><span class="p">())</span>
+<span class="n">p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">p</span><span class="p">]))</span>
+<span class="n">q</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">q</span><span class="p">]))</span>
+<span class="k">assert</span> <span class="n">p</span><span class="o">*</span><span class="n">q</span> <span class="o">==</span> <span class="n">N</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">q</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>
+<span class="n">flag</span><span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">enc</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">long_to_bytes</span><span class="p">(</span><span class="n">flag</span><span class="p">))</span>
+</code></pre></div>
+
+<p>Ta thu được flag <code>b'maple{s0lving_th3m_p3rf3ct_r000ts_1s_fun}</code></p>
+<p>Hết.</p>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>
