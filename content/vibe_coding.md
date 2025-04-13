@@ -6,9 +6,6 @@ slug: vibe_coding
 authors: thevix
 description: Tạo webapp flashcard để luyện thi chứng chỉ trong 15 phút!
 
-![img](https://media.githubusercontent.com/media/RooVetGit/Roo-Code/main/assets/docs/demo.gif)
-
-*Roo Code*
 
 ### Context (Rất quan trọng cho cả người đọc và LLM)
 Tác giả đang trong thời gian ôn luyện để thi chứng chỉ AWS và GCP nên đã tìm tới các exam dump để làm quen với đề. Tuy nhiên, các trang này không đem lại trải nghiệm học tập tốt lắm:
@@ -36,7 +33,7 @@ Theo wikipedia định nghĩa là: Code cùng với AI. Coder ra lệnh cho LLM,
 Giờ thì vào việc thôi.
 
 ### Phát thảo Web App
-Đây là toàn bộ prompt đầu tiên của tác giả.
+Bên dưới là trích lược prompt đầu tiên của tác giả.
 
 ``` txt
 I want to develop python webapp that can run in every users local machine. the app is packaged in a container, so everyone will be able to docker up it (or podman up it). the app can be writen in django or flask, or what ever framework that easy to maintain in the future.
@@ -45,7 +42,7 @@ the webapp's name is "Flashcard", this is a flashcard app. this app will have a 
 
 ...
 ```
-Đây là link github [full không che](https://github.com/thevivotran/studytest/blob/main/idea/1/idea_draft.md)
+Còn đây là link github [full không che](https://github.com/thevivotran/studytest/blob/main/idea/1/idea_draft.md)
 
 Nôm na là:
 1. Mô tả công nghệ
@@ -144,6 +141,14 @@ make build
 make
 ```
 
+Web app có 2 trang: trang chủ và trang học
+
+Trang chủ có tính năng upload file csv cho từng dataset (bộ đề ôn) và chọn bộ đề ôn để luyện tập.
+![img]({static}/images/flashcard1.png)
+
+Sau khi bấm vào từng dataset, sẽ vào trang học flashcard. Có thể tiến, lùi và hiện câu trả lời đúng. Ngoài ra còn có thể đánh dấu câu khó để xem lại, cũng như viết note cho từng câu.
+![img]({static}/images/flashcard2.png)
+
 ### Chi phí thực hiện
 Hoàn toàn **free**. Tuy nhiên, toàn bộ dữ liệu (token) trong quá trình xây dựng dự án sẽ được Google sử dụng.
 
@@ -157,6 +162,7 @@ Toàn bộ dự án dùng:
 
 Tổng cộng sẽ phải trả `$0.9435`, `24,275.00 VNĐ`.
 
+---
 Rẻ hơn thì có thể dùng `deepseek/deepseek-chat-v3-0324` với giá:
 - $0.27/M input tokens
 - $1.1/M output tokens
@@ -164,11 +170,12 @@ Rẻ hơn thì có thể dùng `deepseek/deepseek-chat-v3-0324` với giá:
 Hoặc `anthropic/claude-3.7-sonnet` thì giá sẽ cao hơn:
 - $3/M input tokens
 - $15/M output tokens
+---
 
 ### Kết
 - Thay vì chỉ suggest code hoặc sửa những lỗi như trước đây, các Agent đã có thể hoạt động như những Architecture, Developer và Debugger. `Roo Code` giúp việc chuyển đổi qua lại các `Agent` rất mượt.
-- Phải luôn biết mình muốn gì trước khi bắt đầu. Hoặc, có thể brain storm trong khi làm việc với `Agent Architecture`. Như vậy sẽ tiết kiệm hơn là chỉnh sửa trong quá trình dùng `Agent Developer`.
-- Chi phí khá rẻ (chỉ khi hiểu rõ mình muốn gì), 1 ly cà phê vỉa hè cho 1 web app đúng theo nhu cầu cá nhân, trong vòng 15 phút.
+- Vì chi phí được tính dựa trên độ dài của context (token), nên phải luôn biết mình muốn gì trước khi bắt đầu. Hoặc, có thể brain storm trong khi làm việc với `Agent Architecture`. Như vậy sẽ tiết kiệm hơn là chỉnh sửa trong quá trình dùng `Agent Developer`.
+- Chi phí khá rẻ, 1 ly cà phê vỉa hè cho 1 web app đúng theo nhu cầu cá nhân, trong vòng 15 phút.
 - Không cần phải đầu tư quá nhiều cho phần cứng, bất kì ai cũng có thể tiếp cận các Large Language Model một cách dễ dàng và đa dạng thông qua `Openrouter`.
 
 [Github](https://github.com/thevivotran/studytest)
