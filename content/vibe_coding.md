@@ -57,6 +57,8 @@ Link github [full không che](https://github.com/thevivotran/studytest/blob/main
 
 Tóm lại là:
 
+```txt
+
 1. Mô tả công nghệ
     - Viết một Python web app
     - App này được gói trong một container, để khi dùng chỉ cần docker up
@@ -68,6 +70,8 @@ Tóm lại là:
     - Người dùng sẽ cung cấp một file csv để import bộ dữ liệu này
     - Người dùng có thể thêm nhiều bộ câu hỏi cho từng loại chứng chỉ khác nhau
     - Vân vân...
+
+```
 
 ### Chi tiết hoá prompt
 
@@ -89,6 +93,7 @@ Develop a Python web application named "Flashcard", designed to run locally on u
         * `datasets` table: `id` (INTEGER PRIMARY KEY AUTOINCREMENT), `name` (TEXT UNIQUE NOT NULL).
         * `cards` table: `id` (INTEGER PRIMARY KEY AUTOINCREMENT), `dataset_id` (INTEGER, FOREIGN KEY (`dataset_id`) REFERENCES `datasets` (`id`)), `question` (TEXT NOT NULL), `correct_answer` (TEXT NOT NULL), `choice1` (TEXT NOT NULL), `choice2` (TEXT NOT NULL), `choice3` (TEXT NOT NULL), `choice4` (TEXT NOT NULL), `choice5` (TEXT).
     * Initialization: Automatically create the database and tables if they don't exist on application startup.
+
 ```
 
 Đây là link github [full không che](https://github.com/thevivotran/studytest/blob/main/idea/1/enhanced_idea_draft.md)
@@ -112,7 +117,6 @@ Cuối cùng, Agent này xuất ra một file `PLAN.MD` để có thể đọc �
 
 ```
 
-
 # Flashcard Application Development Plan
 
 This document outlines the plan for developing the "Flashcard" Python web application using Flask and SQLite, containerized with Docker/Podman.
@@ -131,7 +135,6 @@ Sau đó, sẽ là thông tin chi tiết của các Phase, ví dụ đây sẽ l
 
 ```
 
-
 ## Phase 1: Project Setup \& Core Backend
 
 1. **Define Project Structure:**
@@ -144,6 +147,7 @@ Sau đó, sẽ là thông tin chi tiết của các Phase, ví dụ đây sẽ l
         * `templates/`: Directory for HTML templates.
         * `static/`: Directory for CSS/JS files.
     * A separate `data/` directory will be used as a volume mount point for persistent storage (`/data/flashcard.db`, `/data/progress.json`).
+
 ```
 
 Chi tiết file `PLAN.MD` có thể [xem tại đây](https://github.com/thevivotran/studytest/blob/main/idea/1/PLAN.md?plain=1).
