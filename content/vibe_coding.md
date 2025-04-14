@@ -217,4 +217,4 @@ Hoặc `anthropic/claude-3.7-sonnet` thì giá sẽ cao hơn:
 
 [Github](https://github.com/thevivotran/studytest)
 
-**Vibe coding ngay thôi !**
+**Vibe coding ngay thôi!**
