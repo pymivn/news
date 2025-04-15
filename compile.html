@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="CPython&nbsp;compiler">
+<meta name="twitter:description" content="Python có compile code không? Có!">
+        <!-- OG Tags -->
+<meta property="og:url" content="./compile.html"/>
+<meta property="og:title" content="CPython&nbsp;compiler | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="Python có compile code không? Có!" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="Python có compile code không? Có!" />
+
+    <meta name="tags" content="compiler" />
+    <meta name="tags" content="internal" />
+    <meta name="tags" content="CPython" />
+    <meta name="tags" content="bytecode" />
+    <meta name="tags" content="virtual machine" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li class="active"><a href="./category/features.html">features</a></li>
+                            <li><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2021-08-28 00:00:00+07:00">
+                <script>document.write(moment('2021-08-28 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            CPython&nbsp;compiler
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p><img alt="img" src="https://images.unsplash.com/photo-1520491286939-1680f46efe91?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzAxNTg0NzA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=600"></p>
+<p>Python thường được biết tới như một ngôn ngữ lập trình scripting/interpreted.
+Lập trình viên sau khi viết code xong, chỉ cần gõ python tên_file.py để chạy
+code dẫn tới một sự hiểu nhầm phổ biến rằng &#8220;python không compile&nbsp;code&#8221;.</p>
+<p>Để tránh các tranh cãi không cần thiết, ở đây chỉ nói tới CPython - tức bản
+Python phổ biến nhất mà gần như tất cả mọi người đều dùng, tải từ
+<a href="https://www.python.org/">python.org</a>.</p>
+<p>Để chạy 1 file code Python, CPython có bước compile code, nhưng bước này
+CPython tự thực hiện mà không cần lập trình viên phải thực hiện. Việc compile
+này cũng thường diễn ra rất nhanh chóng nên khó có thể phát hiện ra.  Khác với
+C/C++/Golang, Python compile code không sinh ra 1 file binary chạy được. Giống
+với Java, Python sinh ra bytecode, bytecode này được chạy bởi Python virtual
+machine (với Java là <span class="caps">JVM</span>).</p>
+<p>Dễ quan sát hơn khi sử dụng module, CPython mặc định sẽ sinh ra file <code>.pyc</code>
+chứa compiled bytecode. Tạo 1 file  tên <code>mylib.py</code> và 1 file main <code>main.py</code></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># main.py</span>
+<span class="kn">import</span> <span class="nn">mylib</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mylib</span><span class="o">.</span><span class="n">double</span><span class="p">(</span><span class="mi">21</span><span class="p">))</span>
+
+ <span class="c1"># mylib.py</span>
+<span class="k">def</span> <span class="nf">double</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+</code></pre></div>
+
+<p>chạy file&nbsp;main.py</p>
+<div class="highlight"><pre><span></span><code>$ ls -la
+total <span class="m">16</span>
+drwxrwxr-x <span class="m">2</span> hvn hvn <span class="m">4096</span> Aug <span class="m">28</span> <span class="m">20</span>:39 .
+drwxrwxr-x <span class="m">3</span> hvn hvn <span class="m">4096</span> Aug <span class="m">28</span> <span class="m">20</span>:39 ..
+-rw-rw-r-- <span class="m">1</span> hvn hvn   <span class="m">37</span> Aug <span class="m">28</span> <span class="m">20</span>:39 main.py
+-rw-rw-r-- <span class="m">1</span> hvn hvn   <span class="m">32</span> Aug <span class="m">28</span> <span class="m">20</span>:39 mylib.py
+$ python3 main.py
+<span class="m">42</span>
+$ ls -la
+total <span class="m">20</span>
+drwxrwxr-x <span class="m">3</span> hvn hvn <span class="m">4096</span> Aug <span class="m">28</span> <span class="m">20</span>:39 .
+drwxrwxr-x <span class="m">3</span> hvn hvn <span class="m">4096</span> Aug <span class="m">28</span> <span class="m">20</span>:39 ..
+-rw-rw-r-- <span class="m">1</span> hvn hvn   <span class="m">37</span> Aug <span class="m">28</span> <span class="m">20</span>:39 main.py
+-rw-rw-r-- <span class="m">1</span> hvn hvn   <span class="m">32</span> Aug <span class="m">28</span> <span class="m">20</span>:39 mylib.py
+drwxrwxr-x <span class="m">2</span> hvn hvn <span class="m">4096</span> Aug <span class="m">28</span> <span class="m">20</span>:39 __pycache__
+$ ls -la __pycache__
+total <span class="m">12</span>
+drwxrwxr-x <span class="m">2</span> hvn hvn <span class="m">4096</span> Aug <span class="m">28</span> <span class="m">20</span>:39 .
+drwxrwxr-x <span class="m">3</span> hvn hvn <span class="m">4096</span> Aug <span class="m">28</span> <span class="m">20</span>:39 ..
+-rw-rw-r-- <span class="m">1</span> hvn hvn  <span class="m">235</span> Aug <span class="m">28</span> <span class="m">20</span>:39 mylib.cpython-38.pyc
+</code></pre></div>
+
+<p>Python sẽ đọc các file .pyc này mà bỏ qua bước compile ở lần chạy sau (nếu code
+        không thay đổi), tiết kiệm được thời gian compile, NHƯNG <span class="caps">SAU</span> ĐÓ <span class="caps">CODE</span>
+CHẠY KHÔNG <span class="caps">NHANH</span> HƠN lần&nbsp;trước.</p>
+<p>Để xem nội dung bytecode sinh ra từ code, dùng <a href="https://docs.python.org/3/library/dis.html">standard lib <code>dis</code></a></p>
+<h3>Tham&nbsp;khảo</h3>
+<ul>
+<li><a href="https://docs.python.org/3/glossary.html#term-bytecode">bytecode</a></li>
+<li><a href="https://docs.python.org/3/glossary.html#term-virtual-machine">virtual-machine</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-3147/">pep-3147</a></li>
+<li><a href="https://docs.python.org/3/tutorial/modules.html?highlight=compile#compiled-python-files">compiled-python-files</a></li>
+</ul>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

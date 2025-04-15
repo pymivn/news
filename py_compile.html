@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="CPython compile code chạy &#8220;Hello&nbsp;world&#8221;">
+<meta name="twitter:description" content="Python compile, rồi interpret">
+        <!-- OG Tags -->
+<meta property="og:url" content="./py_compile.html"/>
+<meta property="og:title" content="CPython compile code chạy &#8220;Hello&nbsp;world&#8221; | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="Python compile, rồi interpret" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="Python compile, rồi interpret" />
+
+    <meta name="tags" content="ast" />
+    <meta name="tags" content="Python" />
+    <meta name="tags" content="compile" />
+    <meta name="tags" content="C" />
+    <meta name="tags" content="readcode" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2024-10-28 00:00:00+07:00">
+                <script>document.write(moment('2024-10-28 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            CPython compile code chạy &#8220;Hello&nbsp;world&#8221;
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <h3>CPython có compile&nbsp;không?</h3>
+<p>Có.</p>
+<p>Bước compile code của CPython được thực hiện trước khi chạy code, mặc dù người dùng <strong>thường</strong> không nhìn thấy, nhưng nó có xảy ra, đôi khi nó còn tạo ra các file có đuôi <code>.pyc</code>.
+Tài liệu <a href="https://docs.python.org/3.12/glossary.html#term-bytecode">https://docs.python.org/3.12/glossary.html#term-bytecode</a>&nbsp;viết:</p>
+<blockquote>
+<p>Python source code is compiled into bytecode, the internal representation of a Python program in the CPython interpreter. The bytecode is also cached in .pyc files so that executing the same file is faster the second time (recompilation from source to bytecode can be avoided). This “intermediate language” is said to run on a virtual machine that executes the machine code corresponding to each bytecode. Do note that bytecodes are not expected to work between different Python virtual machines, nor to be stable between Python&nbsp;releases.</p>
+</blockquote>
+<ul>
+<li>Python source code được compile thành <strong>bytecode</strong></li>
+<li>bytecode có thể được ghi vào file <code>.pyc</code></li>
+<li>máy ảo Python Virtual Machine (<span class="caps">VM</span>) chạy machine code (mã máy) tương đương với&nbsp;bytecode.</li>
+</ul>
+<h3>Các bước biến đổi để chạy code &#8220;hello&nbsp;world&#8221;</h3>
+<p>Document mới <a href="https://github.com/python/cpython/blob/v3.14.0a1/InternalDocs/compiler.md">3.14</a>&nbsp;viết:</p>
+<div class="highlight"><pre><span></span><code>In CPython, the compilation from source code to bytecode involves several steps:
+
+    Tokenize the source code Parser/lexer/ and Parser/tokenizer/.
+    Parse the stream of tokens into an Abstract Syntax Tree Parser/parser.c.
+    Transform AST into an instruction sequence Python/compile.c.
+    Construct a Control Flow Graph and apply optimizations to it Python/flowgraph.c.
+    Emit bytecode based on the Control Flow Graph Python/assemble.c.
+</code></pre></div>
+
+<p>Quá trình compile từ source code thành bytecode bao gồm các&nbsp;bước:</p>
+<ul>
+<li>tokenize: biến source code thành các &#8220;token&#8221; - thành phần nhỏ nhất. <code>Parser/lexer/</code> <code>Parser/tokenizer</code></li>
+<li>biến chuỗi token thành Abstract Syntax Tree (<span class="caps">AST</span>) <code>Parser/parser.c</code></li>
+<li>biến đổi <span class="caps">AST</span> thành các câu lệnh <code>Python/compile.c</code></li>
+<li>tạo Control Flow graph qua <code>Python/flowgraph.c</code></li>
+<li>sinh ra bytecode từ Control Flow Graph <code>Python/assemble.c</code></li>
+</ul>
+<h3>Xem hello world trải qua các&nbsp;bước</h3>
+<p>Tạo file hello.py với nội dung <code>print("Hello" + " Pymier 2024")</code></p>
+<p><a href="./slice_reverse.html">Build Python từ source</a> rồi chạy <a href="https://familug.github.io/doc-code-bash-xem-vi-sao-echo-khong-hien-ten-file-an.html">lldb</a>, đặt breakpoint tại function <code>pyrun_file</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="n">$</span><span class="w"> </span><span class="n">lldb</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">python</span><span class="w"></span>
+<span class="p">(</span><span class="n">lldb</span><span class="p">)</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="s">&quot;./python&quot;</span><span class="w"></span>
+<span class="n">Current</span><span class="w"> </span><span class="n">executable</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="err">&#39;</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">foss</span><span class="o">/</span><span class="n">python3120</span><span class="o">/</span><span class="n">python</span><span class="err">&#39;</span><span class="w"> </span><span class="p">(</span><span class="n">x86_64</span><span class="p">).</span><span class="w"></span>
+<span class="p">(</span><span class="n">lldb</span><span class="p">)</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="n">pyrun_file</span><span class="w"></span>
+<span class="n">Breakpoint</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="n">locations</span><span class="p">.</span><span class="w"></span>
+<span class="p">(</span><span class="n">lldb</span><span class="p">)</span><span class="w"> </span><span class="n">process</span><span class="w"> </span><span class="n">launch</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">py</span><span class="w"></span>
+<span class="n">Process</span><span class="w"> </span><span class="mi">4000</span><span class="w"> </span><span class="n">launched</span><span class="o">:</span><span class="w"> </span><span class="err">&#39;</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">foss</span><span class="o">/</span><span class="n">python3120</span><span class="o">/</span><span class="n">python</span><span class="err">&#39;</span><span class="w"> </span><span class="p">(</span><span class="n">x86_64</span><span class="p">)</span><span class="w"></span>
+<span class="n">Process</span><span class="w"> </span><span class="mi">4000</span><span class="w"> </span><span class="n">stopped</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="kr">thread</span><span class="w"> </span><span class="err">#</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">&#39;</span><span class="n">python</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">stop</span><span class="w"> </span><span class="n">reason</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">breakpoint</span><span class="w"> </span><span class="mf">1.4</span><span class="w"></span>
+<span class="w">    </span><span class="n">frame</span><span class="w"> </span><span class="err">#</span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="mh">0x00005555558415a0</span><span class="w"> </span><span class="n">python</span><span class="err">`</span><span class="n">_PyRun_SimpleFileObject</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">pythonrun</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">1599</span><span class="o">:</span><span class="mi">22</span><span class="w"></span>
+<span class="w">   </span><span class="mi">1596</span><span class="w"> </span><span class="n">pyrun_file</span><span class="p">(</span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">globals</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="mi">1597</span><span class="w">            </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">locals</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">closeit</span><span class="p">,</span><span class="w"> </span><span class="n">PyCompilerFlags</span><span class="w"> </span><span class="o">*</span><span class="n">flags</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="mi">1598</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">1599</span><span class="w">     </span><span class="n">PyArena</span><span class="w"> </span><span class="o">*</span><span class="n">arena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_PyArena_New</span><span class="p">();</span><span class="w"></span>
+<span class="w">   </span><span class="mi">1600</span><span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arena</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="mi">1601</span><span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="mi">1602</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="p">(</span><span class="n">lldb</span><span class="p">)</span><span class="w"> </span><span class="n">bt</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="kr">thread</span><span class="w"> </span><span class="err">#</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">&#39;</span><span class="n">python</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">stop</span><span class="w"> </span><span class="n">reason</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">breakpoint</span><span class="w"> </span><span class="mf">1.4</span><span class="w"></span>
+<span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="err">#</span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="mh">0x00005555558415a0</span><span class="w"> </span><span class="n">python</span><span class="err">`</span><span class="n">_PyRun_SimpleFileObject</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">pythonrun</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">1599</span><span class="o">:</span><span class="mi">22</span><span class="w"></span>
+<span class="w">    </span><span class="n">frame</span><span class="w"> </span><span class="err">#</span><span class="mi">1</span><span class="o">:</span><span class="w"> </span><span class="mh">0x00005555558415a0</span><span class="w"> </span><span class="n">python</span><span class="err">`</span><span class="n">_PyRun_SimpleFileObject</span><span class="p">(</span><span class="n">fp</span><span class="o">=</span><span class="mh">0x0000555555c2d740</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="o">=</span><span class="mh">0x00007ffff7109840</span><span class="p">,</span><span class="w"> </span><span class="n">closeit</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="o">=</span><span class="mh">0x00007fffffffe318</span><span class="p">)</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">pythonrun</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">433</span><span class="o">:</span><span class="mi">13</span><span class="w"></span>
+<span class="w">    </span><span class="n">frame</span><span class="w"> </span><span class="err">#</span><span class="mi">2</span><span class="o">:</span><span class="w"> </span><span class="mh">0x0000555555841b7f</span><span class="w"> </span><span class="n">python</span><span class="err">`</span><span class="n">_PyRun_AnyFileObject</span><span class="p">(</span><span class="n">fp</span><span class="o">=</span><span class="mh">0x0000555555c2d740</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="o">=</span><span class="mh">0x00007ffff7109840</span><span class="p">,</span><span class="w"> </span><span class="n">closeit</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="o">=</span><span class="mh">0x00007fffffffe318</span><span class="p">)</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">pythonrun</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">78</span><span class="o">:</span><span class="mi">15</span><span class="w"></span>
+<span class="w">    </span><span class="n">frame</span><span class="w"> </span><span class="err">#</span><span class="mi">3</span><span class="o">:</span><span class="w"> </span><span class="mh">0x00005555558696a8</span><span class="w"> </span><span class="n">python</span><span class="err">`</span><span class="n">pymain_run_python</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">main</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">360</span><span class="o">:</span><span class="mi">15</span><span class="w"></span>
+<span class="w">    </span><span class="n">frame</span><span class="w"> </span><span class="err">#</span><span class="mi">4</span><span class="o">:</span><span class="w"> </span><span class="mh">0x0000555555869612</span><span class="w"> </span><span class="n">python</span><span class="err">`</span><span class="n">pymain_run_python</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">main</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">379</span><span class="o">:</span><span class="mi">15</span><span class="w"></span>
+<span class="w">    </span><span class="n">frame</span><span class="w"> </span><span class="err">#</span><span class="mi">5</span><span class="o">:</span><span class="w"> </span><span class="mh">0x00005555558695c0</span><span class="w"> </span><span class="n">python</span><span class="err">`</span><span class="n">pymain_run_python</span><span class="p">(</span><span class="n">exitcode</span><span class="o">=</span><span class="mh">0x00007fffffffe460</span><span class="p">)</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">main</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">610</span><span class="o">:</span><span class="mi">21</span><span class="w"></span>
+<span class="w">    </span><span class="n">frame</span><span class="w"> </span><span class="err">#</span><span class="mi">6</span><span class="o">:</span><span class="w"> </span><span class="mh">0x0000555555869e00</span><span class="w"> </span><span class="n">python</span><span class="err">`</span><span class="n">Py_BytesMain</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">main</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">689</span><span class="o">:</span><span class="mi">5</span><span class="w"></span>
+<span class="w">    </span><span class="n">frame</span><span class="w"> </span><span class="err">#</span><span class="mi">7</span><span class="o">:</span><span class="w"> </span><span class="mh">0x0000555555869dee</span><span class="w"> </span><span class="n">python</span><span class="err">`</span><span class="n">Py_BytesMain</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">main</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">719</span><span class="o">:</span><span class="mi">12</span><span class="w"></span>
+<span class="w">    </span><span class="n">frame</span><span class="w"> </span><span class="err">#</span><span class="mi">8</span><span class="o">:</span><span class="w"> </span><span class="mh">0x0000555555869dcf</span><span class="w"> </span><span class="n">python</span><span class="err">`</span><span class="n">Py_BytesMain</span><span class="p">(</span><span class="n">argc</span><span class="o">=&lt;</span><span class="n">unavailable</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="o">=&lt;</span><span class="n">unavailable</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">main</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">743</span><span class="o">:</span><span class="mi">12</span><span class="w"></span>
+<span class="w">    </span><span class="n">frame</span><span class="w"> </span><span class="err">#</span><span class="mi">9</span><span class="o">:</span><span class="w"> </span><span class="mh">0x00007ffff7c29d90</span><span class="w"> </span><span class="n">libc</span><span class="p">.</span><span class="n">so</span><span class="mf">.6</span><span class="err">`</span><span class="n">__libc_start_call_main</span><span class="p">(</span><span class="n">main</span><span class="o">=</span><span class="p">(</span><span class="n">python</span><span class="err">`</span><span class="n">main</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">python</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">14</span><span class="o">:</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">argc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="o">=</span><span class="mh">0x00007fffffffe5a8</span><span class="p">)</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">libc_start_call_main</span><span class="p">.</span><span class="n">h</span><span class="o">:</span><span class="mi">58</span><span class="o">:</span><span class="mi">16</span><span class="w"></span>
+<span class="w">    </span><span class="n">frame</span><span class="w"> </span><span class="err">#</span><span class="mi">10</span><span class="o">:</span><span class="w"> </span><span class="mh">0x00007ffff7c29e40</span><span class="w"> </span><span class="n">libc</span><span class="p">.</span><span class="n">so</span><span class="mf">.6</span><span class="err">`</span><span class="n">__libc_start_main_impl</span><span class="p">(</span><span class="n">main</span><span class="o">=</span><span class="p">(</span><span class="n">python</span><span class="err">`</span><span class="n">main</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">python</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">14</span><span class="o">:</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">argc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="o">=</span><span class="mh">0x00007fffffffe5a8</span><span class="p">,</span><span class="w"> </span><span class="n">init</span><span class="o">=</span><span class="mh">0x00007ffff7ffd040</span><span class="p">,</span><span class="w"> </span><span class="n">fini</span><span class="o">=&lt;</span><span class="n">unavailable</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">rtld_fini</span><span class="o">=&lt;</span><span class="n">unavailable</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">stack_end</span><span class="o">=</span><span class="mh">0x00007fffffffe598</span><span class="p">)</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">libc</span><span class="o">-</span><span class="n">start</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">392</span><span class="o">:</span><span class="mi">3</span><span class="w"></span>
+<span class="w">    </span><span class="n">frame</span><span class="w"> </span><span class="err">#</span><span class="mi">11</span><span class="o">:</span><span class="w"> </span><span class="mh">0x0000555555660c85</span><span class="w"> </span><span class="n">python</span><span class="err">`</span><span class="n">_start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">37</span><span class="w"></span>
+</code></pre></div>
+
+<p><a href="https://github.com/python/cpython/blob/3.12/Python/pythonrun.c#L1624-L1651">Function <code>pyrun_file</code> trong&nbsp;pythonrun.c</a></p>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="nf">pyrun_file</span><span class="p">(</span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">globals</span><span class="p">,</span><span class="w"></span>
+<span class="w">           </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">locals</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">closeit</span><span class="p">,</span><span class="w"> </span><span class="n">PyCompilerFlags</span><span class="w"> </span><span class="o">*</span><span class="n">flags</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">PyArena</span><span class="w"> </span><span class="o">*</span><span class="n">arena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_PyArena_New</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arena</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">mod_ty</span><span class="w"> </span><span class="n">mod</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">mod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_PyParser_ASTFromFile</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                </span><span class="n">flags</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">arena</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">closeit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mod</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">run_mod</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">globals</span><span class="p">,</span><span class="w"> </span><span class="n">locals</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p">,</span><span class="w"> </span><span class="n">arena</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">_PyArena_Free</span><span class="p">(</span><span class="n">arena</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<ul>
+<li><code>_PyParser_ASTFromFile</code> đọc file vào và biến thành <span class="caps">AST</span>, trả về kiểu <code>mod_ty</code>. Tìm trong tài liệu <a href="https://docs.python.org/3.12/whatsnew/changelog.html#id280">Python viết</a> : <span class="caps">AST</span> object (<code>mod_ty</code> type). <code>_PyParser_ASTFromFile</code> gọi tới <a href="https://github.com/python/cpython/blob/3.12/Parser/pegen.c#L969"><code>_PyPegen_run_parser_from_file_pointer</code> trong pegen.c</a> tại đây gọi <code>_PyTokenizer_FromFile</code> để biến source code thành các token rồi gọi <a href="https://github.com/python/cpython/blob/3.12/Parser/parser.c#L41910"><code>_PyPegen_parse trong parser.c</code></a> để parse token stream thành <span class="caps">AST</span>.</li>
+<li><a href="https://github.com/python/cpython/blob/3.12/Python/pythonrun.c#L1729-L1746"><code>run_mod</code></a> sau đó gọi <a href="https://github.com/python/cpython/blob/3.12/Python/compile.c#L577"><code>_PyAST_Compile</code> trong compile.c</a> để compile code từ <span class="caps">AST</span> <code>mod_py</code>, trả về object kiểu <code>PyCodeObject</code>, sau đó chạy code này bằng <a href="https://github.com/python/cpython/blob/main/Python/ceval.c#L636"><code>run_eval_code_obj</code> trong ceval.c</a>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="nf">run_mod</span><span class="p">(</span><span class="n">mod_ty</span><span class="w"> </span><span class="n">mod</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">globals</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">locals</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">PyCompilerFlags</span><span class="w"> </span><span class="o">*</span><span class="n">flags</span><span class="p">,</span><span class="w"> </span><span class="n">PyArena</span><span class="w"> </span><span class="o">*</span><span class="n">arena</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">PyThreadState</span><span class="w"> </span><span class="o">*</span><span class="n">tstate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_PyThreadState_GET</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">PyCodeObject</span><span class="w"> </span><span class="o">*</span><span class="n">co</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_PyAST_Compile</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">arena</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">co</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_PySys_Audit</span><span class="p">(</span><span class="n">tstate</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;exec&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;O&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">co</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Py_DECREF</span><span class="p">(</span><span class="n">co</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">run_eval_code_obj</span><span class="p">(</span><span class="n">tstate</span><span class="p">,</span><span class="w"> </span><span class="n">co</span><span class="p">,</span><span class="w"> </span><span class="n">globals</span><span class="p">,</span><span class="w"> </span><span class="n">locals</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Py_DECREF</span><span class="p">(</span><span class="n">co</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<h3>Kết&nbsp;luận</h3>
+<p>CPython có compile&nbsp;code.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>
