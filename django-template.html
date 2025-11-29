@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="Django template gọi method không cần&nbsp;()">
+<meta name="twitter:description" content="Flask Jinja2 template gọi method cần (), Django thì không">
+        <!-- OG Tags -->
+<meta property="og:url" content="./django-template.html"/>
+<meta property="og:title" content="Django template gọi method không cần&nbsp;() | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="Flask Jinja2 template gọi method cần (), Django thì không" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="Flask Jinja2 template gọi method cần (), Django thì không" />
+
+    <meta name="tags" content="python" />
+    <meta name="tags" content="Django" />
+    <meta name="tags" content="template" />
+    <meta name="tags" content="Jinja2" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2023-07-16 00:00:00+07:00">
+                <script>document.write(moment('2023-07-16 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Django template gọi method không cần&nbsp;()
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p>Python có 2 template engine phổ biến nhất: Jinja2 (hay dùng với Flask, SaltStack, Ansible&#8230;) và Django&nbsp;template.</p>
+<p>Cả 2 khá giống nhau về cú pháp: viết for/if như Python, dùng function qua các filter có sẵn, đoạn code sau chạy
+cho cả&nbsp;2:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">fw</span> <span class="ow">in</span> <span class="n">frameworks</span> <span class="o">%</span><span class="p">}</span>
+  <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">fw</span><span class="o">|</span><span class="n">length</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">%</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="p">{{</span> <span class="n">fw</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;</span>
+  <span class="p">{</span><span class="o">%</span> <span class="k">else</span> <span class="o">%</span><span class="p">}</span>
+    <span class="p">{{</span> <span class="n">fw</span> <span class="p">}}</span>
+  <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
+</code></pre></div>
+
+<p>nhưng sự khác biệt bắt đầu xuất hiện khi sử dụng&nbsp;method.</p>
+<h3>Gọi method trong Django&nbsp;template</h3>
+<p>Jinja2 sử dụng cú pháp gọi method như Python, kết quả không có gì ngạc nhiên khi gọi <code>c.items()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">jinja2</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="s2">&quot;meo meo go&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jinja2</span><span class="o">.</span><span class="n">Template</span><span class="p">(</span><span class="s1">&#39;{{ c.items }}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">))</span>
+<span class="c1"># &lt;built-in method items of Counter object at 0x7fbe37ce64b0&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jinja2</span><span class="o">.</span><span class="n">Template</span><span class="p">(</span><span class="s1">&#39;{</span><span class="si">% f</span><span class="s1">or k, v in c.items() %} {{ k }} {{ v }} {</span><span class="si">%e</span><span class="s1">ndfor%}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">))</span>
+<span class="c1">#  meo 2  go 1</span>
+</code></pre></div>
+
+<p>Django template không dùng cú pháp gọi&nbsp;method</p>
+<div class="highlight"><pre><span></span><code><span class="p">{{</span> <span class="n">counter</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">}}</span>
+</code></pre></div>
+
+<p>Gặp&nbsp;error:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Could</span> <span class="ow">not</span> <span class="n">parse</span> <span class="n">the</span> <span class="n">remainder</span><span class="p">:</span> <span class="s1">&#39;()&#39;</span> <span class="kn">from</span> <span class="s1">&#39;counter.items()&#39;</span>
+</code></pre></div>
+
+<p>Trong tài liệu Django template <a href="https://docs.djangoproject.com/en/4.2/topics/templates/#variables">topic</a>&nbsp;viết:</p>
+<blockquote>
+<p>Dictionary lookup, attribute lookup and list-index lookups are implemented with a dot notation:
+  <code>{{ my_dict.key }}
+  {{ my_object.attribute }}
+  {{ my_list.0 }}</code>
+  If a variable resolves to a callable, the template system will call it with no arguments and use its result instead of the&nbsp;callable.</p>
+</blockquote>
+<p>Khi sử dụng <code>object.key</code>, Django sẽ thử tìm <code>object["key"]</code>, <code>object.key</code> hay nếu key là method, sẽ gọi <code>object.key</code>,
+vì vậy sẽ phải viết <code>{{ counter.items }}</code>.</p>
+<p>Chỉ đơn giản là không phải viết <code>()</code>, gì mà phức&nbsp;tạp?</p>
+<h3>Tìm&nbsp;bug</h3>
+<p>Cho 1 đoạn Django template, nhận context là 1 <a href="./counter.html">Counter</a>:</p>
+<p>Code <code>views.py</code></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="s2">&quot;red green green red red green green&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">counter</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;from counter&quot;</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;index.html&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;d&quot;</span><span class="p">:</span> <span class="n">d</span><span class="p">,</span> <span class="s2">&quot;counter&quot;</span><span class="p">:</span> <span class="n">counter</span><span class="p">})</span>
+</code></pre></div>
+
+<p>File <code>templates/index.html</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">counter</span><span class="o">.</span><span class="n">items</span> <span class="o">%</span><span class="p">}</span>
+  <span class="p">{{</span> <span class="n">k</span> <span class="p">}}</span> <span class="p">{{</span> <span class="n">v</span> <span class="p">}}</span><span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
+</code></pre></div>
+
+<p>Xảy ra exception tại dòng&nbsp;for:</p>
+<div class="highlight"><pre><span></span><code><span class="ne">TypeError</span> <span class="n">at</span> <span class="o">/</span>
+
+<span class="s1">&#39;int&#39;</span> <span class="nb">object</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">iterable</span>
+</code></pre></div>
+
+<p>có nghĩa <code>counter.items</code> trả về một <code>int</code> chứ không phải tuple (key, value) như <code>dict.items</code> vẫn trả về.
+Khó hiểu hơn nữa, khi phần code tương tự trong function <code>index</code> vẫn chạy bình thường, tại sao <code>counter.items</code> trong Django template trả về&nbsp;int?</p>
+<p>May mắn thay, tìm <code>items()</code> trong tài liệu <a href="https://docs.djangoproject.com/en/4.2/ref/templates/language/">reference</a> của Django Template&nbsp;viết:</p>
+<p><a href="https://docs.djangoproject.com/en/4.2/ref/templates/language/#variables">https://docs.djangoproject.com/en/4.2/ref/templates/language/#variables</a></p>
+<blockquote>
+<p>Technically, when the template system encounters a dot, it tries the following lookups, in this order:
+    Dictionary lookup
+    Attribute or method lookup
+    Numeric index lookup
+If the resulting value is callable, it is called with no arguments. The result of the call becomes the template&nbsp;value.</p>
+</blockquote>
+<p>Cũng giống phần đã viết trong <a href="https://docs.djangoproject.com/en/4.2/topics/templates/#variables">topic</a>, nhưng nhấn mạnh hơn về thứ tự&nbsp;thử:</p>
+<ul>
+<li>tìm kiếm trong dict trước: <code>object[key]</code></li>
+<li>truy cập attribute, method cũng là 1 loại attribute: <code>object.key</code></li>
+</ul>
+<p>Trở lại ví dụ, <code>counter.items</code> đầu tiên sẽ gọi <code>counter[items]</code>,
+mà <a href="./counter.html">Counter trả về 0 với item không tồn tại thay vì raise KeyError</a>, nên kết quả là <code>0</code>,
+không có lần gọi nào tới method <code>counter.items()</code>.</p>
+<blockquote>
+<p>This lookup order can cause some unexpected behavior with objects that override dictionary lookup. For example, consider the following code snippet that attempts to loop over a&nbsp;collections.defaultdict:</p>
+<p _="%" endfor>{% for k, v in defaultdict.items %}
+    Do something with k and v&nbsp;here&#8230;</p>
+<p>Because dictionary lookup happens first, that behavior kicks in and provides a default value instead of using the intended .items() method. In this case, consider converting to a dictionary&nbsp;first</p>
+</blockquote>
+<p>Giải pháp là biến Counter thành dict <code>dict(c)</code> trước khi đưa cho&nbsp;template.</p>
+<p>Thành dict là xong??? cho đến 1 ngày đen đủi, khi dict của bạn chứa 1 key là <code>items</code>&#8230;</p>
+<p>Xem code tại <a href="https://github.com/django/django/blob/4.2/django/template/base.py#L867-L942">https://github.com/django/django/blob/4.2/django/template/base.py#L867-L942</a></p>
+<h3>Kết&nbsp;luận</h3>
+<p>Magic không tự xảy ra, muốn dùng magic nhớ đọc doc, hãy thử, đừng&nbsp;đoán.</p>
+<p>Hết.</p>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

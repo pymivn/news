@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="Thêm câu lệnh python vào gdb để in ra binary&nbsp;architecture">
+<meta name="twitter:description" content="amd64? x86? arm64? !!!">
+        <!-- OG Tags -->
+<meta property="og:url" content="./hgdb-arch.html"/>
+<meta property="og:title" content="Thêm câu lệnh python vào gdb để in ra binary&nbsp;architecture | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="amd64? x86? arm64? !!!" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="amd64? x86? arm64? !!!" />
+
+    <meta name="tags" content="gdb" />
+    <meta name="tags" content="debugger" />
+    <meta name="tags" content="extension" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2023-01-18 00:00:00+07:00">
+                <script>document.write(moment('2023-01-18 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Thêm câu lệnh python vào gdb để in ra binary&nbsp;architecture
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <h3>Architecture</h3>
+<p>Mỗi file binary được compile cho một kiến trúc(architecture) <span class="caps">CPU</span> cụ&nbsp;thể.</p>
+<p>Các architecture phổ biến&nbsp;như:</p>
+<ul>
+<li>x86-32 (32&nbsp;bits)</li>
+<li>x86-64 (64&nbsp;bits)</li>
+<li>arm-64 (phổ biến trên các máy điện thoại/máy tính bảng/hay Apple M1&nbsp;M2&#8230;)</li>
+</ul>
+<p>Một file binary đã compile sẵn cho x86-64 thì không thể chạy trực tiếp trên arm-64.
+Ví dụ khi download <a href="https://github.com/prometheus/prometheus/releases/tag/v2.41.0">phần mềm prometheus thấy có sẵn file binary</a> cho từng architecture trên từng hệ điều&nbsp;hành.</p>
+<p>Cách đơn giản nhất là gõ lệnh <code>file tenbinary</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="k">top</span><span class="w">                                                                           </span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="w"></span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="k">top</span><span class="err">:</span><span class="w"> </span><span class="n">ELF</span><span class="w"> </span><span class="mi">64</span><span class="o">-</span><span class="nc">bit</span><span class="w"> </span><span class="n">LSB</span><span class="w"> </span><span class="n">shared</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">(</span><span class="n">SYSV</span><span class="p">),</span><span class="w"> </span><span class="n">dynamically</span><span class="w"> </span><span class="n">linked</span><span class="p">,</span><span class="w"> </span><span class="n">interpreter</span><span class="w"> </span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">ld</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">x86</span><span class="o">-</span><span class="mf">64.</span><span class="n">so</span><span class="mf">.2</span><span class="p">,</span><span class="w"> </span><span class="n">BuildID</span><span class="o">[</span><span class="n">sha1</span><span class="o">]=</span><span class="mi">867346</span><span class="n">cd2ce3350129fc1e6fb923e92380eaf6e9</span><span class="p">,</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span><span class="w"> </span><span class="mf">3.2.0</span><span class="p">,</span><span class="w"> </span><span class="n">stripped</span><span class="w"></span>
+</code></pre></div>
+
+<p>thấy <code>x86-64</code>, <span class="caps">ELF</span> là format binary trên Linux, ở đây thấy <span class="caps">ELF</span>&nbsp;64-bit.</p>
+<p>Trong gdb,&nbsp;gõ</p>
+<div class="highlight"><pre><span></span><code><span class="ss">(</span><span class="nv">gdb</span><span class="ss">)</span><span class="w"> </span><span class="nv">maintenance</span><span class="w"> </span><span class="nv">info</span><span class="w"> </span><span class="nv">sections</span><span class="w"> </span>?<span class="w"></span>
+<span class="k">Exec</span><span class="w"> </span><span class="nv">file</span>:<span class="w"></span>
+<span class="w">    </span>`<span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">top</span><span class="err">&#39;, file type elf64-x86-64.</span><span class="w"></span>
+</code></pre></div>
+
+<p>Câu lệnh này rất dài và khó nhớ, viết một câu lệnh mới tên là <code>arch</code> in ra <code>elf64-x86-64</code> sẽ ngắn gọn hơn&nbsp;nhiều.</p>
+<h3>Thêm command arch vào&nbsp;gdb</h3>
+<p>Đoạn code tham khảo từ <a href="https://github.com/longld/peda"><span class="caps">PEDA</span></a>, các bước thực hiện là chạy các câu lệnh của gdb
+rồi lấy kết quả ra và in ra phần mong muốn. Thêm vào file code <code>/home/hvn/me/hgdb/hgdb.py</code> như <a href="./hgdb.html">bài trước</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="k">class</span> <span class="nc">Arch</span><span class="p">(</span><span class="n">gdb</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span> <span class="p">(</span><span class="n">Arch</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;arch&quot;</span><span class="p">,</span> <span class="n">gdb</span><span class="o">.</span><span class="n">COMMAND_USER</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">invoke</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">from_tty</span><span class="p">):</span>
+        <span class="n">tmpfile</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mktemp</span><span class="p">()</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">tmpfile</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">gdb</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;set logging off&quot;</span><span class="p">)</span>
+            <span class="n">gdb</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;set height 0&quot;</span><span class="p">)</span>
+            <span class="n">gdb</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;set logging file </span><span class="si">{</span><span class="n">tmpfile</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">gdb</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;set logging overwrite on&quot;</span><span class="p">)</span>
+            <span class="n">gdb</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;set logging redirect on&quot;</span><span class="p">)</span>
+            <span class="n">gdb</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;set logging on&quot;</span><span class="p">)</span>
+            <span class="n">gdb</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;maintenance info sections ?&quot;</span><span class="p">)</span>
+            <span class="n">gdb</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+            <span class="n">gdb</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;set logging off&quot;</span><span class="p">)</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">output</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
+                <span class="k">if</span> <span class="s1">&#39;file type&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))</span>
+                    <span class="k">break</span>
+<span class="n">Arch</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Chạy:</p>
+<div class="highlight"><pre><span></span><code>$ gdb -q /bin/top
+Reading symbols from /bin/top...
+<span class="o">(</span>No debugging symbols found <span class="k">in</span> /bin/top<span class="o">)</span>
+<span class="o">(</span>gdb<span class="o">)</span> arch
+elf64-x86-64
+</code></pre></div>
+
+<p>Hết.</p>
+<p>Thực hiện&nbsp;trên</p>
+<div class="highlight"><pre><span></span><code>$ gdb --version
+GNU gdb <span class="o">(</span>Ubuntu <span class="m">9</span>.2-0ubuntu1~20.04.1<span class="o">)</span> <span class="m">9</span>.2
+Copyright <span class="o">(</span>C<span class="o">)</span> <span class="m">2020</span> Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version <span class="m">3</span> or later &lt;http://gnu.org/licenses/gpl.html&gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+</code></pre></div>
+
+<h2>Tham&nbsp;khảo</h2>
+<p><a href="https://sourceware.org/gdb/current/onlinedocs/gdb.html/Extending-GDB.html#Extending-GDB">https://sourceware.org/gdb/current/onlinedocs/gdb.html/Extending-<span class="caps">GDB</span>.html#Extending-<span class="caps">GDB</span></a></p>
+<h2>Liên&nbsp;quan</h2>
+<ul>
+<li><a href="https://familug.github.io/hoc-rust-voi-gdb.html">https://familug.github.io/hoc-rust-voi-gdb.html</a></li>
+<li><a href="https://pp.pymi.vn/tag/ctf/">https://pp.pymi.vn/tag/ctf/</a></li>
+<li><a href="./hgdb.html">bài&nbsp;trước</a></li>
+</ul>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

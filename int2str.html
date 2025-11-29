@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="Python 3.10 integer lớn tùy ý, nhưng không còn in được ra màn&nbsp;hình">
+<meta name="twitter:description" content="sự thật hôm qua không thật đến hôm nay">
+        <!-- OG Tags -->
+<meta property="og:url" content="./int2str.html"/>
+<meta property="og:title" content="Python 3.10 integer lớn tùy ý, nhưng không còn in được ra màn&nbsp;hình | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="sự thật hôm qua không thật đến hôm nay" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="sự thật hôm qua không thật đến hôm nay" />
+
+    <meta name="tags" content="python" />
+    <meta name="tags" content="changes" />
+    <meta name="tags" content="CVE" />
+    <meta name="tags" content="DOS" />
+    <meta name="tags" content="int" />
+    <meta name="tags" content="str" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2022-10-26 00:00:00+07:00">
+                <script>document.write(moment('2022-10-26 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Python 3.10 integer lớn tùy ý, nhưng không còn in được ra màn&nbsp;hình
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p>Chỉ có sự thay đổi là cố định. Đặc biệt trong ngành <span class="caps">IT</span>, sau mỗi <a href="https://en.wikipedia.org/wiki/Moore%27s_law">2 năm <span class="caps">CPU</span> &#8220;nhanh&#8221; gấp đôi</a>, công nghệ 2 3 năm lại thay đổi, thì những thứ đúng hôm qua, hôm nay càng chưa chắc còn&nbsp;đúng.</p>
+<p><img alt="img" src="https://images.unsplash.com/photo-1537949721120-e8f21f6698e6?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjY3OTU0MTA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=600"></p>
+<p>Vào bài học đầu tiên của lớp <a href="./pymi2210.html"><span class="caps">PYMI2210</span></a>, học viên được xõa thoải mái với integer (số nguyên), cộng trừ nhân chia thì tự dưng phép lũy thừa lại bị không thoải&nbsp;mái:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Python</span> <span class="mf">3.10.8</span> <span class="p">(</span><span class="n">main</span><span class="p">,</span> <span class="n">Oct</span> <span class="mi">25</span> <span class="mi">2022</span><span class="p">,</span> <span class="mi">05</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">56</span><span class="p">)</span> <span class="p">[</span><span class="n">GCC</span> <span class="mf">10.2.1</span> <span class="mi">20210110</span><span class="p">]</span> <span class="n">on</span> <span class="n">linux</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span><span class="o">**</span><span class="mi">4301</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">Exceeds</span> <span class="n">the</span> <span class="n">limit</span> <span class="p">(</span><span class="mi">4300</span><span class="p">)</span> <span class="k">for</span> <span class="n">integer</span> <span class="n">string</span> <span class="n">conversion</span><span class="p">;</span> <span class="n">use</span> <span class="n">sys</span><span class="o">.</span><span class="n">set_int_max_str_digits</span><span class="p">()</span> <span class="n">to</span> <span class="n">increase</span> <span class="n">the</span> <span class="n">limit</span>
+</code></pre></div>
+
+<p>Phản ứng duy nhất của bạn chỉ có thể là &#8220;<span class="caps">WTF</span>&#8221;, sau hơn 40 khóa dạy học Python, thì đây là lần đầu tiên nhìn thấy điều này. Vậy nên nhớ rằng kiến thức cũng chỉ là nhất thời, sự thật hôm qua không thật đến ngày&nbsp;mai.</p>
+<p>Đây là một thay đổi liên quan đến <a href="https://docs.python.org/3/whatsnew/3.10.html#notable-security-feature-in-3-10-7">security trong Python 3.10.7</a>, tức thậm chí Python 3.10.6 cũng chưa có, nó nằm tít dưới cùng trong doc release của&nbsp;3.10: </p>
+<blockquote>
+<p>Converting between int and str in bases other than 2 (binary), 4, 8 (octal), 16 (hexadecimal), or 32 such as base 10 (decimal) now raises a ValueError if the number of digits in string form is above a limit to avoid potential denial of service attacks due to the algorithmic complexity. This is a mitigation for <span class="caps">CVE</span>-2020-10735. This limit can be configured or disabled by environment variable, command line flag, or sys APIs. See the integer string conversion length limitation documentation. The default limit is 4300 digits in string&nbsp;form.</p>
+</blockquote>
+<p>Vì biến đổi từ int, sang string để in ra màn hình, khi số đủ lớn, có thể khiến hệ thống bị quá tải, dẫn tới có thể bị tấn công &#8220;<span class="caps">DOS</span>&#8221;. Nên từ bản 3.10.7 trở đi, số có hơn <strong>4300</strong> chữ số sẽ không được in ra màn hình nữa, muốn in phải chỉnh qua &#8220;import&nbsp;sys&#8221;.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">4300</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">Exceeds</span> <span class="n">the</span> <span class="n">limit</span> <span class="p">(</span><span class="mi">4300</span><span class="p">)</span> <span class="k">for</span> <span class="n">integer</span> <span class="n">string</span> <span class="n">conversion</span><span class="p">;</span> <span class="n">use</span> <span class="n">sys</span><span class="o">.</span><span class="n">set_int_max_str_digits</span><span class="p">()</span> <span class="n">to</span> <span class="n">increase</span> <span class="n">the</span> <span class="n">limit</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">4301</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">//</span> <span class="mi">100</span>
+<span class="mf">100.</span><span class="o">...</span>
+</code></pre></div>
+
+<p>Tính thì vẫn tính thoải mái, nhưng mặc định không đổi thành str hay in được số lớn vậy ra màn&nbsp;hình.</p>
+<p>Hết.</p>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

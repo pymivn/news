@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="zipapp - đóng gói app Python vào 1 file zip chạy&nbsp;được">
+<meta name="twitter:description" content="không hề mới, có từ Python2.6 (2008), nhưng ít được biết tới">
+        <!-- OG Tags -->
+<meta property="og:url" content="./zipapp.html"/>
+<meta property="og:title" content="zipapp - đóng gói app Python vào 1 file zip chạy&nbsp;được | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="không hề mới, có từ Python2.6 (2008), nhưng ít được biết tới" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="không hề mới, có từ Python2.6 (2008), nhưng ít được biết tới" />
+
+    <meta name="tags" content="zip" />
+    <meta name="tags" content="zipapp" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2022-09-28 00:00:00+07:00">
+                <script>document.write(moment('2022-09-28 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            zipapp - đóng gói app Python vào 1 file zip chạy&nbsp;được
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p><img alt="img" src="https://images.unsplash.com/photo-1623985153974-70b07d6a279e?ixlib=rb-1.2.1&amp;dl=fidel-fernando-fopwDMRoOlE-unsplash.jpg&amp;w=640&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb"></p>
+<p>Code Python có thể được đóng trong 1 file zip và chạy được (như file .exe trên Windows). Ví dụ đơn giản trên&nbsp;Ubuntu:</p>
+<div class="highlight"><pre><span></span><code>$ mkdir ziptest
+$ <span class="nb">echo</span> <span class="s1">&#39;print(&quot;Hello Pymier&quot;)&#39;</span> &gt; ziptest/__main__.py
+$ python3 -m zipapp ziptest
+$ ls -l ziptest.pyz
+-rw-rw-r-- <span class="m">1</span> hvn hvn <span class="m">142</span> Sep <span class="m">28</span> <span class="m">21</span>:24 ziptest.pyz
+$ file ziptest.pyz
+ziptest.pyz: Zip archive data, at least v2.0 to extract
+$ zipinfo ziptest.pyz
+Archive:  ziptest.pyz
+Zip file size: <span class="m">142</span> bytes, number of entries: <span class="m">1</span>
+-rw-rw-r--  <span class="m">2</span>.0 unx       <span class="m">22</span> b- stor <span class="m">22</span>-Sep-28 <span class="m">21</span>:20 __main__.py
+<span class="m">1</span> file, <span class="m">22</span> bytes uncompressed, <span class="m">22</span> bytes compressed:  <span class="m">0</span>.0%
+$ python ziptest.pyz
+Hello Pymier
+</code></pre></div>
+
+<p>Code trong file <code>__main__.py</code> sẽ được&nbsp;chạy.</p>
+<h3>Chỉ là 1 file&nbsp;zip</h3>
+<p>Việc tạo file zip này không cần bất cứ tool gì đặt biệt, chỉ cần tạo 1 file zip chứa file <code>__main__.py</code> (và N file khác nếu cần) là&nbsp;được.</p>
+<p>Tài liệu của Python lib zipapp có giải thích format này, chú ý rằng file zip có header ở chỗ nào cũng được (chứ không bắt buộc phải ở đầu&nbsp;file):</p>
+<p>The zip file format allows arbitrary data to be prepended to a zip file. The zip application format uses this ability to prepend a standard <span class="caps">POSIX</span> “shebang” line to the file (#!/path/to/interpreter).
+Formally, the Python zip application format is&nbsp;therefore:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">An</span><span class="w"> </span><span class="nv">optional</span><span class="w"> </span><span class="nv">shebang</span><span class="w"> </span><span class="nv">line</span>,<span class="w"> </span><span class="nv">containing</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">characters</span><span class="w"> </span><span class="nv">b</span><span class="s1">&#39;#!&#39;</span><span class="w"> </span><span class="nv">followed</span><span class="w"> </span><span class="nv">by</span><span class="w"> </span><span class="nv">an</span><span class="w"> </span><span class="nv">interpreter</span><span class="w"> </span><span class="nv">name</span>,<span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">newline</span><span class="w"> </span><span class="ss">(</span><span class="nv">b</span><span class="s1">&#39;\n&#39;</span><span class="ss">)</span><span class="w"> </span><span class="nv">character</span>.<span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">interpreter</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="nv">can</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">anything</span><span class="w"> </span><span class="nv">acceptable</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">OS</span><span class="w"> </span>“<span class="nv">shebang</span>”<span class="w"> </span><span class="nv">processing</span>,<span class="w"> </span><span class="nv">or</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">Python</span><span class="w"> </span><span class="nv">launcher</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">Windows</span>.<span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">interpreter</span><span class="w"> </span><span class="nv">should</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">encoded</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">UTF</span><span class="o">-</span><span class="mi">8</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">Windows</span>,<span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">sys</span>.<span class="nv">getfilesystemencoding</span><span class="ss">()</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">POSIX</span>.<span class="w"></span>
+
+<span class="nv">Standard</span><span class="w"> </span><span class="nv">zipfile</span><span class="w"> </span><span class="nv">data</span>,<span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">generated</span><span class="w"> </span><span class="nv">by</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">zipfile</span><span class="w"> </span><span class="nv">module</span>.<span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">zipfile</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="nv">must</span><span class="w"> </span><span class="k">include</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">called</span><span class="w"> </span><span class="nv">__main__</span>.<span class="nv">py</span><span class="w"> </span><span class="ss">(</span><span class="nv">which</span><span class="w"> </span><span class="nv">must</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span>“<span class="nv">root</span>”<span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">zipfile</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">i</span>.<span class="nv">e</span>.,<span class="w"> </span><span class="nv">it</span><span class="w"> </span><span class="nv">cannot</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">subdirectory</span><span class="ss">)</span>.<span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">zipfile</span><span class="w"> </span><span class="nv">data</span><span class="w"> </span><span class="nv">can</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">compressed</span><span class="w"> </span><span class="nv">or</span><span class="w"> </span><span class="nv">uncompressed</span>.<span class="w"></span>
+</code></pre></div>
+
+<p>If an application archive has a shebang line, it may have the executable bit set on <span class="caps">POSIX</span> systems, to allow it to be executed&nbsp;directly.</p>
+<p>There is no requirement that the tools in this module are used to create application archives - the module is a convenience, but archives in the above format created by any means are acceptable to&nbsp;Python.</p>
+<p><a href="https://docs.python.org/3/library/zipapp.html">https://docs.python.org/3/library/zipapp.html</a></p>
+<h3>Làm một app dùng lib requests,&nbsp;beautifulsoup4</h3>
+<p>Tạo thư mục myapp,
+tạo file <code>myapp/__main__.py</code> với nội&nbsp;dung</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://pymi.vn/&quot;</span><span class="p">)</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">features</span><span class="o">=</span><span class="s2">&quot;lxml&quot;</span><span class="p">)</span>
+<span class="n">i_tags</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">text</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;alert&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span>
+        <span class="s2">&quot;li&quot;</span>
+    <span class="p">)</span>
+<span class="p">]</span>
+<span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">i_tags</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Chạy lệnh để cài các thư viện và đóng gói&nbsp;zipapp:</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span> <span class="n">bs4</span> <span class="o">--</span><span class="n">target</span> <span class="n">myapp</span>
+<span class="o">...</span>
+<span class="err">$</span> <span class="n">ls</span> <span class="n">myapp</span><span class="o">/</span>
+<span class="n">beautifulsoup4</span><span class="o">-</span><span class="mf">4.11.1</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span>     <span class="n">idna</span>
+<span class="nb">bin</span>                                 <span class="n">idna</span><span class="o">-</span><span class="mf">3.4</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span>
+<span class="n">bs4</span>                                 <span class="n">requests</span>
+<span class="n">bs4</span><span class="o">-</span><span class="mf">0.0.1</span><span class="o">.</span><span class="n">egg</span><span class="o">-</span><span class="n">info</span>                  <span class="n">requests</span><span class="o">-</span><span class="mf">2.28.1</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span>
+<span class="n">certifi</span>                             <span class="n">soupsieve</span>
+<span class="n">certifi</span><span class="o">-</span><span class="mf">2022.9.24</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span>         <span class="n">soupsieve</span><span class="o">-</span><span class="mf">2.3.2</span><span class="o">.</span><span class="n">post1</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span>
+<span class="n">charset_normalizer</span>                  <span class="n">urllib3</span>
+<span class="n">charset_normalizer</span><span class="o">-</span><span class="mf">2.1.1</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span>  <span class="n">urllib3</span><span class="o">-</span><span class="mf">1.26.12</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span>
+<span class="err">$</span> <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">zipapp</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;/usr/bin/env python3&quot;</span> <span class="n">myapp</span>
+<span class="err">$</span> <span class="o">./</span><span class="n">myapp</span><span class="o">.</span><span class="n">pyz</span>
+<span class="n">TPHCM</span> <span class="err">😱</span> <span class="n">Dự</span> <span class="n">kiến</span> <span class="n">khai</span> <span class="n">giảng</span> <span class="n">học</span> <span class="n">livestream</span> <span class="n">với</span> <span class="n">lớp</span> <span class="n">Hà</span> <span class="n">Nội</span> <span class="n">giữa</span> <span class="n">tháng</span> <span class="mi">10</span> <span class="mi">2022</span> <span class="err">🎉</span><span class="o">.</span>
+<span class="n">Hà</span> <span class="n">Nội</span> <span class="err">😱</span> <span class="n">Dự</span> <span class="n">kiến</span> <span class="n">khai</span> <span class="n">giảng</span> <span class="n">giữa</span> <span class="n">tháng</span> <span class="mi">10</span> <span class="mi">2022</span> <span class="err">🎉</span><span class="o">.</span>
+</code></pre></div>
+
+<p>Hết.</p>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

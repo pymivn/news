@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="Thư viện base64 trong Python được viết thế&nbsp;nào">
+<meta name="twitter:description" content="liệu có phải viết bằng Python?">
+        <!-- OG Tags -->
+<meta property="og:url" content="./base64impl.html"/>
+<meta property="og:title" content="Thư viện base64 trong Python được viết thế&nbsp;nào | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="liệu có phải viết bằng Python?" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="liệu có phải viết bằng Python?" />
+
+    <meta name="tags" content="Base64" />
+    <meta name="tags" content="encoding" />
+    <meta name="tags" content="stdlib" />
+    <meta name="tags" content="crypto" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2022-02-16 00:00:00+07:00">
+                <script>document.write(moment('2022-02-16 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Thư viện base64 trong Python được viết thế&nbsp;nào
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p><img alt="img" src="https://images.unsplash.com/photo-1507499739999-097706ad8914?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NDQ5Nzk4Njk&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=600"></p>
+<p><a href="./base64.html">Bài trước</a> đã tự viết code Python để encoding từ bytes sang base64, code đơn giản, mang tính chất minh họa. Vậy stdlib base64 Python viết thế&nbsp;nào?</p>
+<p><a href="https://github.com/python/cpython/blob/3.10/Lib/base64.py#L51-L62">https://github.com/python/cpython/blob/3.10/Lib/base64.py#L51-L62</a></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Base64 encoding/decoding uses binascii</span>
+
+<span class="k">def</span> <span class="nf">b64encode</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">altchars</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Encode the bytes-like object s using Base64 and return a bytes object.</span>
+<span class="sd">    Optional altchars should be a byte string of length 2 which specifies an</span>
+<span class="sd">    alternative alphabet for the &#39;+&#39; and &#39;/&#39; characters.  This allows an</span>
+<span class="sd">    application to e.g. generate url or filesystem safe Base64 strings.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">encoded</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">b2a_base64</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">altchars</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">altchars</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">altchars</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">encoded</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="nb">bytes</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;+/&#39;</span><span class="p">,</span> <span class="n">altchars</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">encoded</span>
+</code></pre></div>
+
+<p>hóa ra base64 lại gọi 1 thư viện khác <code>binascii</code> để thực hiện việc&nbsp;encoding.</p>
+<blockquote>
+<p>The binascii module contains a number of methods to convert between binary and various <span class="caps">ASCII</span>-encoded binary representations. Normally, you will not use these functions directly but use wrapper modules like uu, base64, or binhex&nbsp;instead. </p>
+</blockquote>
+<p><strong>The binascii module contains low-level functions written in C for greater speed that are used by the higher-level&nbsp;modules.</strong></p>
+<p><a href="https://docs.python.org/3/library/binascii.html">https://docs.python.org/3/library/binascii.html</a></p>
+<p>Chú ý function <code>b64encode(s, altchars=None)</code> nhận 1 đầu vào optional altchars, là 2 ký tự thay thế <code>+/</code> (thường là <code>-_</code> để encode <span class="caps">URL</span>).</p>
+<p>vậy <a href="https://github.com/python/cpython/blob/3.8/Modules/binascii.c#L570">binascii là thư viện viết bằng C</a>, để có được tốc độ nhanh&nbsp;hơn. </p>
+<p>Tò mò xem PyPy - Python viết bằng Python thì&nbsp;sao:</p>
+<div class="highlight"><pre><span></span><code><span class="n">table_b2a_base64</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;</span><span class="p">)</span>
+
+<span class="nd">@unwrap_spec</span><span class="p">(</span><span class="nb">bin</span><span class="o">=</span><span class="s1">&#39;bufferstr&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">b2a_base64</span><span class="p">(</span><span class="n">space</span><span class="p">,</span> <span class="nb">bin</span><span class="p">,</span> <span class="n">__kwonly__</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="s2">&quot;Base64-code line of data.&quot;</span>
+
+    <span class="n">newlength</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">bin</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">//</span> <span class="mi">3</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">newlength</span> <span class="o">=</span> <span class="n">ovfcheck</span><span class="p">(</span><span class="n">newlength</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">OverflowError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">OperationError</span><span class="p">(</span><span class="n">space</span><span class="o">.</span><span class="n">w_MemoryError</span><span class="p">,</span> <span class="n">space</span><span class="o">.</span><span class="n">w_None</span><span class="p">)</span>
+    <span class="n">newlength</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">StringBuilder</span><span class="p">(</span><span class="n">newlength</span><span class="p">)</span>
+
+    <span class="n">leftchar</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">leftbits</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">bin</span><span class="p">:</span>
+        <span class="c1"># Shift into our buffer, and output any 6bits ready</span>
+        <span class="n">leftchar</span> <span class="o">=</span> <span class="p">(</span><span class="n">leftchar</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">|</span> <span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="n">leftbits</span> <span class="o">+=</span> <span class="mi">8</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">table_b2a_base64</span><span class="p">[(</span><span class="n">leftchar</span> <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="n">leftbits</span><span class="o">-</span><span class="mi">6</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mh">0x3f</span><span class="p">])</span>
+        <span class="n">leftbits</span> <span class="o">-=</span> <span class="mi">6</span>
+        <span class="k">if</span> <span class="n">leftbits</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">:</span>
+            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">table_b2a_base64</span><span class="p">[(</span><span class="n">leftchar</span> <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="n">leftbits</span><span class="o">-</span><span class="mi">6</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mh">0x3f</span><span class="p">])</span>
+            <span class="n">leftbits</span> <span class="o">-=</span> <span class="mi">6</span>
+    <span class="c1">#</span>
+    <span class="k">if</span> <span class="n">leftbits</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">table_b2a_base64</span><span class="p">[(</span><span class="n">leftchar</span> <span class="o">&amp;</span> <span class="mi">3</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">])</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">PAD</span><span class="p">)</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">PAD</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">leftbits</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">table_b2a_base64</span><span class="p">[(</span><span class="n">leftchar</span> <span class="o">&amp;</span> <span class="mh">0xf</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">])</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">PAD</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">newline</span><span class="p">:</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">space</span><span class="o">.</span><span class="n">newbytes</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">build</span><span class="p">())</span>
+</code></pre></div>
+
+<p><a href="https://foss.heptapod.net/pypy/pypy/-/blob/branch/py3.8/pypy/module/binascii/interp_base64.py#L92-124">https://foss.heptapod.net/pypy/pypy/-/blob/branch/py3.8/pypy/module/binascii/interp_base64.py#L92-124</a></p>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="slice[::-1] là slice[len(slice):0:-1] hay&nbsp;slice[0:len(slice):-1]?">
+<meta name="twitter:description" content="làm thế nào để đảo ngược 1 list?">
+        <!-- OG Tags -->
+<meta property="og:url" content="./slice_reverse.html"/>
+<meta property="og:title" content="slice[::-1] là slice[len(slice):0:-1] hay&nbsp;slice[0:len(slice):-1]? | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="làm thế nào để đảo ngược 1 list?" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="làm thế nào để đảo ngược 1 list?" />
+
+    <meta name="tags" content="slice" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li><a href="./category/news.html">news</a></li>
+                            <li class="active"><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2024-08-19 00:00:00+07:00">
+                <script>document.write(moment('2024-08-19 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            slice[::-1] là slice[len(slice):0:-1] hay&nbsp;slice[0:len(slice):-1]?
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <h3>Slice là&nbsp;gì</h3>
+<p>Slice là cú pháp tiện dụng của Python để lấy 1 list con của list đã&nbsp;có.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;java&#39;</span><span class="p">,</span> <span class="s1">&#39;js&#39;</span><span class="p">,</span> <span class="s1">&#39;php&#39;</span><span class="p">,</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="s1">&#39;rust&#39;</span><span class="p">,</span> <span class="s1">&#39;elixir&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<p>Với cú pháp <code>slice[START:STOP:STEP]</code>, <span class="caps">START</span> và <span class="caps">STOP</span> là index bắt đầu và kết thúc,
+<span class="caps">STEP</span> là bước dịch chuyển của index, để chọn index tiếp&nbsp;theo.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">):</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;js&#39;</span><span class="p">,</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;rust&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">names</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;js&#39;</span><span class="p">,</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;rust&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<p>Ở ví dụ trên lấy các phần tử có index 0, 0+2 = 2, 2+2 = 4, 4+2 =&nbsp;6.</p>
+<ul>
+<li><span class="caps">START</span> khi không ghi cụ thể giá trị trước dấu : có giá trị mặc định là&nbsp;0.</li>
+<li><span class="caps">STOP</span> mặc định là <code>len(slice)</code>, tức&nbsp;8.</li>
+<li><span class="caps">STEP</span> nếu không ghi, mặc định là <code>1</code>.</li>
+</ul>
+<p>Một tính năng thú vị của slice khiến nhiều người phỏng vấn tỏ ra khó chịu khi hỏi: hãy đảo ngược 1 list/str và câu trả lời là <code>names[::-1]</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="s s-Atom">&gt;&gt;&gt;</span> <span class="s s-Atom">names</span><span class="p">[</span><span class="o">::-</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">[</span><span class="s s-Atom">&#39;elixir&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;rust&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;go&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;python&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;php&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;js&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;java&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;c&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<p>Khi sử dụng <span class="caps">STEP</span> = -1, cách tính sẽ thế nào?  names[::-1] là phương án a hay&nbsp;b?</p>
+<ul>
+<li>a)&nbsp;names[len(names):0:-1]</li>
+<li>b)&nbsp;names[0:len(names):-1]</li>
+</ul>
+<h3>Tìm lời giải slice với step -1 bằng builtin&nbsp;function</h3>
+<p>Theo&nbsp;reference,</p>
+<p><a href="https://docs.python.org/3/reference/datamodel.html#objects-values-and-types">https://docs.python.org/3/reference/datamodel.html#objects-values-and-types</a></p>
+<p>Thử sử dụng built-in function <code>slice</code> để test 2 trường hợp&nbsp;trên:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">S</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">S</span><span class="o">.</span><span class="n">indices</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="n">S</span><span class="o">.</span><span class="n">indices</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">stride</span><span class="p">)</span>
+
+<span class="n">Assuming</span> <span class="n">a</span> <span class="n">sequence</span> <span class="n">of</span> <span class="n">length</span> <span class="nb">len</span><span class="p">,</span> <span class="n">calculate</span> <span class="n">the</span> <span class="n">start</span> <span class="ow">and</span> <span class="n">stop</span>
+<span class="n">indices</span><span class="p">,</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">stride</span> <span class="n">length</span> <span class="n">of</span> <span class="n">the</span> <span class="n">extended</span> <span class="nb">slice</span> <span class="n">described</span> <span class="n">by</span>
+<span class="n">S</span><span class="o">.</span> <span class="n">Out</span> <span class="n">of</span> <span class="n">bounds</span> <span class="n">indices</span> <span class="n">are</span> <span class="n">clipped</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">manner</span> <span class="n">consistent</span> <span class="k">with</span> <span class="n">the</span>
+<span class="n">handling</span> <span class="n">of</span> <span class="n">normal</span> <span class="n">slices</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;java&#39;</span><span class="p">,</span> <span class="s1">&#39;js&#39;</span><span class="p">,</span> <span class="s1">&#39;php&#39;</span><span class="p">,</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="s1">&#39;rust&#39;</span><span class="p">,</span> <span class="s1">&#39;elixir&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">indices</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+<span class="mi">7</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div>
+
+<p><strong>Câu trả lời là khi step = -1 thì start index là <code>len(names)-1</code>, stop index là <code>-1</code></strong>. Cả 2 phương án nêu từ đầu đều&nbsp;sai.</p>
+<h3>Tìm lời giải slice với step -1 bằng cách đọc code&nbsp;CPython</h3>
+<p>Tải code Python&nbsp;v3.12.0</p>
+<div class="highlight"><pre><span></span><code>$ git clone https://github.com/python/cpython --depth <span class="m">1</span> --branch v3.12.0 python3120
+Cloning into <span class="s1">&#39;python3120&#39;</span>...
+...
+Resolving deltas: <span class="m">100</span>% <span class="o">(</span><span class="m">513</span>/513<span class="o">)</span>, <span class="k">done</span>.
+Note: switching to <span class="s1">&#39;0fb18b02c8ad56299d6a2910be0bab8ad601ef24&#39;</span>.
+
+You are <span class="k">in</span> <span class="s1">&#39;detached HEAD&#39;</span> state. You can look around, make experimental
+...
+$ du -csh python3120
+136M    python3120
+136M    total
+$ <span class="nb">cd</span> python3120
+</code></pre></div>
+
+<p>Tìm file code C chứa từ khóa <code>slice</code>:</p>
+<div class="highlight"><pre><span></span><code>$ grep -Rin <span class="s1">&#39;slice&#39;</span> -l <span class="p">|</span> grep -F .c
+Python/ast_opt.c
+Python/import.c
+Python/Python-ast.c
+Python/compile.c
+...
+Objects/sliceobject.c
+Objects/bytes_methods.c
+Objects/listobject.c
+...
+</code></pre></div>
+
+<p>trong file <code>sliceobject.c</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/* Implementation of slice.indices. */</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="o">*</span><span class="w"></span>
+<span class="nf">slice_indices</span><span class="p">(</span><span class="n">PySliceObject</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="o">*</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">stop</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">step</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<span class="w">    </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_PySlice_GetLongIndices</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">stop</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">step</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"></span>
+<span class="n">_PySlice_GetLongIndices</span><span class="p">(</span><span class="n">PySliceObject</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">length</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="n">PyObject</span><span class="w"> </span><span class="o">**</span><span class="n">start_ptr</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">**</span><span class="n">stop_ptr</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="n">PyObject</span><span class="w"> </span><span class="o">**</span><span class="n">step_ptr</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* Convert step to an integer; raise for zero step. */</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="o">-&gt;</span><span class="n">step</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Py_None</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_PyLong_GetOne</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">step_is_negative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">step_sign</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">...</span><span class="w"></span>
+<span class="w">        </span><span class="n">step_is_negative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">step_sign</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="cm">/* Find lower and upper bounds for start and stop. */</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">step_is_negative</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">lower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyLong_FromLong</span><span class="p">(</span><span class="mi">-1L</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">...</span><span class="w"></span>
+<span class="w">        </span><span class="n">upper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyNumber_Add</span><span class="p">(</span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="n">lower</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">lower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_PyLong_GetZero</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">upper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Py_NewRef</span><span class="p">(</span><span class="n">length</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="cm">/* Compute start. */</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="o">-&gt;</span><span class="n">start</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Py_None</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Py_NewRef</span><span class="p">(</span><span class="n">step_is_negative</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">upper</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">lower</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">...</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="cm">/* Compute stop. */</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="o">-&gt;</span><span class="n">stop</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Py_None</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">stop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Py_NewRef</span><span class="p">(</span><span class="n">step_is_negative</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">lower</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">upper</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">stop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">evaluate_slice_index</span><span class="p">(</span><span class="n">self</span><span class="o">-&gt;</span><span class="n">stop</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">...</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<p>đoạn code này thực hiện tính toán khi step &lt; 0, start = upper = length + lower và stop = lower =&nbsp;-1.</p>
+<p>Code CPython khá phức tạp, <strong>việc in ra start, stop khi thực hiện slice[::-1] để lại như bài tập cho bạn&nbsp;đọc.</strong></p>
+<p>Vậy code nào đơn giản hơn? Python có rất nhiều bản khác nhau và đơn giản nhất có thể kể tới&nbsp;MicroPython.</p>
+<h3>MicroPython - khỏe như Python mà nhỏ cỡ&nbsp;micro</h3>
+<div class="highlight"><pre><span></span><code>$ git clone https://github.com/micropython/micropython --depth <span class="m">1</span> --branch v1.23.0
+Cloning into <span class="s1">&#39;micropython&#39;</span>...
+remote: Enumerating objects: <span class="m">5784</span>, <span class="k">done</span>.
+remote: Counting objects: <span class="m">100</span>% <span class="o">(</span><span class="m">5784</span>/5784<span class="o">)</span>, <span class="k">done</span>.
+
+$ du -csh micropython
+55M micropython
+55M total
+</code></pre></div>
+
+<p>Mở file <code>py/objslice.c</code> tìm function <code>slice_indices</code> và thêm dòng printf để in start, stop,&nbsp;step:</p>
+<div class="highlight"><pre><span></span><code><span class="nb nb-Type">void</span><span class="w"> </span><span class="n">mp_obj_slice_indices</span><span class="p">(</span><span class="n">mp_obj_t</span><span class="w"> </span><span class="n">self_in</span><span class="p">,</span><span class="w"> </span><span class="n">mp_int_t</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="n">mp_bound_slice_t</span><span class="w"> </span><span class="o">*</span><span class="n">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">mp_obj_slice_t</span><span class="w"> </span><span class="o">*</span><span class="bp">self</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MP_OBJ_TO_PTR</span><span class="p">(</span><span class="n">self_in</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">mp_int_t</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">stop</span><span class="p">,</span><span class="w"> </span><span class="n">step</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="o">...</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">step</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="n">Positive</span><span class="w"> </span><span class="n">step</span><span class="w"></span>
+<span class="w">        </span><span class="o">...</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="n">Negative</span><span class="w"> </span><span class="n">step</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="o">-&gt;</span><span class="n">start</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mp_const_none</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mp_obj_get_int</span><span class="p">(</span><span class="bp">self</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">start</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">length</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MIN</span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">MAX</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="o">-&gt;</span><span class="n">stop</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mp_const_none</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">stop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">stop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mp_obj_get_int</span><span class="p">(</span><span class="bp">self</span><span class="o">-&gt;</span><span class="n">stop</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">stop</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">stop</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">length</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="n">stop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MIN</span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">MAX</span><span class="p">(</span><span class="n">stop</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">result</span><span class="o">-&gt;</span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">start</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">result</span><span class="o">-&gt;</span><span class="n">stop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stop</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">result</span><span class="o">-&gt;</span><span class="n">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">step</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="n">Thêm</span><span class="w"> </span><span class="n">dòng</span><span class="w"> </span><span class="n">này</span><span class="p">,</span><span class="w"> </span><span class="n">và</span><span class="w"> </span><span class="n">thêm</span><span class="w"> </span><span class="c1">#include &lt;stdio.h&gt; vào đầu file.</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s2">&quot;DEBUG: start </span><span class="si">%ld</span><span class="s2"> stop </span><span class="si">%ld</span><span class="s2"> step </span><span class="si">%ld</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">stop</span><span class="p">,</span><span class="w"> </span><span class="n">step</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<p>Build&nbsp;binary:</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">cd</span> <span class="n">micropython</span>
+<span class="err">$</span> <span class="n">cd</span> <span class="n">ports</span><span class="o">/</span><span class="n">unix</span>
+<span class="err">$</span> <span class="n">make</span> <span class="n">submodules</span>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">libffi</span><span class="o">-</span><span class="n">dev</span>
+<span class="err">$</span> <span class="n">make</span> <span class="o">-</span><span class="n">j</span>
+<span class="o">...</span>
+<span class="n">make</span> <span class="o">-</span><span class="n">j</span>  <span class="mi">28</span><span class="p">,</span><span class="mi">59</span><span class="n">s</span> <span class="n">user</span> <span class="mi">4</span><span class="p">,</span><span class="mi">52</span><span class="n">s</span> <span class="n">system</span> <span class="mi">369</span><span class="o">%</span> <span class="n">cpu</span> <span class="mi">8</span><span class="p">,</span><span class="mi">970</span> <span class="n">total</span>
+</code></pre></div>
+
+<p>Chỉ mất 8 giây để build trên máy dùng <code>AMD Ryzen 3 4300U</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="p">.</span><span class="o">/</span><span class="s s-Atom">build</span><span class="o">-</span><span class="s s-Atom">standard</span><span class="o">/</span><span class="s s-Atom">micropython</span>
+<span class="nv">MicroPython</span> <span class="s s-Atom">v1</span><span class="mf">.23.0</span><span class="o">-</span><span class="s s-Atom">dirty</span> <span class="s s-Atom">on</span> <span class="mi">2024</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">19</span><span class="p">;</span> <span class="s s-Atom">linux</span> <span class="p">[</span><span class="nv">GCC</span> <span class="mf">11.4.0</span><span class="p">]</span> <span class="s s-Atom">version</span>
+<span class="nv">Use</span> <span class="nv">Ctrl</span><span class="o">-</span><span class="nv">D</span> <span class="s s-Atom">to</span> <span class="s s-Atom">exit</span><span class="p">,</span> <span class="nv">Ctrl</span><span class="o">-</span><span class="nv">E</span> <span class="s s-Atom">for</span> <span class="s s-Atom">paste</span> <span class="s s-Atom">mode</span>
+<span class="s s-Atom">&gt;&gt;&gt;</span> <span class="s s-Atom">names</span> <span class="o">=</span> <span class="p">[</span><span class="s s-Atom">&#39;c&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;java&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;js&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;php&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;python&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;go&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;rust&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;elixir&#39;</span><span class="p">]</span>
+<span class="s s-Atom">&gt;&gt;&gt;</span> <span class="s s-Atom">names</span><span class="p">[</span><span class="o">::-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nv">DEBUG</span><span class="o">:</span> <span class="s s-Atom">start</span> <span class="mi">7</span> <span class="s s-Atom">stop</span> <span class="o">-</span><span class="mi">1</span> <span class="s s-Atom">step</span> <span class="o">-</span><span class="mi">1</span>
+<span class="p">[</span><span class="s s-Atom">&#39;elixir&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;rust&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;go&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;python&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;php&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;js&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;java&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;c&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<p>Vậy khi viết <code>slice[::-1]</code> start index là len(slice)-1, stop index là&nbsp;-1.</p>
+<h3>Reverse thực hiện thế&nbsp;nào?</h3>
+<p>Trong MicroPython <code>py/objlist.c</code> có&nbsp;code</p>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="n">mp_obj_t</span><span class="w"> </span><span class="nf">list_reverse</span><span class="p">(</span><span class="n">mp_obj_t</span><span class="w"> </span><span class="n">self_in</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">mp_check_self</span><span class="p">(</span><span class="n">mp_obj_is_type</span><span class="p">(</span><span class="n">self_in</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mp_type_list</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">mp_obj_list_t</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MP_OBJ_TO_PTR</span><span class="p">(</span><span class="n">self_in</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">mp_int_t</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="o">-&gt;</span><span class="n">len</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">mp_int_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">mp_obj_t</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="o">-&gt;</span><span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+<span class="w">        </span><span class="n">self</span><span class="o">-&gt;</span><span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="o">-&gt;</span><span class="n">items</span><span class="p">[</span><span class="n">len</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="w">        </span><span class="n">self</span><span class="o">-&gt;</span><span class="n">items</span><span class="p">[</span><span class="n">len</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">mp_const_none</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<p>Hay code&nbsp;Python</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;java&#39;</span><span class="p">,</span> <span class="s1">&#39;js&#39;</span><span class="p">,</span> <span class="s1">&#39;php&#39;</span><span class="p">,</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="s1">&#39;rust&#39;</span><span class="p">,</span> <span class="s1">&#39;elixir&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
+<span class="o">...</span>     <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">names</span><span class="p">[</span><span class="n">length</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="n">length</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">names</span>
+<span class="p">[</span><span class="s1">&#39;elixir&#39;</span><span class="p">,</span> <span class="s1">&#39;rust&#39;</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;php&#39;</span><span class="p">,</span> <span class="s1">&#39;js&#39;</span><span class="p">,</span> <span class="s1">&#39;java&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<h3>Kết&nbsp;luận</h3>
+<p>slice với step=-1 có diễn biến bất thường. Nếu cần tìm xuống bên dưới thì đọc code CPython, nhỡ mà khó quá, thì qua&nbsp;MicroPython.</p>
+<p><span class="caps">PS</span>: nhớ làm bài tập với&nbsp;CPython.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

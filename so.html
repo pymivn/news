@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="Dùng C shared object .so trong&nbsp;CPython">
+<meta name="twitter:description" content="chuyện ít ai thèm nói">
+        <!-- OG Tags -->
+<meta property="og:url" content="./so.html"/>
+<meta property="og:title" content="Dùng C shared object .so trong&nbsp;CPython | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="chuyện ít ai thèm nói" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="chuyện ít ai thèm nói" />
+
+    <meta name="tags" content="C" />
+    <meta name="tags" content="shared object" />
+    <meta name="tags" content="so" />
+    <meta name="tags" content="import" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2022-10-12 00:00:00+07:00">
+                <script>document.write(moment('2022-10-12 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Dùng C shared object .so trong&nbsp;CPython
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p><img alt="img" src="https://images.unsplash.com/photo-1579546928686-286c9fbde1ec?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjU1MDQ5MTU&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=600"></p>
+<p>CPython có thể import file C &#8220;shared library&#8221; (trên Linux là các file &#8220;shared object&#8221; có đuôi <code>.so</code> bằng việc gõ &#8220;import&nbsp;filename&#8221;.</p>
+<p>Nếu có cả file <code>.so</code> và <code>.py</code> cùng tồn tại, CPython ưu tiên gọi file <code>.so</code> trước.</p>
+<p>Trong stdlib của CPython, có nhiều thư viện dùng C như sqlite3 hay json, các thư viện này thường có 1 file .py, thực hiện nhiệm vụ import file <code>.so</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">find</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span> <span class="o">-</span><span class="n">name</span> <span class="s1">&#39;*sqlite*&#39;</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">lib</span><span class="o">-</span><span class="n">dynload</span><span class="o">/</span><span class="n">_sqlite3</span><span class="o">.</span><span class="n">cpython</span><span class="o">-</span><span class="mi">38</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="o">.</span><span class="n">so</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">sqlite3</span>
+
+<span class="err">$</span> <span class="n">grep</span> <span class="kn">import</span> <span class="o">-</span><span class="n">R</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">sqlite3</span>
+<span class="o">...</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">sqlite3</span><span class="o">/</span><span class="n">dbapi2</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="kn">from</span> <span class="nn">_sqlite3</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="o">...</span>
+
+<span class="err">$</span> <span class="n">find</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span> <span class="o">-</span><span class="n">name</span> <span class="s1">&#39;*json*&#39;</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">lib</span><span class="o">-</span><span class="n">dynload</span><span class="o">/</span><span class="n">_json</span><span class="o">.</span><span class="n">cpython</span><span class="o">-</span><span class="mi">38</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="o">.</span><span class="n">so</span>
+<span class="o">...</span>
+<span class="err">$</span> <span class="n">grep</span> <span class="s1">&#39;_json&#39;</span> <span class="o">-</span><span class="n">R</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">json</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">json</span><span class="o">/</span><span class="n">decoder</span><span class="o">.</span><span class="n">py</span><span class="p">:</span>    <span class="kn">from</span> <span class="nn">_json</span> <span class="kn">import</span> <span class="n">scanstring</span> <span class="k">as</span> <span class="n">c_scanstring</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">json</span><span class="o">/</span><span class="n">decoder</span><span class="o">.</span><span class="n">py</span><span class="p">:</span>    <span class="c1"># Note that this exception is used from _json</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">json</span><span class="o">/</span><span class="n">scanner</span><span class="o">.</span><span class="n">py</span><span class="p">:</span>    <span class="kn">from</span> <span class="nn">_json</span> <span class="kn">import</span> <span class="n">make_scanner</span> <span class="k">as</span> <span class="n">c_make_scanner</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">json</span><span class="o">/</span><span class="n">encoder</span><span class="o">.</span><span class="n">py</span><span class="p">:</span>    <span class="kn">from</span> <span class="nn">_json</span> <span class="kn">import</span> <span class="n">encode_basestring_ascii</span> <span class="k">as</span> <span class="n">c_encode_basestring_ascii</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">json</span><span class="o">/</span><span class="n">encoder</span><span class="o">.</span><span class="n">py</span><span class="p">:</span>    <span class="kn">from</span> <span class="nn">_json</span> <span class="kn">import</span> <span class="n">encode_basestring</span> <span class="k">as</span> <span class="n">c_encode_basestring</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">json</span><span class="o">/</span><span class="n">encoder</span><span class="o">.</span><span class="n">py</span><span class="p">:</span>    <span class="kn">from</span> <span class="nn">_json</span> <span class="kn">import</span> <span class="n">make_encoder</span> <span class="k">as</span> <span class="n">c_make_encoder</span>
+<span class="o">...</span>
+</code></pre></div>
+
+<p>Xem qua 1 file&nbsp;.so:</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">lib</span><span class="o">-</span><span class="n">dynload</span><span class="o">/</span><span class="n">_sqlite3</span><span class="p">.</span><span class="n">cpython</span><span class="o">-</span><span class="mi">38</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="p">.</span><span class="n">so</span><span class="w"></span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">lib</span><span class="o">-</span><span class="n">dynload</span><span class="o">/</span><span class="n">_sqlite3</span><span class="p">.</span><span class="n">cpython</span><span class="o">-</span><span class="mi">38</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="p">.</span><span class="nl">so</span><span class="p">:</span><span class="w"> </span><span class="n">ELF</span><span class="w"> </span><span class="mi">64</span><span class="o">-</span><span class="nc">bit</span><span class="w"> </span><span class="n">LSB</span><span class="w"> </span><span class="n">shared</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">(</span><span class="n">SYSV</span><span class="p">),</span><span class="w"> </span><span class="n">dynamically</span><span class="w"> </span><span class="n">linked</span><span class="p">,</span><span class="w"> </span><span class="n">BuildID</span><span class="o">[</span><span class="n">sha1</span><span class="o">]=</span><span class="n">b65897eefdf7fd0290ce9885a91dda3781d59b59</span><span class="p">,</span><span class="w"> </span><span class="n">stripped</span><span class="w"></span>
+
+<span class="err">$</span><span class="w"> </span><span class="n">readelf</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">lib</span><span class="o">-</span><span class="n">dynload</span><span class="o">/</span><span class="n">_sqlite3</span><span class="p">.</span><span class="n">cpython</span><span class="o">-</span><span class="mi">38</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="p">.</span><span class="n">so</span><span class="w"></span>
+<span class="n">ELF</span><span class="w"> </span><span class="nl">Header</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nl">Magic</span><span class="p">:</span><span class="w">   </span><span class="mi">7</span><span class="n">f</span><span class="w"> </span><span class="mi">45</span><span class="w"> </span><span class="mi">4</span><span class="n">c</span><span class="w"> </span><span class="mi">46</span><span class="w"> </span><span class="mi">02</span><span class="w"> </span><span class="mi">01</span><span class="w"> </span><span class="mi">01</span><span class="w"> </span><span class="mi">00</span><span class="w"> </span><span class="mi">00</span><span class="w"> </span><span class="mi">00</span><span class="w"> </span><span class="mi">00</span><span class="w"> </span><span class="mi">00</span><span class="w"> </span><span class="mi">00</span><span class="w"> </span><span class="mi">00</span><span class="w"> </span><span class="mi">00</span><span class="w"> </span><span class="mi">00</span><span class="w"> </span>
+<span class="w">  </span><span class="k">Class</span><span class="err">:</span><span class="w">                             </span><span class="n">ELF64</span><span class="w"></span>
+<span class="w">  </span><span class="k">Data</span><span class="err">:</span><span class="w">                              </span><span class="mi">2</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">complement</span><span class="p">,</span><span class="w"> </span><span class="n">little</span><span class="w"> </span><span class="n">endian</span><span class="w"></span>
+<span class="w">  </span><span class="nl">Version</span><span class="p">:</span><span class="w">                           </span><span class="mi">1</span><span class="w"> </span><span class="p">(</span><span class="k">current</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">OS</span><span class="o">/</span><span class="nl">ABI</span><span class="p">:</span><span class="w">                            </span><span class="n">UNIX</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">System</span><span class="w"> </span><span class="n">V</span><span class="w"></span>
+<span class="w">  </span><span class="n">ABI</span><span class="w"> </span><span class="nl">Version</span><span class="p">:</span><span class="w">                       </span><span class="mi">0</span><span class="w"></span>
+<span class="w">  </span><span class="nl">Type</span><span class="p">:</span><span class="w">                              </span><span class="n">DYN</span><span class="w"> </span><span class="p">(</span><span class="n">Shared</span><span class="w"> </span><span class="k">object</span><span class="w"> </span><span class="k">file</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="nl">Machine</span><span class="p">:</span><span class="w">                           </span><span class="n">Advanced</span><span class="w"> </span><span class="n">Micro</span><span class="w"> </span><span class="n">Devices</span><span class="w"> </span><span class="n">X86</span><span class="o">-</span><span class="mi">64</span><span class="w"></span>
+<span class="w">  </span><span class="nl">Version</span><span class="p">:</span><span class="w">                           </span><span class="mh">0x1</span><span class="w"></span>
+<span class="w">  </span><span class="n">Entry</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="nl">address</span><span class="p">:</span><span class="w">               </span><span class="mh">0x8480</span><span class="w"></span>
+<span class="w">  </span><span class="k">Start</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">program</span><span class="w"> </span><span class="nl">headers</span><span class="p">:</span><span class="w">          </span><span class="mi">64</span><span class="w"> </span><span class="p">(</span><span class="n">bytes</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="k">file</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">Start</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">section</span><span class="w"> </span><span class="nl">headers</span><span class="p">:</span><span class="w">          </span><span class="mi">98160</span><span class="w"> </span><span class="p">(</span><span class="n">bytes</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="k">file</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="nl">Flags</span><span class="p">:</span><span class="w">                             </span><span class="mh">0x0</span><span class="w"></span>
+<span class="w">  </span><span class="k">Size</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="nl">header</span><span class="p">:</span><span class="w">               </span><span class="mi">64</span><span class="w"> </span><span class="p">(</span><span class="n">bytes</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">Size</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">program</span><span class="w"> </span><span class="nl">headers</span><span class="p">:</span><span class="w">           </span><span class="mi">56</span><span class="w"> </span><span class="p">(</span><span class="n">bytes</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">Number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">program</span><span class="w"> </span><span class="nl">headers</span><span class="p">:</span><span class="w">         </span><span class="mi">11</span><span class="w"></span>
+<span class="p">...</span><span class="w"> </span><span class="n">còn</span><span class="w"> </span><span class="n">rất</span><span class="w"> </span><span class="n">dài</span><span class="w"></span>
+</code></pre></div>
+
+<p>Hết.</p>
+<p>Bài viết thực hiện trên Ubuntu 20.04, Python&nbsp;3.8</p>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

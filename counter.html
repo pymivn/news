@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="collections.Counter có phải là&nbsp;dict?">
+<meta name="twitter:description" content="người có phải là vượn?">
+        <!-- OG Tags -->
+<meta property="og:url" content="./counter.html"/>
+<meta property="og:title" content="collections.Counter có phải là&nbsp;dict? | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="người có phải là vượn?" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="người có phải là vượn?" />
+
+    <meta name="tags" content="python" />
+    <meta name="tags" content="dict" />
+    <meta name="tags" content="collections" />
+    <meta name="tags" content="counter" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2023-07-14 00:00:00+07:00">
+                <script>document.write(moment('2023-07-14 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            collections.Counter có phải là&nbsp;dict?
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p>Lập trình viên Python không bao giờ phải tự đếm số lần xuất hiện của mỗi phần tử, bởi có sẵn&nbsp;Counter:</p>
+<h3>Python Counter là&nbsp;gì</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="s2">&quot;py py thon thon py&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="c1"># Counter({&#39;py&#39;: 3, &#39;thon&#39;: 2})</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">c</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+<span class="c1"># py 3</span>
+<span class="c1"># thon 2</span>
+</code></pre></div>
+
+<p>Thay vì tự&nbsp;viết:</p>
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="s2">&quot;py py thon thon py&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+        <span class="n">d</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">d</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="c1"># {&#39;py&#39;: 3, &#39;thon&#39;: 2}</span>
+</code></pre></div>
+
+<h3>Counter có phải là&nbsp;dict?</h3>
+<p>Trước tiên, cần làm rõ, &#8220;là dict&#8221; có nghĩa là&nbsp;gì?</p>
+<ul>
+<li>Là kế thừa từ&nbsp;dict?</li>
+<li>Là mọi method giống dict? và có thêm vài method&nbsp;khác</li>
+</ul>
+<p>Dễ thấy, Counter kế thừa từ dict, nên 1 Counter, theo nghĩa của lập trình hướng đối tượng - <span class="caps">OOP</span>, là 1&nbsp;dict:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Counter</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+<span class="o">...</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span>
+<span class="kc">True</span>
+</code></pre></div>
+
+<p>Nếu một người tin vào <strong>THUYẾT</strong> tiến hóa, thì 1 người có phải 1 con vượn? hay 1 con bò sát? hay 1 con sinh vật đơn bào? Theo <span class="caps">OOP</span> thì là&nbsp;vậy.</p>
+<p>Đó là lỗ hổng trong cách tư duy <span class="caps">OOP</span>, những ngôn ngữ lập trình mới ngày nay không theo lối suy nghĩ này, mà dựa trên khả năng của 1 object để xét nó là gì như Go interface hay Rust trait: một object là <code>Writer</code> nếu nó có thể <code>write</code>, là <code>Reader</code> nếu nó có thể <code>read</code>.</p>
+<p>Quay trờ lại câu trả lời: Counter là 1 dict, câu trả lời này có tác dụng gì? có thể dùng Counter như dict mà không có khác biệt gì?
+Đôi khi không&nbsp;phải:</p>
+<p>dict</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;py&#39;</span><span class="p">])</span>
+<span class="c1"># 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;secret&#39;</span><span class="p">))</span>
+<span class="c1"># None</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;secret&#39;</span><span class="p">])</span>
+<span class="c1"># Traceback (most recent call last):</span>
+<span class="c1">#   File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span>
+<span class="c1"># KeyError: &#39;secret&#39;</span>
+</code></pre></div>
+
+<p>Counter thì&nbsp;khác</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;py&#39;</span><span class="p">])</span>
+<span class="c1"># 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;recret&#39;</span><span class="p">))</span>
+<span class="c1"># None</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;secret&#39;</span><span class="p">])</span>
+<span class="c1"># 0</span>
+</code></pre></div>
+
+<p>Truy cập 1 key không tồn tại trong Counter trả về 0, <a href="https://docs.python.org/3.10/reference/datamodel.html?highlight=__missing__#object.__missing__">method <code>__missing__</code></a> quyết định điều&nbsp;này:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">object</span><span class="o">.</span><span class="fm">__missing__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+
+    <span class="n">Called</span> <span class="n">by</span> <span class="nb">dict</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">()</span> <span class="n">to</span> <span class="n">implement</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="nb">dict</span> <span class="n">subclasses</span>
+    <span class="n">when</span> <span class="n">key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">dictionary</span><span class="o">.</span>
+</code></pre></div>
+
+<p>Code Counter <a href="https://github.com/python/cpython/blob/v3.11.0/Lib/collections/__init__.py#L599C1-L602C17">https://github.com/python/cpython/blob/v3.11.0/Lib/collections/__init__.py#<span class="caps">L599C1</span>-<span class="caps">L602C17</span></a>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__missing__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="s1">&#39;The count of elements not in the Counter is zero.&#39;</span>
+    <span class="c1"># Needed so that self[missing_item] does not raise KeyError</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</code></pre></div>
+
+<p>Giờ thì cách hoạt động của Counter đã khác hoàn toàn dict, vậy counter có phải&nbsp;dict?</p>
+<h3>Kết&nbsp;luận</h3>
+<p>Nói đúng cũng phải, nói không đúng cũng phải, chủ yếu là người nghe muốn nghe cái&nbsp;gì.</p>
+<p>Hết.</p>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

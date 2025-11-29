@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="PySpark bigdata giải bài toán ProjectEuler&nbsp;1">
+<meta name="twitter:description" content="Như Pandas, mà big bao nhiêu cũng được">
+        <!-- OG Tags -->
+<meta property="og:url" content="./sparkpe1.html"/>
+<meta property="og:title" content="PySpark bigdata giải bài toán ProjectEuler&nbsp;1 | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="Như Pandas, mà big bao nhiêu cũng được" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="Như Pandas, mà big bao nhiêu cũng được" />
+
+    <meta name="tags" content="Spark" />
+    <meta name="tags" content="PySpark" />
+    <meta name="tags" content="bigdata" />
+    <meta name="tags" content="data analysis" />
+    <meta name="tags" content="pandas" />
+    <meta name="tags" content="PE" />
+    <meta name="tags" content="projecteuler" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2021-09-18 00:00:00+07:00">
+                <script>document.write(moment('2021-09-18 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            PySpark bigdata giải bài toán ProjectEuler&nbsp;1
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p>pandas là công cụ tuyệt vời để xử lý, khám phá dữ liệu dạng bảng như Excel, nó là phần không thể thiếu với các ngành &#8220;data analysis&#8221;, &#8220;data&nbsp;science&#8221;.</p>
+<p>pandas có 1 nhược điểm/yêu cầu: là dữ liệu phải nhét vừa vào <span class="caps">RAM</span>. Tức nếu có bộ dữ liệu lớn hơn <span class="caps">RAM</span> thì sẽ khó/không xử lý được/phải dùng thư viện khác (như dash,&nbsp;etc&#8230;)</p>
+<p><img alt="img" src="https://images.unsplash.com/photo-1630011725376-bd68a6403318?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzE5NzM5OTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=600"></p>
+<p>PySpark là 1 giải pháp, Spark đã quá nổi tiếng trong lĩnh vực BigData, thì giờ đây có thể cài, chạy PySpark, gần như Pandas để tính toán dữ liệu, với ưu điểm có thể xử lý song song (nhanh hơn), xử lý được dữ liệu lớn hơn <span class="caps">RAM</span>, dùng nhiều máy tính. Người dùng pandas nên biết thêm pyspark để dùng khi cần, chứ không phải để thay thế trong mọi trường&nbsp;hợp.</p>
+<h2>Cài&nbsp;đặt</h2>
+<p>Pandas dùng C ở bên dưới, mà C thì không cần cài gì để chạy cả. 
+Spark dùng Java, để chạy phải cài Java Runtime Environment (<span class="caps">JRE</span>), trên Ubuntu 20.04&nbsp;gõ:</p>
+<div class="highlight"><pre><span></span><code>sudo apt-get update &amp;&amp; sudo apt-get install -y  default-jre
+</code></pre></div>
+
+<p>Tạo 1 venv mới,&nbsp;cài </p>
+<div class="highlight"><pre><span></span><code>pip install pyspark
+</code></pre></div>
+
+<h2>Giải ProjectEuler&nbsp;1</h2>
+<p>https://projecteuler.net/problem=1</p>
+<blockquote>
+<p>Tính tổng các số nhỏ hơn 1000 chia hết cho 3 hoặc&nbsp;5.</p>
+</blockquote>
+<p>Bật Python trong venv lên và&nbsp;import </p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+<span class="o">...</span>
+<span class="n">Using</span> <span class="n">Spark</span><span class="s1">&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties</span>
+<span class="n">Setting</span> <span class="n">default</span> <span class="n">log</span> <span class="n">level</span> <span class="n">to</span> <span class="s2">&quot;WARN&quot;</span><span class="o">.</span>
+<span class="n">To</span> <span class="n">adjust</span> <span class="n">logging</span> <span class="n">level</span> <span class="n">use</span> <span class="n">sc</span><span class="o">.</span><span class="n">setLogLevel</span><span class="p">(</span><span class="n">newLevel</span><span class="p">)</span><span class="o">.</span> <span class="n">For</span> <span class="n">SparkR</span><span class="p">,</span> <span class="n">use</span> <span class="n">setLogLevel</span><span class="p">(</span><span class="n">newLevel</span><span class="p">)</span><span class="o">.</span>
+</code></pre></div>
+
+<p>Tạo dataframe, đầu vào là list của các dòng, mỗi dòng là 1 tuple, do bài này chỉ dùng 1 cột nên tạo tuple 1 phần tử <code>(i,)</code>, schema là khái niệm trong <span class="caps">SQL</span> database, nói về tên cột (có thể kèm&nbsp;kiểu):</p>
+<div class="highlight"><pre><span></span><code> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(((</span><span class="n">i</span><span class="p">,)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)),</span> <span class="n">schema</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;n&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<p>Giải:</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s1">&#39;n % 3 == 0 or n % 5 == 0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;n&#39;</span><span class="p">:</span> <span class="s1">&#39;sum&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="o">+------+</span>                                                                        
+<span class="o">|</span><span class="nb">sum</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">|</span>
+<span class="o">+------+</span>
+<span class="o">|</span><span class="mi">233168</span><span class="o">|</span>
+<span class="o">+------+</span>
+</code></pre></div>
+
+<p><code>PySpark</code> không tính toán cho tới khi gọi <code>show()</code> hay <code>collect()</code></p>
+<p>Bonus: giải bằng&nbsp;pandas:</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">24</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">25</span><span class="p">]:</span> <span class="n">pdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;n&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)})</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">26</span><span class="p">]:</span> <span class="n">pdf</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;n % 3 == 0 or n % 5 == 0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;n&#39;</span><span class="p">:</span> <span class="s1">&#39;sum&#39;</span><span class="p">})</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">26</span><span class="p">]:</span> 
+<span class="n">n</span>    <span class="mi">233168</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+</code></pre></div>
+
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="PySpark đi phỏng vấn đếm từ count&nbsp;words">
+<meta name="twitter:description" content="Dùng Python có sẵn Counter, giải bài này PySpark">
+        <!-- OG Tags -->
+<meta property="og:url" content="./sparkwc.html"/>
+<meta property="og:title" content="PySpark đi phỏng vấn đếm từ count&nbsp;words | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="Dùng Python có sẵn Counter, giải bài này PySpark" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="Dùng Python có sẵn Counter, giải bài này PySpark" />
+
+    <meta name="tags" content="Spark" />
+    <meta name="tags" content="PySpark" />
+    <meta name="tags" content="count words" />
+    <meta name="tags" content="interview question" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2021-09-19 00:00:00+07:00">
+                <script>document.write(moment('2021-09-19 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            PySpark đi phỏng vấn đếm từ count&nbsp;words
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p><span class="dquo">&#8220;</span>count words&#8221; là 1 bài phỏng vấn kinh điển trong ngành <span class="caps">IT</span>, nó không quá khó/thuật toán/thách đố, mà lại rất thực tế, yêu cầu đủ các kiến thức cần có để viết&nbsp;code:</p>
+<ul>
+<li>dùng&nbsp;dictionary</li>
+<li>viết vòng lặp&nbsp;for</li>
+<li>có thể cần viết&nbsp;if</li>
+<li>xử lý&nbsp;string</li>
+<li>sort (sắp xếp) kết quả bằng dict&nbsp;value</li>
+<li>đọc file (<span class="caps">IO</span>)</li>
+</ul>
+<p><img alt="img" src="https://images.unsplash.com/photo-1598210854169-af04499e4899?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwyMzI1MzN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzIwMjY5Mzk&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=600"></p>
+<p>Nó không quá dễ/beginner như <a href="https://en.wikipedia.org/wiki/Fizz_buzz">FizzBuzz</a>, hoàn toàn có thể làm bài test &#8220;số 2&#8221; sau khi ứng viên giải bài FizzBuzz sau 5 phút, cũng không quá khó/thuật toán kiểu &#8220;leetcode.com&#8221;, nên có thể dành test cho cả non-developer (như Sysadmin/devops/<span class="caps">QA</span>&#8230;) lẫn developer (<span class="caps">PS</span>: tác giả bài viết trong link cuối bài là người phỏng vấn các kỹ sư tại Canonical - công ty đứng sau Ubuntu). Python giải bài này dùng dict rất đơn giản, thậm chí cực đơn giản khi có sẵn kiểu&nbsp;Counter:</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">42</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">56</span><span class="p">]:</span> <span class="n">t</span> <span class="o">=</span> <span class="s2">&quot;ga meo Bo meo bo meo&quot;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">57</span><span class="p">]:</span> <span class="n">Counter</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">57</span><span class="p">]:</span> <span class="p">[(</span><span class="s1">&#39;meo&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bo&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ga&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+</code></pre></div>
+
+<p>dùng sẵn chuẩn Pythonic vậy nên khi đi phỏng vấn, nhiều khi bị coi là &#8220;hack&#8221;/&#8221;cheat&#8221;, bắt phải tự viết bằng&nbsp;dict:</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">47</span><span class="p">]:</span> <span class="n">t</span> <span class="o">=</span> <span class="s2">&quot;ga meo Bo meo bo meo&quot;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">48</span><span class="p">]:</span> <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">49</span><span class="p">]:</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
+    <span class="o">...</span><span class="p">:</span>     <span class="n">d</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="o">...</span><span class="p">:</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">55</span><span class="p">]:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">55</span><span class="p">]:</span> <span class="p">[(</span><span class="s1">&#39;meo&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bo&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ga&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+</code></pre></div>
+
+<p>Giải bằng PySpark thì&nbsp;sao?</p>
+<p>import và tạo kết nối đến Spark rồi đọc file text&nbsp;vào:</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+<span class="o">...</span>
+<span class="n">To</span> <span class="n">adjust</span> <span class="n">logging</span> <span class="n">level</span> <span class="n">use</span> <span class="n">sc</span><span class="o">.</span><span class="n">setLogLevel</span><span class="p">(</span><span class="n">newLevel</span><span class="p">)</span><span class="o">.</span> <span class="n">For</span> <span class="n">SparkR</span><span class="p">,</span> <span class="n">use</span> <span class="nb">set</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">text</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;kjvbible.txt&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>File kjvbible.text nặng 4.<span class="caps">2MB</span> tải từ&nbsp;https://github.com/benhoyt/countwords/raw/master/kjvbible.txt</p>
+<p>Mỗi dòng sẽ được cho vào thành 1 row trong cột&nbsp;&#8220;value&#8221;:</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">60</span><span class="p">]:</span> <span class="n">text</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
+<span class="n">root</span>
+ <span class="o">|--</span> <span class="n">value</span><span class="p">:</span> <span class="n">string</span> <span class="p">(</span><span class="n">nullable</span> <span class="o">=</span> <span class="n">true</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">64</span><span class="p">]:</span> <span class="n">text</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="o">+--------------------+</span>
+<span class="o">|</span>               <span class="n">value</span><span class="o">|</span>
+<span class="o">+--------------------+</span>
+<span class="o">|</span><span class="n">The</span> <span class="n">Old</span> <span class="n">Testament</span><span class="o">...|</span>
+<span class="o">|</span>                    <span class="o">|</span>
+<span class="o">|</span>                    <span class="o">|</span>
+<span class="o">|</span>                    <span class="o">|</span>
+<span class="o">|</span>                    <span class="o">|</span>
+<span class="o">|</span><span class="n">The</span> <span class="n">First</span> <span class="n">Book</span> <span class="n">of</span><span class="o">...|</span>
+<span class="o">|</span>                    <span class="o">|</span>
+<span class="o">|</span>                    <span class="o">|</span>
+<span class="o">|</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span> <span class="n">In</span> <span class="n">the</span> <span class="n">beginn</span><span class="o">...|</span>
+<span class="o">|</span>                    <span class="o">|</span>
+<span class="o">+--------------------+</span>
+</code></pre></div>
+
+<p>Biến thành chữ thường (lower) rồi cắt thành các từ sử dụng split, split ở đây khác với string method split của Python, đây thực chất là split của Java string, nó nhận vào 1 regex pattern, ở đây dùng &#8220;\s+&#8221; tức 1 hay nhiều ký tự whitespace (space, tab,&nbsp;newline):</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">65</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">69</span><span class="p">]:</span> <span class="n">text</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">lower</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">value</span><span class="p">),</span> <span class="s2">&quot;\s+&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="o">+----------------------------+</span>
+<span class="o">|</span><span class="n">split</span><span class="p">(</span><span class="n">lower</span><span class="p">(</span><span class="n">value</span><span class="p">),</span> \<span class="n">s</span><span class="o">+</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">|</span>
+<span class="o">+----------------------------+</span>
+<span class="o">|</span>        <span class="p">[</span><span class="n">the</span><span class="p">,</span> <span class="n">old</span><span class="p">,</span> <span class="n">testam</span><span class="o">...|</span>
+<span class="o">|</span>                          <span class="p">[]</span><span class="o">|</span>
+<span class="o">|</span>                          <span class="p">[]</span><span class="o">|</span>
+<span class="o">|</span>                          <span class="p">[]</span><span class="o">|</span>
+<span class="o">|</span>                          <span class="p">[]</span><span class="o">|</span>
+<span class="o">|</span>        <span class="p">[</span><span class="n">the</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">book</span><span class="o">...|</span>
+<span class="o">|</span>                          <span class="p">[]</span><span class="o">|</span>
+<span class="o">|</span>                          <span class="p">[]</span><span class="o">|</span>
+<span class="o">|</span>        <span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="ow">in</span><span class="p">,</span> <span class="n">the</span><span class="p">,</span> <span class="n">be</span><span class="o">...|</span>
+<span class="o">|</span>                          <span class="p">[]</span><span class="o">|</span>
+<span class="o">+----------------------------+</span>
+</code></pre></div>
+
+<p>Thay vì mỗi string ban đầu ở mỗi dòng, giờ ta có list (spark/Java gọi là array) các string ở mỗi dòng. Cần nối các list này lại với nhau rồi biến cái list đó thành các&nbsp;dòng.</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="n">các</span> <span class="n">dòng</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">6.</span>
+</code></pre></div>
+
+<p>Function <code>explode</code> thực hiện việc&nbsp;này:</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">70</span><span class="p">]:</span> <span class="n">text</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">explode</span><span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">lower</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">value</span><span class="p">),</span> <span class="s2">&quot;\s+&quot;</span><span class="p">)))</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="o">+---------+</span>
+<span class="o">|</span>      <span class="n">col</span><span class="o">|</span>
+<span class="o">+---------+</span>
+<span class="o">|</span>      <span class="n">the</span><span class="o">|</span>
+<span class="o">|</span>      <span class="n">old</span><span class="o">|</span>
+<span class="o">|</span><span class="n">testament</span><span class="o">|</span>
+<span class="o">|</span>       <span class="n">of</span><span class="o">|</span>
+</code></pre></div>
+
+<p>Giờ đặt lại tên cột cho hay với alias, bỏ đi các dòng empty, rồi nhóm (groupBy) các từ giống nhau lại, rồi đếm (count), sắp xếp theo từ nào có count nhiều nhất, giảm dần, lấy 10 từ&nbsp;top:</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">97</span><span class="p">]:</span> <span class="n">text</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">explode</span><span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">lower</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">value</span><span class="p">),</span> <span class="s2">&quot;\s+&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;word&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;word != &#39;&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&quot;word&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="o">+-----+-----+</span>
+<span class="o">|</span> <span class="n">word</span><span class="o">|</span><span class="n">count</span><span class="o">|</span>
+<span class="o">+-----+-----+</span>
+<span class="o">|</span>  <span class="n">the</span><span class="o">|</span><span class="mi">64015</span><span class="o">|</span>
+<span class="o">|</span>  <span class="ow">and</span><span class="o">|</span><span class="mi">51313</span><span class="o">|</span>
+<span class="o">|</span>   <span class="n">of</span><span class="o">|</span><span class="mi">34634</span><span class="o">|</span>
+<span class="o">|</span>   <span class="n">to</span><span class="o">|</span><span class="mi">13567</span><span class="o">|</span>
+<span class="o">|</span> <span class="n">that</span><span class="o">|</span><span class="mi">12784</span><span class="o">|</span>
+<span class="o">|</span>   <span class="ow">in</span><span class="o">|</span><span class="mi">12503</span><span class="o">|</span>
+<span class="o">|</span>   <span class="n">he</span><span class="o">|</span><span class="mi">10261</span><span class="o">|</span>
+<span class="o">|</span><span class="n">shall</span><span class="o">|</span> <span class="mi">9838</span><span class="o">|</span>
+<span class="o">|</span> <span class="n">unto</span><span class="o">|</span> <span class="mi">8987</span><span class="o">|</span>
+<span class="o">|</span>  <span class="k">for</span><span class="o">|</span> <span class="mi">8810</span><span class="o">|</span>
+<span class="o">+-----+-----+</span>
+<span class="n">only</span> <span class="n">showing</span> <span class="n">top</span> <span class="mi">10</span> <span class="n">rows</span>
+</code></pre></div>
+
+<p>Kết quả trùng khớp với https://github.com/benhoyt/countwords/blob/master/output.txt (x10 - do trong repo họ tạo file text 10&nbsp;lần).</p>
+<p>Tham&nbsp;khảo:</p>
+<ul>
+<li><a href="https://benhoyt.com/writings/count-words/">https://benhoyt.com/writings/count-words/</a></li>
+</ul>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

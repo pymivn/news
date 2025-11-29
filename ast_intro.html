@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="Biến nhỏ hơn thành lớn hơn với&nbsp;ast">
+<meta name="twitter:description" content="làm sao biến code 1+1<3 thành 1 + 1 > 3">
+        <!-- OG Tags -->
+<meta property="og:url" content="./ast_intro.html"/>
+<meta property="og:title" content="Biến nhỏ hơn thành lớn hơn với&nbsp;ast | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="làm sao biến code 1+1<3 thành 1 + 1 > 3" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="làm sao biến code 1+1<3 thành 1 + 1 > 3" />
+
+    <meta name="tags" content="ast" />
+    <meta name="tags" content="Python" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li><a href="./category/news.html">news</a></li>
+                            <li class="active"><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2024-10-15 00:00:00+07:00">
+                <script>document.write(moment('2024-10-15 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Biến nhỏ hơn thành lớn hơn với&nbsp;ast
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <h3><span class="caps">AST</span> là&nbsp;gì</h3>
+<p>Code Python ngoài dạng dòng text lập trình viên viết, có thể được biểu diễn ở dạng cây (tree), tên đầy đủ là Abstract Syntax Tree (<span class="caps">AST</span>).</p>
+<p><span class="caps">AST</span> giúp việc duyệt qua từng biểu thức (expression), thành phần nhỏ nhất (token) trong mỗi biểu thức trở nên dễ dàng hơn nhiều so với dạng text, vì vậy các tool check code ưa chuộng việc dùng <span class="caps">AST</span> thay&nbsp;text.</p>
+<h3>Biến code text thành&nbsp;tree</h3>
+<p>Sử dụng <code>ast.parse</code> để biến code thành tree. Dùng <code>ast.dump</code> để hiển thị cây ở dạng&nbsp;text:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ast</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;1+1&lt;3&#39;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">Module</span><span class="p">(</span>
+    <span class="n">body</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">Expr</span><span class="p">(</span>
+            <span class="n">value</span><span class="o">=</span><span class="n">Compare</span><span class="p">(</span>
+                <span class="n">left</span><span class="o">=</span><span class="n">BinOp</span><span class="p">(</span>
+                    <span class="n">left</span><span class="o">=</span><span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+                    <span class="n">op</span><span class="o">=</span><span class="n">Add</span><span class="p">(),</span>
+                    <span class="n">right</span><span class="o">=</span><span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span>
+                <span class="n">ops</span><span class="o">=</span><span class="p">[</span>
+                    <span class="n">Lt</span><span class="p">()],</span>
+                <span class="n">comparators</span><span class="o">=</span><span class="p">[</span>
+                    <span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">3</span><span class="p">)]))],</span>
+    <span class="n">type_ignores</span><span class="o">=</span><span class="p">[])</span>
+</code></pre></div>
+
+<p><span class="caps">AST</span> không bị ảnh hưởng khi thêm space vào giữa các token, hay thậm chí xuống dòng,&nbsp;comment:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span>
+
+ <span class="o">&lt;</span>
+<span class="c1">#&lt;</span>
+ <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ast</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;(1+1</span>
+<span class="s2">...</span>
+<span class="s2">... &lt;</span>
+<span class="s2">... #&lt;</span>
+<span class="s2">... 3)&quot;&quot;&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="o">...</span> <span class="p">)</span>
+<span class="n">Module</span><span class="p">(</span>
+    <span class="n">body</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">Expr</span><span class="p">(</span>
+            <span class="n">value</span><span class="o">=</span><span class="n">Compare</span><span class="p">(</span>
+                <span class="n">left</span><span class="o">=</span><span class="n">BinOp</span><span class="p">(</span>
+                    <span class="n">left</span><span class="o">=</span><span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+                    <span class="n">op</span><span class="o">=</span><span class="n">Add</span><span class="p">(),</span>
+                    <span class="n">right</span><span class="o">=</span><span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span>
+                <span class="n">ops</span><span class="o">=</span><span class="p">[</span>
+                    <span class="n">Lt</span><span class="p">()],</span>
+                <span class="n">comparators</span><span class="o">=</span><span class="p">[</span>
+                    <span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">3</span><span class="p">)]))],</span>
+    <span class="n">type_ignores</span><span class="o">=</span><span class="p">[])</span>
+</code></pre></div>
+
+<p>kết quả vẫn giống với <code>1+1&lt;3</code>.</p>
+<h3>Biến nhỏ hơn thành lớn&nbsp;hơn</h3>
+<p>Đề bài: biến code phép toán so sánh nhỏ hơn thành lớn hơn trong file&nbsp;before.py</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1+1&lt;3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1 + 1 &lt; 3&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Chạy:</p>
+<div class="highlight"><pre><span></span><code>$ python3 before.py
+<span class="m">1</span> + <span class="m">1</span> &lt; <span class="m">3</span> True
+<span class="m">16</span>
+</code></pre></div>
+
+<p>Cần thực hiện biến đổi để dòng đầu output&nbsp;thành:</p>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="n">False</span><span class="w"></span>
+</code></pre></div>
+
+<p>Nếu sử dụng cách biến đổi text, có thể&nbsp;viết:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;before.py&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&lt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">))</span>
+<span class="c1"># 1+1&gt;3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1 + 1 &gt; 3&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">exec</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&lt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">))</span>
+<span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="kc">False</span>
+<span class="mi">0</span>
+</code></pre></div>
+
+<p>đơn giản! và sai vì dùng replace đã thay đổi&nbsp;cả:</p>
+<ul>
+<li><code>1+1&lt;&lt;3</code> binary shift, không phải phép so sánh nhỏ&nbsp;hơn</li>
+<li>dòng&nbsp;comment</li>
+<li>string <code>"1 + 1 &lt; 3"</code>, đấy là 1 string không phải phép so&nbsp;sánh.</li>
+</ul>
+<p>Các giải pháp biến đổi text (string method/regex) đều gặp phải các trường hợp phức tạp như trên. <span class="caps">AST</span> giải quyết vấn đề gọn gàng đơn giản hơn&nbsp;nhiều.</p>
+<h3>Dùng <span class="caps">AST</span> biến nhỏ thành&nbsp;lớn</h3>
+<p>Dump <span class="caps">AST</span> ra màn&nbsp;hình:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tree</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">Module</span><span class="p">(</span>
+    <span class="n">body</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">Expr</span><span class="p">(</span>
+            <span class="n">value</span><span class="o">=</span><span class="n">Call</span><span class="p">(</span>
+                <span class="n">func</span><span class="o">=</span><span class="n">Name</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;print&#39;</span><span class="p">,</span> <span class="n">ctx</span><span class="o">=</span><span class="n">Load</span><span class="p">()),</span>
+                <span class="n">args</span><span class="o">=</span><span class="p">[</span>
+                    <span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;1 + 1 &lt; 3&#39;</span><span class="p">),</span>
+                    <span class="n">Compare</span><span class="p">(</span>
+                        <span class="n">left</span><span class="o">=</span><span class="n">BinOp</span><span class="p">(</span>
+                            <span class="n">left</span><span class="o">=</span><span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+                            <span class="n">op</span><span class="o">=</span><span class="n">Add</span><span class="p">(),</span>
+                            <span class="n">right</span><span class="o">=</span><span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span>
+                        <span class="n">ops</span><span class="o">=</span><span class="p">[</span>
+                            <span class="n">Lt</span><span class="p">()],</span>
+                        <span class="n">comparators</span><span class="o">=</span><span class="p">[</span>
+                            <span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">3</span><span class="p">)])],</span>
+                <span class="n">keywords</span><span class="o">=</span><span class="p">[])),</span>
+        <span class="n">Expr</span><span class="p">(</span>
+            <span class="n">value</span><span class="o">=</span><span class="n">Call</span><span class="p">(</span>
+                <span class="n">func</span><span class="o">=</span><span class="n">Name</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;print&#39;</span><span class="p">,</span> <span class="n">ctx</span><span class="o">=</span><span class="n">Load</span><span class="p">()),</span>
+                <span class="n">args</span><span class="o">=</span><span class="p">[</span>
+                    <span class="n">BinOp</span><span class="p">(</span>
+                        <span class="n">left</span><span class="o">=</span><span class="n">BinOp</span><span class="p">(</span>
+                            <span class="n">left</span><span class="o">=</span><span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+                            <span class="n">op</span><span class="o">=</span><span class="n">Add</span><span class="p">(),</span>
+                            <span class="n">right</span><span class="o">=</span><span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span>
+                        <span class="n">op</span><span class="o">=</span><span class="n">LShift</span><span class="p">(),</span>
+                        <span class="n">right</span><span class="o">=</span><span class="n">Constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">3</span><span class="p">))],</span>
+                <span class="n">keywords</span><span class="o">=</span><span class="p">[]))],</span>
+    <span class="n">type_ignores</span><span class="o">=</span><span class="p">[])</span>
+</code></pre></div>
+
+<p>Thấy chỉ có 2 biểu thức (Expression), <code>ast</code> không hỗ trợ comment nên đã bị bỏ qua.
+<span class="caps">AST</span> nhận biết được string constant trong Expr đầu và dòng cuối dùng <code>LShift</code> (binary left&nbsp;shift)</p>
+<p>Truy cập vào Expr đầu tiên, lấy trong các args của function, sửa Compare dùng <code>ops[0]</code> kiểu <code>Lt</code> (less than - nhỏ hơn) thành <code>Gt</code> (greater than - lớn&nbsp;hơn).</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tree</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ops</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">Gt</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">unparse</span><span class="p">(</span><span class="n">tree</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1 + 1 &lt; 3&#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Code sau khi biến đổi, chạy cho kết&nbsp;quả</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">exec</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">unparse</span><span class="p">(</span><span class="n">tree</span><span class="p">))</span>
+<span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="kc">False</span>
+<span class="mi">16</span>
+</code></pre></div>
+
+<p>nhỏ đã thành to như mong&nbsp;ước.</p>
+<h4>Biến đổi <span class="caps">AST</span> với&nbsp;Transformer</h4>
+<p>Không phải GenAI Transformer deep learning architecture mà là NodeTransformer, class giúp biến đổi&nbsp;Node.</p>
+<div class="highlight"><pre><span></span><code><span class="n">tree</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">body</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">RewriteOp</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">NodeTransformer</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">visit_Lt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ast</span><span class="o">.</span><span class="n">Gt</span><span class="p">()</span>
+
+<span class="n">node</span> <span class="o">=</span> <span class="n">RewriteOp</span><span class="p">()</span><span class="o">.</span><span class="n">visit</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">unparse</span><span class="p">(</span><span class="n">node</span><span class="p">))</span>
+</code></pre></div>
+
+<p>Kết&nbsp;quả</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1 + 1 &lt; 3&#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+
+<p>khi <code>visit</code> duyệt tới node <code>Lt</code>, method <code>visit_Lt</code> được gọi, trả về một node mới thay cho node Lt cũ, ở đây thay bằng node&nbsp;Gt.</p>
+<p>Dùng <code>unparse</code> để biến <span class="caps">AST</span> thành code. Code này có <span class="caps">AST</span> tương đương với code viết tay, nhưng không giống hệt, không có&nbsp;comment.</p>
+<p>Chạy online tại đây <a href="https://glot.io/snippets/h0wqj0crmy">https://glot.io/snippets/h0wqj0crmy</a></p>
+<h3>Ứng&nbsp;dụng</h3>
+<p><span class="caps">AST</span> được dùng khi cần check code hay biến đổi code, dùng nhiều trong các linter hay code formatter. Các tool này có thể không dùng standard library <code>ast</code> mà dùng các thư viện&nbsp;khác.</p>
+<ul>
+<li><a href="https://github.com/pylint-dev/pylint/tree/v3.3.0/pylint">PyLint</a>: dùng <a href="https://github.com/pylint-dev/astroid/tree/v3.3.0">astroid</a></li>
+<li><a href="https://github.com/psf/black/tree/24.10.0/src/blib2to3">black</a> dùng <a href="https://docs.python.org/3.7/library/2to3.html">lib2to3</a> từng là 1 phần của Python các bản cũ &lt; 3.8 để hỗ trợ convert code từ Python2 sang Python3, hỗ trợ <span class="caps">AST</span> với&nbsp;comment.</li>
+</ul>
+<h3>Kết&nbsp;luận</h3>
+<p><span class="caps">AST</span> giúp check và biến đổi code dễ dàng khi dùng text là muôn vàn khó&nbsp;khăn.</p>
+<p>Hết.</p>
+<p><span class="caps">HVN</span> at <a href="http://pymi.vn">http://pymi.vn</a> and <a href="https://www.familug.org">https://www.familug.org</a>.</p>
+<p><a href="https://www.familug.org/p/ung-ho.html">Ủng hộ tác giả&nbsp;🍺</a></p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

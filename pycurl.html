@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="http dùng requests?  pycurl nhanh gấp&nbsp;2!">
+<meta name="twitter:description" content="thư viện cực phổ biến nhưng ít dùng trong thế giới Python">
+        <!-- OG Tags -->
+<meta property="og:url" content="./pycurl.html"/>
+<meta property="og:title" content="http dùng requests?  pycurl nhanh gấp&nbsp;2! | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="thư viện cực phổ biến nhưng ít dùng trong thế giới Python" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="thư viện cực phổ biến nhưng ít dùng trong thế giới Python" />
+
+    <meta name="tags" content="python" />
+    <meta name="tags" content="requests" />
+    <meta name="tags" content="curl" />
+    <meta name="tags" content="pycurl" />
+    <meta name="tags" content="http" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2023-04-04 00:00:00+07:00">
+                <script>document.write(moment('2023-04-04 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            http dùng requests?  pycurl nhanh gấp&nbsp;2!
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p><img alt="curl" src="https://curl.se/logo/curl-logo.svg"></p>
+<h3>curl - câu lệnh <span class="caps">HTTP</span> client phổ biến&nbsp;nhất</h3>
+<p>Đó là điều không phải bàn cãi. Đa phần các lập trình viên hay các devops/sysadmin đều ít nhiều biết dùng&nbsp;curl.</p>
+<p>Cài đặt: <code>sudo apt install curl</code></p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">curl</span> <span class="o">-</span><span class="n">XGET</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">httpbin</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">get</span>
+<span class="p">{</span>
+  <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="s2">&quot;headers&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;Accept&quot;</span><span class="p">:</span> <span class="s2">&quot;*/*&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Host&quot;</span><span class="p">:</span> <span class="s2">&quot;httpbin.org&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;curl/7.68.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;X-Amzn-Trace-Id&quot;</span><span class="p">:</span> <span class="s2">&quot;Root=1-642c2f63-1e6528c964ff9d9b39d7dc7f&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;origin&quot;</span><span class="p">:</span> <span class="s2">&quot;14.1.11.1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://httpbin.org/get&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Chương trình này sử dụng thư viện lo tất cả bên dưới:&nbsp;libcurl</p>
+<div class="highlight"><pre><span></span><code>$ ldd <span class="sb">`</span>which curl<span class="sb">`</span> <span class="p">|</span> grep curl
+    libcurl.so.4 <span class="o">=</span>&gt; /lib/x86_64-linux-gnu/libcurl.so.4 <span class="o">(</span>0x00007f0a91282000<span class="o">)</span>
+</code></pre></div>
+
+<p><code>libcurl</code> có &#8220;binding&#8221; cho hầu hết tất cả các ngôn ngữ lập&nbsp;trình.</p>
+<p>Đếm đơn giản có hơn 50 ngôn ngữ: <span class="caps">PHP</span>, Java, C, Rust, &#8230; và cả&nbsp;Python</p>
+<div class="highlight"><pre><span></span><code>$ curl https://curl.se/libcurl/bindings.html <span class="p">|</span> grep <span class="s1">&#39;&lt;a href=&quot;http&#39;</span> -c
+<span class="m">57</span>
+</code></pre></div>
+
+<h3>pycurl - code dài x2 nhưng nhanh cũng x2 lần&nbsp;requests</h3>
+<p>requests phổ biến nhờ <span class="caps">API</span> dễ dùng requests.get requests.post &#8230; viết hoàn tòan bằng Python. Ưu điểm này cũng chỉ ra yếu điểm của Python: chậm khi so với&nbsp;C.</p>
+<p>Nếu viết 1 script gọi 10 requests nhỏ nhỏ chạy cỡ 10s, viết lại bằng pycurl có thể mất 5s, việc này không có gì đáng kể, nên vẫn sẽ dùng&nbsp;requests.</p>
+<p>Nhưng với chương trình phải <span class="caps">GET</span>/<span class="caps">POST</span> hàng trăm ngàn requests mỗi giờ, hay gửi vài <span class="caps">GB</span>/<span class="caps">TB</span>, thay pycurl sẽ mang lại cải thiện đáng kể.
+Benchmark tại trang chủ pycurl: <a href="https://github.com/svanoort/python-client-benchmarks">https://github.com/svanoort/python-client-benchmarks</a></p>
+<p>Giải thích khi nào dùng pycurl vs request <a href="http://pycurl.io/docs/latest/index.html#pycurl-vs-requests">http://pycurl.io/docs/latest/index.html#pycurl-vs-requests</a></p>
+<p>Ví dụ đơn giản với 3 dòng requests và 10 dòng&nbsp;pycurl:</p>
+<p>Trên Ubuntu 20.04 cài&nbsp;đặt:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install -y libcurl4-openssl-dev
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>python3 -m venv cenv
+. cenv/bin/activate
+python3 -m pip install pycurl requests
+</code></pre></div>
+
+<h4>requests ngắn và&nbsp;chậm</h4>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://pymi.vn&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">[:</span><span class="mi">200</span><span class="p">])</span>
+</code></pre></div>
+
+<p>Tốc&nbsp;độ:</p>
+<div class="highlight"><pre><span></span><code>$ /usr/bin/time -v python3 req.py
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;vi&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Học lập trình Python — PyMI.vn<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;descri</span>
+<span class="s">    Command being timed: &quot;</span><span class="na">python3</span> <span class="na">req</span><span class="err">.</span><span class="na">py</span><span class="err">&quot;</span>
+    <span class="na">User</span> <span class="na">time</span> <span class="err">(</span><span class="na">seconds</span><span class="err">)</span><span class="na">:</span> <span class="na">0</span><span class="err">.</span><span class="na">10</span>
+    <span class="na">System</span> <span class="na">time</span> <span class="err">(</span><span class="na">seconds</span><span class="err">)</span><span class="na">:</span> <span class="na">0</span><span class="err">.</span><span class="na">01</span>
+    <span class="na">Percent</span> <span class="na">of</span> <span class="na">CPU</span> <span class="na">this</span> <span class="na">job</span> <span class="na">got:</span> <span class="na">20</span><span class="err">%</span>
+    <span class="na">Elapsed</span> <span class="err">(</span><span class="na">wall</span> <span class="na">clock</span><span class="err">)</span> <span class="na">time</span> <span class="err">(</span><span class="na">h:mm:ss</span> <span class="na">or</span> <span class="na">m:ss</span><span class="err">)</span><span class="na">:</span> <span class="na">0:00</span><span class="err">.</span><span class="na">58</span>
+    <span class="na">Average</span> <span class="na">shared</span> <span class="na">text</span> <span class="na">size</span> <span class="err">(</span><span class="na">kbytes</span><span class="err">)</span><span class="na">:</span> <span class="na">0</span>
+    <span class="na">Average</span> <span class="na">unshared</span> <span class="na">data</span> <span class="na">size</span> <span class="err">(</span><span class="na">kbytes</span><span class="err">)</span><span class="na">:</span> <span class="na">0</span>
+    <span class="na">Average</span> <span class="na">stack</span> <span class="na">size</span> <span class="err">(</span><span class="na">kbytes</span><span class="err">)</span><span class="na">:</span> <span class="na">0</span>
+    <span class="na">Average</span> <span class="na">total</span> <span class="na">size</span> <span class="err">(</span><span class="na">kbytes</span><span class="err">)</span><span class="na">:</span> <span class="na">0</span>
+    <span class="na">Maximum</span> <span class="na">resident</span> <span class="na">set</span> <span class="na">size</span> <span class="err">(</span><span class="na">kbytes</span><span class="err">)</span><span class="na">:</span> <span class="na">23152</span>
+</code></pre></div>
+
+<h4>pycurl dài và&nbsp;nhanh</h4>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pycurl</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="n">buff</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">()</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">pycurl</span><span class="o">.</span><span class="n">Curl</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">URL</span><span class="p">,</span> <span class="s1">&#39;https://pymi.vn&#39;</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">WRITEDATA</span><span class="p">,</span> <span class="n">buff</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setopt</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">HTTPHEADER</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0/8mqLkJuL-86&#39;</span><span class="p">])</span>
+<span class="n">c</span><span class="o">.</span><span class="n">perform</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">body</span> <span class="o">=</span> <span class="n">buff</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">body</span><span class="o">.</span><span class="n">decode</span><span class="p">()[:</span><span class="mi">200</span><span class="p">])</span>
+</code></pre></div>
+
+<p>Tốc&nbsp;độ</p>
+<div class="highlight"><pre><span></span><code>$ /usr/bin/time -v python3  curl.py
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;vi&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Học lập trình Python — PyMI.vn<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;descri</span>
+<span class="s">    Command being timed: &quot;</span><span class="na">python3</span> <span class="na">curl</span><span class="err">.</span><span class="na">py</span><span class="err">&quot;</span>
+    <span class="na">User</span> <span class="na">time</span> <span class="err">(</span><span class="na">seconds</span><span class="err">)</span><span class="na">:</span> <span class="na">0</span><span class="err">.</span><span class="na">05</span>
+    <span class="na">System</span> <span class="na">time</span> <span class="err">(</span><span class="na">seconds</span><span class="err">)</span><span class="na">:</span> <span class="na">0</span><span class="err">.</span><span class="na">00</span>
+    <span class="na">Percent</span> <span class="na">of</span> <span class="na">CPU</span> <span class="na">this</span> <span class="na">job</span> <span class="na">got:</span> <span class="na">9</span><span class="err">%</span>
+    <span class="na">Elapsed</span> <span class="err">(</span><span class="na">wall</span> <span class="na">clock</span><span class="err">)</span> <span class="na">time</span> <span class="err">(</span><span class="na">h:mm:ss</span> <span class="na">or</span> <span class="na">m:ss</span><span class="err">)</span><span class="na">:</span> <span class="na">0:00</span><span class="err">.</span><span class="na">60</span>
+    <span class="na">Average</span> <span class="na">shared</span> <span class="na">text</span> <span class="na">size</span> <span class="err">(</span><span class="na">kbytes</span><span class="err">)</span><span class="na">:</span> <span class="na">0</span>
+    <span class="na">Average</span> <span class="na">unshared</span> <span class="na">data</span> <span class="na">size</span> <span class="err">(</span><span class="na">kbytes</span><span class="err">)</span><span class="na">:</span> <span class="na">0</span>
+    <span class="na">Average</span> <span class="na">stack</span> <span class="na">size</span> <span class="err">(</span><span class="na">kbytes</span><span class="err">)</span><span class="na">:</span> <span class="na">0</span>
+    <span class="na">Average</span> <span class="na">total</span> <span class="na">size</span> <span class="err">(</span><span class="na">kbytes</span><span class="err">)</span><span class="na">:</span> <span class="na">0</span>
+    <span class="na">Maximum</span> <span class="na">resident</span> <span class="na">set</span> <span class="na">size</span> <span class="err">(</span><span class="na">kbytes</span><span class="err">)</span><span class="na">:</span> <span class="na">20576</span>
+</code></pre></div>
+
+<p><span class="caps">PS</span>: tuy &#8220;khó dùng&#8221; hơn requests, một khi biết dùng, có thể dùng ở ~50 ngôn ngữ khác nhau là một lợi thế không hề nhỏ của&nbsp;libcurl.</p>
+<h3>Kết&nbsp;luận</h3>
+<p>Ngắn chậm hay dài nhanh? sự lựa chọn là của&nbsp;bạn.</p>
+<p>Hết.</p>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>

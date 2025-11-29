@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+          <title>Tin tức Python PyMI.vn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://n.pymi.vn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tin tức Python PyMI.vn Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="Lộ mật khẩu cùng&nbsp;dataclass">
+<meta name="twitter:description" content="mới, xịn, tiện, lợi, hại">
+        <!-- OG Tags -->
+<meta property="og:url" content="./dataclass-leak.html"/>
+<meta property="og:title" content="Lộ mật khẩu cùng&nbsp;dataclass | Tin tức Python PyMI.vn" />
+<meta property="og:description" content="mới, xịn, tiện, lợi, hại" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="./theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["./theme/css/icons.data.svg.css", "./theme/css/icons.data.png.css", "./theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="./theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="mới, xịn, tiện, lợi, hại" />
+
+    <meta name="tags" content="python" />
+    <meta name="tags" content="dataclass" />
+    <meta name="tags" content="security" />
+    <meta name="tags" content="str" />
+    <meta name="tags" content="repr" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <h1><a href="/">Pymiers's Blog</a></h1>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                            <li><a href="./category/features.html">features</a></li>
+                            <li class="active"><a href="./category/news.html">news</a></li>
+                            <li><a href="./category/pymivn.html">pymi.vn</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2023-08-30 00:00:00+07:00">
+                <script>document.write(moment('2023-08-30 00:00:00+07:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Lộ mật khẩu cùng&nbsp;dataclass
+          </h2>
+          <center>
+          <h4>
+            by Pymier0
+          </h4>
+          </center>
+        </header>
+      <div class="content">
+         <p><code>dataclasses</code> module là 1 standard library rất mới, xuất hiện ở Python 3.7, với tác&nbsp;dụng:</p>
+<blockquote>
+<p>This module provides a decorator and functions for automatically adding generated special methods such as <code>__init__()</code> and <code>__repr__()</code> to user-defined&nbsp;classes.</p>
+</blockquote>
+<p><a href="https://peps.python.org/pep-0557/">https://peps.python.org/pep-0557/</a></p>
+<p>đây là một tính năng được yêu thích ở các bản Python mới&nbsp;(3.7+).</p>
+<h3>dataclass giúp viết class ngắn hơn, không phải tự gõ <code>__init__</code></h3>
+<p><code>dataclass</code> là một decorator, dùng trên đầu&nbsp;class:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">age</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="n">u</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;Pymier&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;hvn@pymi.vn&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<span class="c1"># User(name=&#39;Pymier&#39;, age=8, email=&#39;hvn@pymi.vn&#39;)</span>
+</code></pre></div>
+
+<p>Tiện vậy có gì mà không&nbsp;tốt?</p>
+<h3>dataclass luôn in ra mọi&nbsp;attribute</h3>
+<p>Mặc định, khi print một object tạo bởi class dùng dataclass, nó sẽ in ra mọi attribute.
+Giả sử một ngày, cần chứa mật khẩu trong class User, đoạn code trở&nbsp;thành:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">age</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">password</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="n">u</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;Pymier&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;hvn@pymi.vn&quot;</span><span class="p">,</span> <span class="s2">&quot;hunter42&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<span class="c1"># User(name=&#39;Pymier&#39;, age=8, email=&#39;hvn@pymi.vn&#39;, password=&#39;hunter42&#39;)</span>
+</code></pre></div>
+
+<p>Vậy là nhờ dùng dataclass, ta VÔ TÌNH để lộ mật khẩu, in ra màn hình, render ra website hay theo log file lộ ra&nbsp;ngoài&#8230;</p>
+<h4>Sửa lại thế&nbsp;nào?</h4>
+<p>muốn print object ra gì, rõ là phải sửa <code>__str__</code>!, thêm method <code>__str__</code> vào</p>
+<div class="highlight"><pre><span></span><code>    <span class="o">...</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">=}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">=}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">email</span><span class="si">=}</span><span class="s2">&quot;</span>
+
+<span class="n">u</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;Pymier&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;hvn@pymi.vn&quot;</span><span class="p">,</span> <span class="s2">&quot;hunter42&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<span class="c1"># self.name=&#39;Pymier&#39; self.age=8 self.email=&#39;hvn@pymi.vn&#39;</span>
+</code></pre></div>
+
+<p>Kết quả giờ không còn hiện ra password nữa, ta lặng lẽ ỉm đi cái security bug này và không ai biết tới, thật tuyệt&nbsp;vời!</p>
+<p>Xong chưa? nên dừng lại 1 chút suy nghĩ rồi hãy đọc&nbsp;tiếp.</p>
+<p>Đoạn code ban đầu hoàn hảo, được thiết kế chủ ý dùng dataclass vì có thể in ra mọi thông tin, thì sau 1 thay đổi &#8220;nhỏ&#8221; và thường là do 1 người khác thay đổi, trở thành code có lỗ hổng bảo mật (security vulnerability).
+Người ta thường so sánh ngành lập trình với ngành xây dựng, software thì toàn bug còn nhà thì mấy khi &#8220;hỏng&#8221;? software bị thay đổi hàng ngày, còn nhà thì vài năm hay thập kỷ mới&nbsp;thay.</p>
+<h3>Tạo 1 class mới chứa dataclass&nbsp;này</h3>
+<p>Tạo 1 team class dùng dataclass, và in&nbsp;ra:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">Team</span><span class="p">:</span>
+    <span class="n">members</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">User</span><span class="p">]</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">Team</span><span class="p">(</span><span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="n">u</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="c1"># Team(members=[User(name=&#39;Pymier&#39;, age=8, email=&#39;hvn@pymi.vn&#39;, password=&#39;hunter42&#39;)])</span>
+</code></pre></div>
+
+<p>dù ta đã viết <code>__str__</code> cho <code>User</code>, nhưng khi in ra <code>Team</code> object, nó sử dụng <code>__repr__</code> chứ không dùng <code>__str__</code>, như dòng đầu tiên trong tài liệu của <code>dataclasses</code> đã&nbsp;viết:</p>
+<blockquote>
+<p>automatically adding generated special methods such as <code>__init__()</code> <strong>and</strong> <code>__repr__()</code> to user-defined&nbsp;classes</p>
+</blockquote>
+<p>Cách fix: thêm <code>__repr__</code>:</p>
+<blockquote>
+<p>If a class defines <code>__repr__()</code> but not <code>__str__()</code>, then <code>__repr__()</code> is also used when an “informal” string representation of instances of that class is&nbsp;required.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">age</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">password</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">=}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">=}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">email</span><span class="si">=}</span><span class="s2">&quot;</span>
+
+<span class="n">u</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;Pymier&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;hvn@pymi.vn&quot;</span><span class="p">,</span> <span class="s2">&quot;hunter42&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<span class="c1"># self.name=&#39;Pymier&#39; self.age=8 self.email=&#39;hvn@pymi.vn&#39;</span>
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">Team</span><span class="p">:</span>
+    <span class="n">members</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">User</span><span class="p">]</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">Team</span><span class="p">(</span><span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="n">u</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="c1"># Team(members=[self.name=&#39;Pymier&#39; self.age=8 self.email=&#39;hvn@pymi.vn&#39;])</span>
+</code></pre></div>
+
+<p>Bạn đọc tham khảo sự khác biệt giữa <code>__str__</code> và <code>__repr__</code>: <a href="https://stackoverflow.com/questions/1436703/what-is-the-difference-between-str-and-repr">https://stackoverflow.com/questions/1436703/what-is-the-difference-between-str-and-repr</a></p>
+<p>Bất ngờ thay, mấy ông già không &#8220;cool&#8221; không &#8220;trend&#8221; không dùng <code>dataclass</code> không gặp phải vấn đề&nbsp;này:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">password</span>
+
+<span class="n">u</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;Pymier&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;hvn@pymi.vn&quot;</span><span class="p">,</span> <span class="s2">&quot;hunter42&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+<span class="c1"># &lt;__main__.User object at 0x7f9efd510410&gt; &lt;__main__.User object at 0x7f9efd510410&gt;</span>
+</code></pre></div>
+
+<p>Update: dataclasses cũng đã tính đến chuyện này, để KHÔNG hiện một attribute khi <code>__repr__</code>, dùng <code>field(repr=False)</code></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">age</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">password</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="nb">repr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;Pymier&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;hvn@pymi.vn&quot;</span><span class="p">,</span> <span class="s2">&quot;hunter42&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<span class="c1"># User(name=&#39;Pymier&#39;, age=8, email=&#39;hvn@pymi.vn&#39;)</span>
+</code></pre></div>
+
+<h3>Tham&nbsp;khảo</h3>
+<p><a href="https://docs.python.org/3.11/library/dataclasses.html">https://docs.python.org/3.11/library/dataclasses.html</a></p>
+<p>Xem list các method được dataclass autogenerate tại <a href="https://peps.python.org/pep-0557/#abstract">https://peps.python.org/pep-0557/#abstract</a></p>
+<h3>Kết&nbsp;luận</h3>
+<p><code>dataclasses</code> tiện lợi, giúp viết ít code hơn, nhưng cần biết những gì nó &#8220;tự động&#8221; để tránh bất ngờ.
+Default không có nghĩa là không biết. Explicit is better than&nbsp;implicit.</p>
+<p>Hết.</p>
+<p>Đăng ký ngay tại <a href="https://pymi.vn">PyMI.vn</a> để học Python tại Hà Nội <span class="caps">TP</span> <span class="caps">HCM</span> (Sài Gòn),
+trở thành lập trình viên #python chuyên nghiệp ngay sau khóa&nbsp;học.</p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://github.com/pymivn" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> Pymiers</p>
+                </footer>
+        </div>
+</body>
+</html>
